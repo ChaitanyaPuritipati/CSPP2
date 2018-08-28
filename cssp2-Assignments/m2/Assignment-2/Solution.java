@@ -10,7 +10,7 @@ public final class Solution {
         //unused.
     }
     /**
-     * { function_description }.
+     * { Main function is created to start the program }.
      *
      * @param      args  The arguments
      */
@@ -27,9 +27,9 @@ public final class Solution {
     /**
      * { function_description }.
      *
-     * @param      a     { parameter_description }
-     * @param      b     { parameter_description }
-     * @param      c     { parameter_description }
+     * @param      a     { It is of int type }
+     * @param      b     { It is of int type }
+     * @param      c     { It is of int type }
      */
     static void rootsOfQuadraticEquation(final int a, final int b,
         final int c) {
