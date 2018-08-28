@@ -18,7 +18,7 @@ final class Solution {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result = power(base , exponent);
+        long result = power(base, exponent);
         System.out.println(result);
     }
     /**
