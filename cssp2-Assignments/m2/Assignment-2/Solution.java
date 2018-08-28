@@ -36,8 +36,8 @@ public final class Solution {
         final int four = 4;
         double determinant = Math.sqrt((b * b) - (four * a * c));
         if (determinant >= 0) {
-            double root1 = ((- b) + determinant)/(2 * a);
-            double root2 = ((- b) - determinant)/(2 * a);
+            double root1 = ((-b) + determinant) / (2 * a);
+            double root2 = ((-b) - determinant) / (2 * a);
             System.out.println(root1 + " " + root2);
         }
     }
