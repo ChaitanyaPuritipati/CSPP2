@@ -18,8 +18,8 @@ public class Solution {
 	static void rootsOfQuadraticEquation(int a, int b, int c){
 		double determinant = Math.sqrt((b*b)-(4*a*c));
 		if (determinant >= 0){
-			double root_1 = ((- b) + determinant)/2*a;
-            double root_2 = ((- b) - determinant)/2*a;
+			double root_1 = ((- b) + determinant)/(2*a);
+            double root_2 = ((- b) - determinant)/(2*a);
             System.out.println(root_1 + " " + root_2);
 		}
 	}
