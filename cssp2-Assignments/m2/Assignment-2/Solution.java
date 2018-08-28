@@ -1,9 +1,19 @@
 import java.util.Scanner;
-
-public class Solution {
-	/*
-	Do not modify this main function.
-	*/
+/**
+ * Class for solution.
+ */
+public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//unused.
+	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		/*
 		Main function starts here
@@ -14,9 +24,13 @@ public class Solution {
 		int c = scan.nextInt();
 		rootsOfQuadraticEquation(a, b, c);
 	}
-	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
-	*/
+	/**
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      b     { parameter_description }
+	 * @param      c     { parameter_description }
+	 */
 	static void rootsOfQuadraticEquation(int a, int b, int c){
 		double determinant = Math.sqrt((b*b)-(4*a*c));
 		if (determinant >= 0){
