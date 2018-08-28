@@ -29,11 +29,10 @@ final class Solution {
      *
      * @return     { return value is long type. }.
      */
-    static long power(final int base, final int exponent){
+    static long power(final int base, final int exponent) {
         if (exponent == 0) {
             return 1;
-        }
-        else{
+        }else {
             return base*power(base, exponent - 1);
         } 
 
