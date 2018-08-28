@@ -17,11 +17,11 @@ public class Solution {
 	/*
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
-	static void rootsOfQuadraticEquation(int a, int b, int c){
-		double determinant = Math.sqrt((b*b)-(4*a*c));
+	static void rootsOfQuadraticEquation(int test_a, int test_b, int test_c){
+		double determinant = Math.sqrt((test_b*test_b)-(4*test_a*test_c));
 		if (determinant >= 0){
-			double root_1 = ((- b) + determinant)/(2*a);
-            double root_2 = ((- b) - determinant)/(2*a);
+			double root_1 = ((- test_b) + determinant)/(2*test_a);
+            double root_2 = ((- test_b) - determinant)/(2*test_a);
             System.out.println(root_1 + " " + root_2);
 		}
 	}
