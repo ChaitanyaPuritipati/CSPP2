@@ -32,8 +32,9 @@ public final class Solution {
      * @param      c     { parameter_description }
      */
     static void rootsOfQuadraticEquation(final int a, final int b,
-        final int c){
-        double determinant = Math.sqrt((b * b) - (4 * a * c));
+        final int c) {
+        final int four = 4;
+        double determinant = Math.sqrt((b * b) - (four * a * c));
         if (determinant >= 0) {
             double root1 = ((- b) + determinant)/(2 * a);
             double root2 = ((- b) - determinant)/(2 * a);
