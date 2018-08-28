@@ -10,13 +10,13 @@ public final class Solution {
 		//unused.
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
 		/*
-		Main function starts here
+		Main function starts here.
 		*/
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
@@ -25,7 +25,7 @@ public final class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      a     { parameter_description }
 	 * @param      b     { parameter_description }
