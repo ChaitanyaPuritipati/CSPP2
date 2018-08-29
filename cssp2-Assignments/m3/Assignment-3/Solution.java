@@ -16,7 +16,7 @@ public class Solution {
     }
     static int gcd(int a, int b){
         for (int i = a; i>= 2; i--) {
-        	if (i%b == 0) {
+        	if (b%i == 0) {
         		return i;
         	}
 
