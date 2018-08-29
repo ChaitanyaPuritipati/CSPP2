@@ -26,12 +26,15 @@ final class Solution {
     }
     /**
      * { gcd function is static and is used to find the gcd of two numbers }.
+     *
      * @param      a     { It is of int type and a smaller value }.
      * @param      b     { It is of int type and a larger value }.
+     *
+     * @return     { return value is of int type }.
      */
     static int gcd(final int a, final int b) {
-        for (int i = a; i>=2; i--) {
-            if (b%i == 0 && a%i == 0) {
+        for (int i = a; i >= 2; i--) {
+            if (b % i == 0 && a % i == 0) {
                 return i;
             }
 
