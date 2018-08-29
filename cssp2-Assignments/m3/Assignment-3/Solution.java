@@ -1,10 +1,12 @@
 
 import java.util.Scanner;
-/*
-    Do not modify this main function.
-    */
-public class Solution {
-
+/**
+ * Class for solution.
+ */
+final class Solution {
+    private Solution() {
+        //unused
+    }
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);      
