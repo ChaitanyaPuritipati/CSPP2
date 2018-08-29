@@ -12,7 +12,7 @@ public class Solution {
         int count = 0;
         for (int i = 1; i <= n; i++) {
         	int testnum = i;
-        	while(testnum%10 != 0){
+        	while(testnum > 0){
         		int temp = testnum%10;
         		// System.out.println(temp);
                 if (temp == 7) {
