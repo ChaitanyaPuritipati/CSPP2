@@ -11,13 +11,14 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
-        	int temp = i;
-        	while(temp % 10 != 0){
-        		System.out.println(temp);
+        	int testnum = i;
+        	while(testnum%10 != 0){
+        		int temp = testnum%10;
+        		// System.out.println(temp);
                 if (temp == 7) {
                 	count = count + 1;
                 }
-                temp = temp/10;
+                testnum = testnum/10;
         	}
         } System.out.println(count);
     }
