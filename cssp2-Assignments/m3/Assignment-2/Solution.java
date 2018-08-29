@@ -15,7 +15,7 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         final int n = s.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
