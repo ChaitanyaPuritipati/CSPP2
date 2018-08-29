@@ -10,24 +10,14 @@ public class Solution {
         Scanner s=new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        
-        System.out.println(gcd(n1,n2));
+        int small = Math.min(n1, n2);
+        int large = Math.max(n1, n2);
+        System.out.println(gcd(small,large));
     }
     static int gcd(int a, int b){
-    	if (a > b) {
-    		if(a%b == 0){
-    			return b;
-    		}
-    	     return 1;
-    	}
-    	else if (a < b) {
-             if (b%a == 0) {
-                 return a;
-             }
-             return 1;
-    	}
-    	else {
+    	if (b%a == 0){
     		return a;
     	}
-    }
+    	else return gcd( b%a , a);
+    }	
 }
