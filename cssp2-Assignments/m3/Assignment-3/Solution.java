@@ -7,7 +7,7 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int small = Math.min(n1, n2);
@@ -15,9 +15,12 @@ public class Solution {
         System.out.println(gcd(small,large));
     }
     static int gcd(int a, int b){
-    	if (b%a == 0){
-    		return a;
-    	}
-    	else return gcd( b%a , a);
-    }	
+        for (int i = a; i>= 2; i--) {
+        	if (i%b == 0) {
+        		return i;
+        	}
+
+        }
+        return 1;
+    }
 }
