@@ -13,6 +13,7 @@ public class Solution {
         for (int i = 1; i <= n; i++) {
         	int temp = i;
         	while(temp % 10 != 0){
+        		System.out.println(temp);
                 if (temp == 7) {
                 	count = count + 1;
                 }
