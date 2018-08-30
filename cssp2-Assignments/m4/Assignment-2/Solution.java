@@ -36,7 +36,7 @@ public final class Solution {
             System.out.println("not possible");
             return;
         }
-        int addarr[][] = new int[rows1][columns1];
+        int[][] addarr = new int[rows1][columns1];
         for (int row = 0; row < rows1; row++) {
             for (int col = 0; col < columns1; col++) {
                 addarr[row][col] = arr1[row][col] + arr2[row][col];
