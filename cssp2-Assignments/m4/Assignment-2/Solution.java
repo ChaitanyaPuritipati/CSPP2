@@ -14,8 +14,8 @@ public class Solution {
    		int rows_2 = input.nextInt();
    		int columns_2 = input.nextInt();
    		int arr2[][] = new int[rows_2][columns_2];
-   		for (int row=0; row < rows_1; row++) {
-   			for (int col=0;col<columns_1;col++) {
+   		for (int row=0; row < rows_2; row++) {
+   			for (int col=0;col<columns_2;col++) {
    				arr2[row][col] = input.nextInt();
    			}
    		}
@@ -30,9 +30,10 @@ public class Solution {
    			}
    		}
    		for (int row=0; row < rows_1; row++) {
-   			for (int col=0;col<columns_1;col++) {
+   			for (int col=0;col<columns_1-1;col++) {
    				System.out.print(addarr[row][col] + " ");
-   			} 
+   			}
+   			System.out.print(addarr[row][columns_1-1]);
    			System.out.println();
    		}
 	}
