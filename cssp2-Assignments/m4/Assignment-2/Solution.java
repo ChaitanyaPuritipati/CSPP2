@@ -11,7 +11,7 @@ public class Solution {
    			for (int col=0;col<columns_1;col++) {
    				colarr[col] = input.nextInt();
    			}
-   			System.out.println(colarr);
+   			System.out.println(colarr[1]);
    		}
    		System.out.println(rowarr);
 	}
