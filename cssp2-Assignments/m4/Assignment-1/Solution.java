@@ -8,8 +8,14 @@ public class Solution
 	{
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		System.out.println(n);
-		
-
+		int[] elements = new int[n];
+		int max = 0;
+ 		for (int i = 0; i < n; i++) {
+ 			elements[i] = sc.nextInt();
+ 			if (elements[i] > max) {
+ 				max = elements[i];
+ 			}
+		}
+        System.out.println(max);
 	}
 }
