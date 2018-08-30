@@ -13,8 +13,8 @@ public class Solution {
         final int rows_1 = input.nextInt();
         final int columns_1 = input.nextInt();
         int arr1[][] = new int[rows_1][columns_1];
-        for (int row=0; row < rows_1; row++) {
-            for (int col=0;col<columns_1;col++) {
+        for (int row = 0; row < rows_1; row++) {
+            for (int col = 0; col < columns_1; col++) {
                 arr1[row][col] = input.nextInt();
             }
         }
