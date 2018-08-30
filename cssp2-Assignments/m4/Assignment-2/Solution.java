@@ -27,8 +27,8 @@ public final class Solution {
         final int rows2 = input.nextInt();
         final int columns2 = input.nextInt();
         int[][] arr2 = new int[rows2][columns2];
-        for (int row=0; row < rows2; row++) {
-            for (int col=0; col < columns2; col++) {
+        for (int row = 0; row < rows2; row++) {
+            for (int col = 0; col < columns2; col++) {
                 arr2[row][col] = input.nextInt();
             }
         }
