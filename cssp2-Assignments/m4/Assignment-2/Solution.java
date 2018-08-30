@@ -9,8 +9,9 @@ public class Solution {
    		for (int row=0; row < rows_1; row++) {
    			for (int col=0;col<columns_1;col++) {
    				arr1[row][col] = input.nextInt();
+   				System.out.println(arr1[row][col]);
    			}
    		}
-   		System.out.println(arr1);
+   		
 	}
 }
