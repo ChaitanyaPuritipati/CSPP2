@@ -18,7 +18,7 @@ public final class Solution {
         Scanner input = new Scanner(System.in);
         final int rows1 = input.nextInt();
         final int columns1 = input.nextInt();
-        int arr1[][] = new int[rows1][columns1];
+        int[][] arr1 = new int[rows1][columns1];
         for (int row = 0; row < rows1; row++) {
             for (int col = 0; col < columns1; col++) {
                 arr1[row][col] = input.nextInt();
@@ -26,7 +26,7 @@ public final class Solution {
         }
         final int rows2 = input.nextInt();
         final int columns2 = input.nextInt();
-        int arr2[][] = new int[rows2][columns2];
+        int[][] arr2 = new int[rows2][columns2];
         for (int row=0; row < rows2; row++) {
             for (int col=0; col < columns2; col++) {
                 arr2[row][col] = input.nextInt();
