@@ -4,6 +4,12 @@ import java.util.Scanner;
  */
 public class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused
+    }
+    /**
      * { Main is used to start the program execution }.
      *
      * @param      args  The arguments
