@@ -5,14 +5,12 @@ public class Solution {
 		Scanner input = new Scanner(System.in);
 		int rows_1 = input.nextInt();
    		int columns_1 = input.nextInt();
-   		int rowarr[] = new int[rows_1];
+   		int arr1[][] = new int[rows_1][columns_1];
    		for (int row=0; row < rows_1; row++) {
-   			int colarr[] = new int[columns_1]; 
    			for (int col=0;col<columns_1;col++) {
-   				colarr[col] = input.nextInt();
+   				arr1[row][col] = input.nextInt();
    			}
-   			System.out.println(colarr[1]);
    		}
-   		System.out.println(rowarr);
+   		System.out.println(arr1);
 	}
 }
