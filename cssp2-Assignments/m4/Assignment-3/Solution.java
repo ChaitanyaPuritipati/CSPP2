@@ -18,7 +18,7 @@ public class Solution
 	}
 	static String binaryToDecimal(String funcstring) {
 		double decimalnum = 0;
-		for (int i = 0; i < funcstring.length(); i--) {
+		for (int i = 0; i < funcstring.length(); i++) {
 			decimalnum = decimalnum + (Integer.parseInt(funcstring.charAt(i) + ""))*(Math.pow(2, funcstring.length()-i-1));
 		}
 		return (decimalnum + "");
