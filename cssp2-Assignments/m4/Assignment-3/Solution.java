@@ -34,7 +34,7 @@ final class Solution {
         int decimalnum = 0;
         for (int i = 0; i < funcstring.length(); i++) {
             int everycharint = (Integer.parseInt (funcstring.charAt(i) + ""));
-            decimalnum = decimalnum + (everycharint)*((int) Math.pow(2, funcstring.length()-i-1));
+            decimalnum = decimalnum + (everycharint) * ((int) Math.pow(2, funcstring.length() - i - 1));
         }
         return (decimalnum + "");
     }
