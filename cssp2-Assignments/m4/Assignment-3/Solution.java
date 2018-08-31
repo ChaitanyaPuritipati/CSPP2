@@ -20,10 +20,7 @@ public class Solution
 		System.out.println(funcstring);
 		int decimalnum = 0;
 		for (int i = funcstring.length() - 1; i >= 0; i--) {
-			
-			System.out.println(Integer.parseInt(String.valueOf(funcstring.charAt(i))));
-			
-
+			System.out.println(Integer.parseInt(funcstring.charAt(i)+""));
 			// decimalnum = decimalnum + Math.pow(2, Integer.parseInt(funcstring.charAt(i)));
 		}
 		return String.valueOf(decimalnum);
