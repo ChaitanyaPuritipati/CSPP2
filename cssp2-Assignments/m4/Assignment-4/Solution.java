@@ -11,13 +11,19 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
         String inputstring = input.nextLine();
-        String reversestring = reverseString(inputstring);  
+        String reversestring = reverseString(inputstring);
         System.out.println(reversestring);
     }
+    /**
+     * { reverString function to reverse the string }.
+     *
+     * @param      funcstring  teststring to loop inside the loop.
+     *
+     * @return     { return value is of string type }.
+     */
     static String reverseString(String funcstring) {
         String outstring = "";
         for (int everyindex = 0; everyindex < funcstring.length(); everyindex++) {
