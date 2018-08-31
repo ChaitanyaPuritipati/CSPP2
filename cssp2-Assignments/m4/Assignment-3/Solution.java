@@ -12,8 +12,17 @@ public class Solution
 		for(int i = 0; i <= n; i++){
 			String s = sc.nextLine();
 			System.out.println(s);
-			// String res = binaryToDecimal(s);//Write binaryToDecimal function
-			// System.out.println(res);
+			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			System.out.println(res);
 		}
+	}
+	static String binaryToDecimal(String funcstring) {
+		System.out.println(funcstring);
+		int decimalnum = 0;
+		for (int i = funcstring.length() - 1; i >= 0; i--) {
+			System.out.println(funcstring.charAt(i));
+			// decimalnum = decimalnum + Math.pow(2, Integer.parseInt(funcstring.charAt(i)));
+		}
+		return String.valueOf(decimalnum);
 	}
 }
