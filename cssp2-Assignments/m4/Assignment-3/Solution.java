@@ -1,23 +1,39 @@
-// Given an String, Write a java method that returns the decimal value for the given binary string.
 import java.util.Scanner;
-public class Solution
-{/*
-	Do not modify this main function.
-	*/
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		for(int i = 0; i < n; i++){
-			String s = sc.next();
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
+/**
+ * { Solution class is created }.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//unused
+	}
+	/**
+	 * { Main function is created to start the execution of the program }.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
+		Scanner input = new Scanner(System.in);
+		int numofstrings = input.nextInt();
+		for(int i = 0; i < numofstrings; i++){
+			String binarystring = input.next();
+			String decimalstring = binaryToDecimal(binarystring);//Write binaryToDecimal function
+			System.out.println(decimalstring);
 		}
 	}
-	static String binaryToDecimal(String funcstring) {
+	/**
+	 * { binaryToDecimal function is created to convert binary number to decimal number }.
+	 *
+	 * @param      funcstring  Binary string 
+	 *
+	 * @return     { Return value is decimal string }.
+	 */
+	static String binaryToDecimal(final String funcstring) {
 		int decimalnum = 0;
 		for (int i = 0; i < funcstring.length(); i++) {
-			decimalnum = decimalnum + ((Integer.parseInt(funcstring.charAt(i) + ""))*((int)Math.pow(2, funcstring.length()-i-1)));
+			decimalnum = decimalnum + ((Integer.parseInt (funcstring.charAt(i) + ""))*((int) Math.pow(2, funcstring.length()-i-1)));
 		}
 		return (decimalnum + "");
 	}
