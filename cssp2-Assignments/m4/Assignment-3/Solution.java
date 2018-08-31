@@ -26,14 +26,14 @@ final class Solution {
     /**
      * { binaryToDecimal function is to convert binary to decimal }.
      *
-     * @param      funcstring  Binary string 
+     * @param      funcstring  Binary string
      *
      * @return     { Return value is decimal string }.
      */
     static String binaryToDecimal(final String funcstring) {
         int decimalnum = 0;
         for (int i = 0; i < funcstring.length(); i++) {
-            int everycharint = (Integer.parseInt (funcstring.charAt(i) + ""));
+            int everycharint = (Integer.parseInt(funcstring.charAt(i) + ""));
             int power = (int) Math.pow(2, funcstring.length() - i - 1);
             decimalnum = decimalnum + (everycharint) * (power);
         }
