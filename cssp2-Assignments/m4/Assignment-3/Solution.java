@@ -19,7 +19,6 @@ public class Solution
 		for (int i = 0; i < funcstring.length(); i++) {
 			decimalnum = decimalnum + ((Integer.parseInt(funcstring.charAt(i) + ""))*((int)Math.pow(2, funcstring.length()-i-1)));
 		}
-		decimalnum = (int) decimalnum;
 		return (decimalnum + "");
 	}
 }
