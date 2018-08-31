@@ -24,7 +24,7 @@ final class Solution {
         }
     }
     /**
-     * { binaryToDecimal function is created to convert binary number to decimal number }.
+     * { binaryToDecimal function is to convert binary to decimal }.
      *
      * @param      funcstring  Binary string 
      *
