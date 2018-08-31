@@ -25,6 +25,7 @@ public class Solution
 		}
 		System.out.println("looping done");
 		decimalnum = (int) decimalnum;
+		System.out.println(decimalnum);
 		return (decimalnum + "");
 	}
 }
