@@ -24,6 +24,7 @@ public class Solution
 			decimalnum = decimalnum + (Integer.parseInt(funcstring.charAt(i) + ""))*(Math.pow(2, funcstring.length()-i-1));
 		}
 		System.out.println("looping done");
+		decimalnum = (int) decimalnum;
 		return (decimalnum + "");
 	}
 }
