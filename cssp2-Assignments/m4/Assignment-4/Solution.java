@@ -3,6 +3,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         //unused.
     }
@@ -24,9 +27,9 @@ final class Solution {
      *
      * @return     { return value is of string type }.
      */
-    static String reverseString(String funcstring) {
+    static String reverseString(final String funcstring) {
         String outstring = "";
-        for (int everyindex = 0; everyindex < funcstring.length(); 
+        for (int everyindex = 0; everyindex < funcstring.length();
             everyindex++) {
             outstring = funcstring.charAt(everyindex) + outstring;
         }
