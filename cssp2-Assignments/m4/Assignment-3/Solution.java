@@ -11,9 +11,7 @@ public class Solution
 		int n = sc.nextInt();
 		for(int i = 0; i < n; i++){
 			String s = sc.next();
-			System.out.println(s);
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println("entered after function");
 			System.out.println(res);
 		}
 	}
