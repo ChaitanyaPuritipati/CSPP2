@@ -13,7 +13,7 @@ public class Solution
 			String s = sc.nextLine();
 			// System.out.println(s);
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
+			// System.out.println(res);
 		}
 	}
 	static String binaryToDecimal(String funcstring) {
