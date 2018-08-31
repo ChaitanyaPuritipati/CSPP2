@@ -33,7 +33,8 @@ final class Solution {
     static String binaryToDecimal(final String funcstring) {
         int decimalnum = 0;
         for (int i = 0; i < funcstring.length(); i++) {
-            decimalnum = decimalnum + ((Integer.parseInt (funcstring.charAt(i) + ""))*((int) Math.pow(2, funcstring.length()-i-1)));
+            decimalnum = decimalnum + 
+            ((Integer.parseInt (funcstring.charAt(i) + ""))*((int) Math.pow(2, funcstring.length()-i-1)));
         }
         return (decimalnum + "");
     }
