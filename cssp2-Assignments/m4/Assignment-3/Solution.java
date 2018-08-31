@@ -19,7 +19,7 @@ public class Solution
 	static String binaryToDecimal(String funcstring) {
 		System.out.println(funcstring);
 		double decimalnum = 0;
-		for (int i = funcstring.length() - 1; i >= 0; i--) {
+		for (int i = (funcstring.length() - 1); i >= 0; i--) {
 			decimalnum = decimalnum + (Integer.parseInt(funcstring.charAt(i) + ""))*(Math.pow(2, i));
 		}
 		return (decimalnum + "");
