@@ -11,7 +11,7 @@ public class Solution
 		int n = sc.nextInt();
 		for(int i = 0; i <= n; i++){
 			String s = sc.nextLine();
-			System.out.println(s);
+			// System.out.println(s);
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
@@ -20,7 +20,7 @@ public class Solution
 		System.out.println(funcstring);
 		double decimalnum = 0;
 		for (int i = funcstring.length() - 1; i >= 0; i--) {
-			decimalnum = decimalnum + (Math.pow(2, Integer.parseInt(funcstring.charAt(i) + "")));
+			decimalnum = decimalnum + (Integer.parseInt(funcstring.charAt(i) + ""))*(Math.pow(2, i));
 		}
 		return (decimalnum + "");
 	}
