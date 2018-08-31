@@ -26,7 +26,8 @@ final class Solution {
      */
     static String reverseString(String funcstring) {
         String outstring = "";
-        for (int everyindex = 0; everyindex < funcstring.length(); everyindex++) {
+        for (int everyindex = 0; everyindex < funcstring.length(); 
+            everyindex++) {
             outstring = funcstring.charAt(everyindex) + outstring;
         }
         return outstring;
