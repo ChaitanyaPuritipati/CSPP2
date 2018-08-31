@@ -21,6 +21,9 @@ public class Solution
 		int decimalnum = 0;
 		for (int i = funcstring.length() - 1; i >= 0; i--) {
 			System.out.println(funcstring.charAt(i));
+			System.out.println((int)(funcstring.charAt(i)));
+			
+
 			// decimalnum = decimalnum + Math.pow(2, Integer.parseInt(funcstring.charAt(i)));
 		}
 		return String.valueOf(decimalnum);
