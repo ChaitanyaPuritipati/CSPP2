@@ -18,14 +18,11 @@ public class Solution
 		}
 	}
 	static String binaryToDecimal(String funcstring) {
-		System.out.println("entered into function");
-		double decimalnum = 0;
+		int decimalnum = 0;
 		for (int i = 0; i < funcstring.length(); i++) {
-			decimalnum = decimalnum + (Integer.parseInt(funcstring.charAt(i) + ""))*(Math.pow(2, funcstring.length()-i-1));
+			decimalnum = decimalnum + ((Integer.parseInt(funcstring.charAt(i) + ""))*((int)Math.pow(2, funcstring.length()-i-1)));
 		}
-		System.out.println("looping done");
 		decimalnum = (int) decimalnum;
-		System.out.println(decimalnum);
 		return (decimalnum + "");
 	}
 }
