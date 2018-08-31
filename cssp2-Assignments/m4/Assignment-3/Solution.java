@@ -17,7 +17,6 @@ public class Solution
 		}
 	}
 	static String binaryToDecimal(String funcstring) {
-		System.out.println(funcstring);
 		double decimalnum = 0;
 		for (int i = (funcstring.length() - 1); i >= 0; i--) {
 			System.out.println(funcstring.charAt(i));
