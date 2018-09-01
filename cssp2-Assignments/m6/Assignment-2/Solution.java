@@ -23,15 +23,17 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+        final int hundred = 100;
+        final int fifty = 50;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] % 100 != 0) {
-                    int test = a[i][j] / 100;
-                    int sub = Math.abs(test * 100 - a[i][j]);
-                    if (sub < 50) {
-                        a[i][j] = test * 100;
-                    } else if (sub >= 50) {
-                        a[i][j] = (test + 1) * 100;
+                if (a[i][j] % hundred != 0) {
+                    int test = a[i][j] / hundred;
+                    int sub = Math.abs(test * hundred - a[i][j]);
+                    if (sub < fifty) {
+                        a[i][j] = test * hundred;
+                    } else if (sub >= fifty) {
+                        a[i][j] = (test + 1) * hundred;
                     }
                 }
             }
