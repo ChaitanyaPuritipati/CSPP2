@@ -18,7 +18,7 @@ public final class Solution {
      * @param      funcnum  It is of int type.
      */
     static void oddComposites(final int funcnum) {
-        int three = 3; //To remove magical number error.
+        final int three = 3; //To remove magical number error.
         for (int i = three; i <= funcnum; i = i + 2) {
             int flag = 0;
             for (int j = 2; j < i; j++) {
