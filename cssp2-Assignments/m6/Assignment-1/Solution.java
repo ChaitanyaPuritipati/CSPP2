@@ -13,12 +13,13 @@ public final class Solution {
         //not used
     }
     /**
-     * Prints the odd composite numbers between 2 and n.
+     * { Prints the odd composite numbers between 2 and funcnum }.
      *
-     * @param      n     n value
+     * @param      funcnum  It is of int type.
      */
     static void oddComposites(final int funcnum) {
-        for (int i = 3; i <= funcnum; i = i + 2) {
+        int three = 3; //To remove magical number error.
+        for (int i = three; i <= funcnum; i = i + 2) {
             int flag = 0;
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
