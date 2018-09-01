@@ -26,9 +26,16 @@ final class Solution {
         int hundred = 100;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] % 100 != 0) {
-                    int test = a[i][j] / hundred;
-                    a[i][j] = hundred * (test + 1);
+                if (a[i][j] % 100 != 0 ) {
+                    double test = a[i][j] / hundred;
+                    System.out.println(test);
+                    int test1 = a[i][j] / hundred;
+                    System.out.println(test1);
+                    if (test - test1 >= 0.5) {
+                        a[i][j] = hundred * (test1 + 1);
+                    } else if (test - test1 < 0.5) {
+                        a[i][j] = hundred * (test1);
+                    }
                 }
             }
         }
