@@ -25,12 +25,9 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-    	for (char element : charArray) {
-    		System.out.println(element);
-    		System.out.println(oldChar);
-    		System.out.println(newChar);
-    		if (element == oldChar) {
-    			element = newChar;
+    	for (int index = 0; index < charArray.length; index++) {
+    		if (charArray[index] == oldChar) {
+    			charArray[index] = newChar;
     		}
     	}
     	return charArray;
