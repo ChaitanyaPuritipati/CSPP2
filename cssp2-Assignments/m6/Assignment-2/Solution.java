@@ -22,7 +22,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, //continued. 
+    static int[][] roundHundred(final int[][] a, //continued.
         final int rows, final int columns) {
         final int hundred = 100;
         final int fifty = 50;
