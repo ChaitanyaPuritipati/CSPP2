@@ -26,8 +26,10 @@ final class Solution {
         int hundred = 100;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int test = a[i][j] / hundred;
-                a[i][j] = hundred * (test + 1);
+                if (a[i][j] % 100 != 0) {
+                    int test = a[i][j] / hundred;
+                    a[i][j] = hundred * (test + 1);
+                }
             }
         }
         return a;
