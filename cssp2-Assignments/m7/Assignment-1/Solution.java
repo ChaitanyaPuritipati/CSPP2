@@ -29,6 +29,9 @@ class InputValidator {
  * Class for solution.
  */
 final class Solution {
+    private Solution(){
+        //unused
+    }
     public static void main(final String args[]) {
         Scanner scan = new Scanner(System.in);
         String input = scan.next();
