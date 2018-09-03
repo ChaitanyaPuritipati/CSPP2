@@ -36,7 +36,7 @@ final class Solution {
         //unused
     }
     /**
-     * { Main function to intiate the program }
+     * { Main function to intiate the program }.
      *
      * @param      args  The arguments
      */
