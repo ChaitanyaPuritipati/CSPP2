@@ -12,7 +12,7 @@ class InputValidator {
      *
      * @param      giveninput  String type
      */
-    public InputValidator(final String giveninput) {
+    InputValidator(final String giveninput) {
         this.testinput = giveninput;
     }
     /**
@@ -28,7 +28,7 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     public static void main(final String args[]) {
         Scanner scan = new Scanner(System.in);
         String input = scan.next();
