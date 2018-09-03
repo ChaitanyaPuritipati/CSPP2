@@ -6,7 +6,7 @@ class InputValidator {
 	}
 	public boolean validateData() {
 		final int six = 6;
-		return this.testinput.length() > six;
+		return this.testinput.length() >= six;
 	}
 }
 public class Solution {
