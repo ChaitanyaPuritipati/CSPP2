@@ -36,7 +36,9 @@ final class Solution {
         //unused
     }
     /**
-     * { main function to initiate the program }.
+     * { Main function to intiate the program }
+     *
+     * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
