@@ -35,11 +35,13 @@ final class Solution {
     private Solution() {
         //unused
     }
-    public static void main(final String args[]) {
+    /**
+     * { main function to initiate the program }.
+     */
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String input = scan.next();
         InputValidator inputclass = new InputValidator(input);
         System.out.println(inputclass.validateData());
-
     }
 }
