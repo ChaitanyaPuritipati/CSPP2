@@ -29,7 +29,10 @@ class InputValidator {
  * Class for solution.
  */
 final class Solution {
-    private Solution(){
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
         //unused
     }
     public static void main(final String args[]) {
