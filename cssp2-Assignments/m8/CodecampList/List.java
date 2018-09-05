@@ -128,12 +128,20 @@ public class List {
 			System.out.println("Invalid Position Exception");
 			return;
 		} else {
-			int testindex = index + 1;
-			for (int j = index; j < newlist.length; j++) {
-				newlist[j] = newlist[testindex];
-				testindex = testindex + 1;
+			int newlen = newlist.length - index;
+			int[] new1 = new int[newlen];
+			int j = 0;
+			for (int i = index; i < newlist.length; i++) {
+				new1[j] = newlist[i];
+				j++;
+			}
+			int k = 0;
+			for (int i = index - 1; i < newlist.length - 1; i++) {
+				newlist[i] = new1[k];
+				k++;
 			}
 			size--;
+
 		}
 	}
 
@@ -149,7 +157,7 @@ public class List {
 	 * number of items in the list? Would size variable be useful?
 	 */
 	public int get(int index) {
-		if (index <=size) {
+		if (index <= size) {
 			return newlist[index];
 		}
 		return -1;
@@ -178,7 +186,7 @@ public class List {
 	public String toString() {
 		int[] stringlist = new int[size];
 		for (int i = 0; i < size; i++) {
-            stringlist[i] = newlist[i];
+			stringlist[i] = newlist[i];
 		}
 		return Arrays.toString(stringlist).replaceAll(" ", "");
 	}
