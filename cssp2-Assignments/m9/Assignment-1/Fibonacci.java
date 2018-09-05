@@ -18,7 +18,7 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public class Fibonacci {
+public final class Fibonacci {
     /**
      * Constructs the object.
      */
@@ -39,14 +39,14 @@ public class Fibonacci {
      *
      * @return     { List type }.
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         // todo - complete this method
         List fibolist = new List(n);
         int firstnum = 0;
         int secondnum = 1;
         fibolist.add(firstnum);
         fibolist.add(secondnum);
-        for (int i = 0; i < n - 2; i++ ) {
+        for (int i = 0; i < n - 2; i++) {
             int temp = secondnum;
             secondnum = firstnum + secondnum;
             firstnum = temp;
