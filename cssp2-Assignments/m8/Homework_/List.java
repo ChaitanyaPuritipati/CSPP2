@@ -287,7 +287,7 @@ public class List {
 			}
 		}
 		catch(Exception e) {
-			System.out.println(e);
+			System.out.println("Negative Index Exception");
 		}
 
 	}
