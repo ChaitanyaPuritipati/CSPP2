@@ -278,6 +278,9 @@ public class List {
 			resize();
 		}
 		try {
+			if (index == 0 && size == 0) {
+				add(item);
+			}
 			if (index < size) {
 				for (int i = size; i >= index; i--) {
 					list[i] = list[i - 1];
