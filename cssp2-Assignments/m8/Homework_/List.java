@@ -264,7 +264,7 @@ public class List {
 		list = Arrays.copyOf(list, 2 * list.length);
 	}
 	public void addAll(int items[]) {
-		for (int i = 1; i < items.length; i++) {
+		for (int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
 	}
