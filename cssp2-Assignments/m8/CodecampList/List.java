@@ -128,10 +128,10 @@ public class List {
 			System.out.println("Invalid Position Exception");
 			return;
 		} else {
-			int newlen = newlist.length - index;
+			int newlen = newlist.length - index - 1;
 			int[] new1 = new int[newlen];
 			int j = 0;
-			for (int i = index; i < newlist.length; i++) {
+			for (int i = index + 1; i < newlist.length; i++) {
 				new1[j] = newlist[i];
 				j++;
 			}
