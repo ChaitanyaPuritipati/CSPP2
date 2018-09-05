@@ -136,12 +136,11 @@ public class List {
 				j++;
 			}
 			int k = 0;
-			for (int i = index - 1; i < newlist.length - 1; i++) {
+			for (int i = index; i < newlist.length - 1; i++) {
 				newlist[i] = new1[k];
 				k++;
 			}
 			size--;
-
 		}
 	}
 
