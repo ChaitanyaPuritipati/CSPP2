@@ -180,7 +180,7 @@ public class List {
 		for (int i = 0; i < size; i++) {
             stringlist[i] = newlist[i];
 		}
-		return Arrays.toString(stringlist);
+		return Arrays.toString(stringlist).replaceAll(" ", "");
 	}
 
 	/*
