@@ -277,13 +277,19 @@ public class List {
 		if (size == list.length) {
 			resize();
 		}
-		if (index < size) {
-			for (int i = size; i >= index; i--) {
-				list[i] = list[i - 1];
+		try {
+			if (index < size) {
+				for (int i = size; i >= index; i--) {
+					list[i] = list[i - 1];
+				}
+				list[index] = item;
+				size++;
 			}
-			list[index] = item;
-			size++;
 		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+
 	}
 
 	/* Returns the count of occurances of a given item in the list*/
