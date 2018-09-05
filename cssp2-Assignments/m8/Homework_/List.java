@@ -282,7 +282,7 @@ public class List {
 			resize();
 		}
 		if (index == 0 && size == 0) {
-			add(item);
+			list[0] = item;
 			size++;
 			return;
 		}
