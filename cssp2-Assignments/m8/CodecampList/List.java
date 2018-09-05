@@ -251,7 +251,9 @@ public class List {
 					l.remove(Integer.parseInt(tokens[1]));
 					break;
 				case "indexOf":
-					System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+					if (l.indexOf(Integer.parseInt(tokens[1])) != -1) {
+						System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+					}
 					break;
 				case "get":
 					System.out.println(l.get(Integer.parseInt(tokens[1])));
