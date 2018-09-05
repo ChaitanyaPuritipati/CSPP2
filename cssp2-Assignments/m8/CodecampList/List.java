@@ -29,7 +29,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
+    private int[] newlist; 
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -49,7 +49,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
+    private int size; 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -70,7 +70,10 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-
+        Scanner input = new Scanner(System.in);
+        size = input.nextInt();
+        System.out.println(size);
+        newlist = new int[size];
     }
     
     /*
@@ -198,10 +201,7 @@ public class List {
             // read the line
             String line = stdin.nextLine();
             // split the line using space
-            System.out.println(line);
             String[] tokens = line.split(" ");
-            System.out.println(tokens[0]);
-            System.out.println(tokens[1]);
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
