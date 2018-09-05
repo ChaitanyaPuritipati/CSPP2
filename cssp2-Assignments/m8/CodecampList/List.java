@@ -72,7 +72,7 @@ public class List {
         // That is the initial value to use for size.
         size = 14;
         // System.out.println(size);
-        newlist = new int[size];
+        // newlist = new int[size];
     }
     
     /*
