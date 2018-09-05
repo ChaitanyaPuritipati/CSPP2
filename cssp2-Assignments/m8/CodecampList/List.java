@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -29,7 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] newlist;
+
+
+
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -49,7 +54,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
-    private int size;
+
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -57,6 +62,17 @@ public class List {
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * { It is of int type }.
+     */
+    private int[] newlist;
+    /**
+     * { It is of int type }.
+     */
+    private int size;
+    /**
+     * Constructs the object.
      */
     public List() {
 
@@ -71,7 +87,6 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        // System.out.println(size);
         final int ten = 10;
         newlist = new int[ten];
     }
@@ -86,6 +101,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * { add function is to insert elements }.
+     *
+     * @param      item  it is of int type
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         newlist[size] = item;
@@ -97,6 +117,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { size function to return size }.
+     *
+     * @return     { It if of int type }.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -122,6 +147,11 @@ public class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     */
+    /**
+     * { remove function to remove element }.
+     *
+     * @param      index  parameter
      */
     public void remove(int index) {
         if (index >= size) {
@@ -154,6 +184,13 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * { to get value at that index }.
+     *
+     * @param      index  The index
+     *
+     * @return     { int type }.
+     */
     public int get(int index) {
         if (index <= size) {
             return newlist[index];
@@ -180,6 +217,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         int[] stringlist = new int[size];
         for (int i = 0; i < size; i++) {
@@ -192,6 +234,13 @@ public class List {
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     */
+    /**
+     * { checks for the element }.
+     *
+     * @param      item  The item
+     *
+     * @return     { Boolean type }.
      */
     public boolean contains(int item) {
         for (int i = 0; i < size; i++) {
@@ -207,6 +256,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { int type }.
+     */
     public int indexOf(int item) {
         for (int i = 0; i < size; i++) {
             if (newlist[i] == item) {
@@ -215,6 +271,11 @@ public class List {
         }
         return -1;
     }
+    /**
+     * { main function }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
