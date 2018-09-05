@@ -71,7 +71,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         Scanner input = new Scanner(System.in);
-        size = input.nextInt();
+        size = Integer.parseInt(input.next());
         System.out.println(size);
         newlist = new int[size];
     }
