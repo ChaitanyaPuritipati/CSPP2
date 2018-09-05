@@ -70,11 +70,10 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        size = 14;
+        size = 0;
         // System.out.println(size);
-        // newlist = new int[size];
+        newlist = new int[10];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -202,8 +201,8 @@ public class List {
             System.out.println(line);
             // split the line using space
             String[] tokens = line.split(" ");
-            System.out.println(tokens[0]);
-            System.out.println(tokens[1]);
+            // System.out.println(tokens[0]);
+            // System.out.println(tokens[1]);
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
