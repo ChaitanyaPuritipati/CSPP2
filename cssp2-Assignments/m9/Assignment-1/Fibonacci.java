@@ -39,6 +39,7 @@ public class Fibonacci
             firstnum = temp;
             fibolist.add(secondnum);
         }
+        System.out.println(fibolist);
         return fibolist;
     }
 	public static void main(String[] args) {
