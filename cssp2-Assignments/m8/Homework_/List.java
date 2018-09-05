@@ -280,6 +280,7 @@ public class List {
 		try {
 			if (index == 0 && size == 0) {
 				add(item);
+				size++;
 			}
 			if (index < size) {
 				for (int i = size; i >= index; i--) {
