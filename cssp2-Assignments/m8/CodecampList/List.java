@@ -199,7 +199,9 @@ public class List {
         // check if there is one more line to process
         while (stdin.hasNext()) {
             // read the line
+            System.out.println("entered");
             String line = stdin.nextLine();
+            System.out.println(line);
             // split the line using space
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
