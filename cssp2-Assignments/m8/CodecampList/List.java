@@ -201,7 +201,7 @@ public class List {
             System.out.println(line);
             // split the line using space
             String[] tokens = line.split(" ");
-            // System.out.println(tokens[0]);
+            System.out.println(tokens[0]);
             // System.out.println(tokens[1]);
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
