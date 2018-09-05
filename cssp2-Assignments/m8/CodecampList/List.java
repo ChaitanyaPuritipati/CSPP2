@@ -124,7 +124,7 @@ public class List {
 	 * The method returns void (nothing)
 	 */
 	public void remove(int index) {
-		if (index > size) {
+		if (index >= size) {
 			System.out.println("Invalid Position Exception");
 			return;
 		} else {
@@ -197,8 +197,12 @@ public class List {
 	 * the item exists and otherwise false
 	 */
 	public boolean contains(int item) {
-		// Replace the code below
-		return true;
+		for (int i = 0; i < size; i++) {
+			if (newlist[i] == item) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/*
@@ -207,52 +211,55 @@ public class List {
 	 * or -1 if this list does not contain the element.
 	 */
 	public int indexOf(int item) {
-		// Replace the code below
+		for (int i = 0; i < size; i++) {
+			if (newlist[i] == item) {
+				return i;
+			}
+		}
 		return -1;
-	}
+    }
+		public static void main(String[] args) {
+			// create an object of the list to invoke methods on it
+			List l = new List();
 
-	public static void main(String[] args) {
-		// create an object of the list to invoke methods on it
-		List l = new List();
-
-		// code to read the test cases input file
-		Scanner stdin = new Scanner(new BufferedInputStream(System.in));
-		// check if there is one more line to process
-		while (stdin.hasNext()) {
-			// read the line
-			String line = stdin.nextLine();
-			// split the line using space
-			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
-			switch (tokens[0]) {
-			case "add":
-				l.add(Integer.parseInt(tokens[1]));
-				break;
-			case "size":
-				// invoke size method and print the list size
-				// BTW, list size is not the array size
-				// it is the number of items in the list
-				System.out.println(l.size());
-				break;
-			case "print":
-				// print the list (implement toString for this to work)
-				// expected format is [item-1,item-2,...,item-n]
-				// review the output testcase file
-				System.out.println(l);
-				break;
-			case "remove":
-				l.remove(Integer.parseInt(tokens[1]));
-				break;
-			case "indexOf":
-				System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
-				break;
-			case "get":
-				System.out.println(l.get(Integer.parseInt(tokens[1])));
-				break;
-			case "contains":
-				System.out.println(l.contains(Integer.parseInt(tokens[1])));
-				break;
+			// code to read the test cases input file
+			Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+			// check if there is one more line to process
+			while (stdin.hasNext()) {
+				// read the line
+				String line = stdin.nextLine();
+				// split the line using space
+				String[] tokens = line.split(" ");
+				// based on the list operation invoke the corresponding method
+				switch (tokens[0]) {
+				case "add":
+					l.add(Integer.parseInt(tokens[1]));
+					break;
+				case "size":
+					// invoke size method and print the list size
+					// BTW, list size is not the array size
+					// it is the number of items in the list
+					System.out.println(l.size());
+					break;
+				case "print":
+					// print the list (implement toString for this to work)
+					// expected format is [item-1,item-2,...,item-n]
+					// review the output testcase file
+					System.out.println(l);
+					break;
+				case "remove":
+					l.remove(Integer.parseInt(tokens[1]));
+					break;
+				case "indexOf":
+					System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+					break;
+				case "get":
+					System.out.println(l.get(Integer.parseInt(tokens[1])));
+					break;
+				case "contains":
+					System.out.println(l.contains(Integer.parseInt(tokens[1])));
+					break;
+				}
 			}
 		}
 	}
-}
