@@ -200,7 +200,8 @@ public class List {
             // split the line using space
             System.out.println(line);
             String[] tokens = line.split(" ");
-            System.out.println(tokens);
+            System.out.println(tokens[0]);
+            System.out.println(tokens[1]);
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
