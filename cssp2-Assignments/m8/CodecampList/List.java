@@ -70,8 +70,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        Scanner input = new Scanner(System.in);
-        size = Integer.parseInt(input.next());
+        size = 14;
         System.out.println(size);
         newlist = new int[size];
     }
@@ -199,11 +198,12 @@ public class List {
         // check if there is one more line to process
         while (stdin.hasNext()) {
             // read the line
-            System.out.println("entered");
             String line = stdin.nextLine();
             System.out.println(line);
             // split the line using space
             String[] tokens = line.split(" ");
+            System.out.println(tokens[0]);
+            System.out.println(tokens[1]);
             // based on the list operation invoke the corresponding method
             System.out.println(tokens[0]);
             System.out.println(tokens[1]);
