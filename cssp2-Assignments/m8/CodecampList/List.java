@@ -106,7 +106,7 @@ public class List {
      *
      * @param      item  it is of int type
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         newlist[size] = item;
         size++;
@@ -153,7 +153,7 @@ public class List {
      *
      * @param      index  parameter
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index >= size) {
             System.out.println("Invalid Position Exception");
             return;
@@ -191,7 +191,7 @@ public class List {
      *
      * @return     { int type }.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index <= size) {
             return newlist[index];
         }
@@ -242,7 +242,7 @@ public class List {
      *
      * @return     { Boolean type }.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (newlist[i] == item) {
                 return true;
@@ -263,7 +263,7 @@ public class List {
      *
      * @return     { int type }.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (newlist[i] == item) {
                 return i;
