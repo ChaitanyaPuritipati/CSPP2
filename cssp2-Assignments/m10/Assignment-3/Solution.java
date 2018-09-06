@@ -69,8 +69,7 @@ final class Solution {
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        Scanner stdin = new Scanner(
-            new BufferedInputStream(System.in));
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
         switch (objectType) {
         case "S"://This case will be executed for String type list
@@ -116,6 +115,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listString.contains(tokens[1]));
                     break;
+                default:    
                 }
             }
             break;
@@ -167,6 +167,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
                     break;
+                default:    
                 }
             }
             break;
@@ -218,6 +219,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
                     break;
+                default:    
                 }
             }
             break;
@@ -269,6 +271,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listCharacter.contains(tokens[1].charAt(0)));
                     break;
+                default:    
                 }
             }
             break;
@@ -320,6 +323,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
                     break;
+                default:    
                 }
             }
             break;
@@ -371,6 +375,7 @@ final class Solution {
                 case "contains":
                     System.out.println(listStudent.contains(new Student(tokens[1])));
                     break;
+                default:    
                 }
             }
             break;
