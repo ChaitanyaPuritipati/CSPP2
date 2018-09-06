@@ -159,7 +159,7 @@ public class List<E> {
         for (int i = 0; i < size; i++) {
             // System.out.println(list[i]);
             // System.out.println(item);
-            if ((E) list[i] == item) {
+            if (list[i].equals(item)) {
                 return true;
             }
         }
