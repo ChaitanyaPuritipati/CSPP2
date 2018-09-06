@@ -171,7 +171,7 @@ public class StringList implements StringListInterface {
 	 */
 
 	public void remove(int index) {
-		if (index >= size && index < 0) {
+		if (index >= size || index < 0) {
 			System.out.println("Invalid Position Exception");
 			return;
 		} else {
