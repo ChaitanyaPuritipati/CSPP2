@@ -69,9 +69,6 @@ public class StringList implements StringListInterface {
 	 * The purpose of the constructor is to initialize the
 	 * class variables with some default values.
 	 */
-
-
-
 	public StringList() {
 
 		// what are the two variables to be initialized here?
