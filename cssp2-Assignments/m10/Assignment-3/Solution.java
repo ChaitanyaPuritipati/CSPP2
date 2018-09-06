@@ -279,7 +279,7 @@ final class Solution {
                     break;
                 case "contains":
                     System.out.println(listCharacter.contains(
-                        tokens[1].charAt(0)));
+                                           tokens[1].charAt(0)));
                     break;
                 default:
                 }
@@ -302,7 +302,7 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -325,13 +325,16 @@ final class Solution {
                     listDouble.remove(Integer.parseInt(tokens[1]));
                     break;
                 case "indexOf":
-                    System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        listDouble.indexOf(Double.parseDouble(tokens[1])));
                     break;
                 case "get":
-                    System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+                    System.out.println(
+                        listDouble.get(Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
-                    System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        listDouble.contains(Double.parseDouble(tokens[1])));
                     break;
                 default:
                 }
@@ -354,7 +357,7 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
@@ -377,13 +380,16 @@ final class Solution {
                     listStudent.remove(Integer.parseInt(tokens[1]));
                     break;
                 case "indexOf":
-                    System.out.println(listStudent.indexOf(new Student(tokens[1])));
+                    System.out.println(
+                        listStudent.indexOf(new Student(tokens[1])));
                     break;
                 case "get":
-                    System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+                    System.out.println(
+                        listStudent.get(Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
-                    System.out.println(listStudent.contains(new Student(tokens[1])));
+                    System.out.println(
+                        listStudent.contains(new Student(tokens[1])));
                     break;
                 default:
                 }
