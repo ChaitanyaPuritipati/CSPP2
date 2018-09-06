@@ -81,7 +81,8 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
     }
 
     /*
@@ -103,7 +104,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -124,7 +125,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
             resize();
@@ -234,7 +235,7 @@ public class List {
      *
      * @return     { element or -1 }.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -293,7 +294,7 @@ public class List {
      *
      * @return     { boolean type }.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
     /*
@@ -308,7 +309,7 @@ public class List {
      *
      * @return     { Returns index or -1 }.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
@@ -326,7 +327,7 @@ public class List {
     /**
      * { To add list of items at once }.
      */
-    public void addAll(int items[]) {
+    public void addAll(final int items[]) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
@@ -342,7 +343,7 @@ public class List {
      * @param      index  int type
      * @param      item   int type
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
             return;
@@ -384,7 +385,7 @@ public class List {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
