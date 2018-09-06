@@ -7,7 +7,7 @@ class Student {
     /**
      * { It is of string type }.
      */
-    private String name;
+    private String studentname;
     /**
      * Constructs the object.
      *
@@ -15,7 +15,7 @@ class Student {
      */
     public Student(final String name) {
         //A constructor used to initialize the instance variables
-        this.name = name;
+        this.studentname = name;
     }
     /**
      * Gets the name.
@@ -24,7 +24,7 @@ class Student {
      */
     public String getName() {
         //Getter method which returns the value of instance variable
-        return this.name;
+        return this.studentname;
     }
     @Override
     /**
@@ -49,7 +49,7 @@ class Student {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.name;
+        return this.studentname;
     }
 }
 /**
