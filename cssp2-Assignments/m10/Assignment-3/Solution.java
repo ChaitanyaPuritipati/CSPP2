@@ -61,10 +61,14 @@ class Student {
  */
 final class Solution {
     /**
-     * Constructs the object.
+     * { Scanner object }.
      */
     private static Scanner stdin = new Scanner(
         new BufferedInputStream(System.in));
+    /**
+     * Constructs the object.
+     */
+
     private Solution() {
         //unused
     }
