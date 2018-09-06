@@ -271,8 +271,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -314,8 +315,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -329,6 +331,7 @@ public class List {
     }
     /**
      * { To add list of items at once }.
+     * @param     items items list
      */
     public void addAll(final int items[]) {
         for (int i = 0; i < items.length; i++) {
