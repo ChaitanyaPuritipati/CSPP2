@@ -63,7 +63,8 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    private static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+    private static Scanner stdin = new Scanner(
+        new BufferedInputStream(System.in));
     private Solution() {
         //unused
     }
