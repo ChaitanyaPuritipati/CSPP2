@@ -333,7 +333,7 @@ public class List {
      * { To add list of items at once }.
      * @param     items items list
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
@@ -390,7 +390,11 @@ public class List {
         return count;
     }
 
-
+    /**
+     * { Main function starts here }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -411,8 +415,10 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1) {
+                            l.add(Integer.parseInt(
+                                      t[0]), Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -452,6 +458,7 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+            default:
             }
         }
     }
