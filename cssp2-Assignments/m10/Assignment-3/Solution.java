@@ -247,7 +247,7 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = t1[i].charAt(0);
                         }
                         listCharacter.addAll(temp);
@@ -270,13 +270,16 @@ final class Solution {
                     listCharacter.remove(Integer.parseInt(tokens[1]));
                     break;
                 case "indexOf":
-                    System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
+                    System.out.println(
+                        listCharacter.indexOf(tokens[1].charAt(0)));
                     break;
                 case "get":
-                    System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
+                    System.out.println(
+                        listCharacter.get(Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
-                    System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+                    System.out.println(listCharacter.contains(
+                        tokens[1].charAt(0)));
                     break;
                 default:
                 }
