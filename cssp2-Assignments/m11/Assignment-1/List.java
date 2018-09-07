@@ -259,7 +259,7 @@ public class List {
         System.out.println(size + "listsize");
         System.out.println(testlist.size + "testsize");
         for(int i = 0; i < size - testlist.size + 1; i++) {
-            System.out.println(subList(i, i + testlist.size).toString());
+            System.out.println(subList(i, i + testlist.size).toString() + "sublist");
             if(subList(i, i + testlist.size).list == testlist.list) {
                 return true;
             }
