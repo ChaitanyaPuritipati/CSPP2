@@ -269,7 +269,8 @@ public class List {
 	* the simpler.
 	*/
 	public void clear() {
-		removeAll(list);
+		list = new int[10];
+		size = 0;
 	}
 	public void resize() {
 		list = Arrays.copyOf(list, 2 * list.length);
