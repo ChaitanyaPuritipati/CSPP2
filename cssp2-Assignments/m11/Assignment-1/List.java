@@ -266,13 +266,13 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-     /**
-      * { count function }.
-      *
-      * @param      item  The item
-      *
-      * @return     { int type }.
-      */
+    /**
+     * { count function }.
+     *
+     * @param      item  The item
+     *
+     * @return     { int type }.
+     */
     public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -431,18 +431,19 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList":
                 if (tokens.length != 2) {
                     break;
                 }
-                String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null) {
-                    System.out.println(object);
-                }
-                break;
-            }
+
+                    String[] arrstring3 = tokens[1].split(",");
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
+                        System.out.println(object);
+                    }
+                    break;
+                
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
