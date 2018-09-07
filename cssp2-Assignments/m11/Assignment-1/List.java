@@ -215,16 +215,22 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
+    public int count(final int item) {
+        int count = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == item) {
+                count++;
+            }
+        }
+        return count;
+    }
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-            for(int j = 0; j < size; j++) {
-                System.out.println(size + "size");
-                System.out.println(list[j] + "list");
-                System.out.println(newArray[i] + "new");
-                if(list[j] == newArray[i]) {
-                    remove(j);
-                }
+            int counter = count(newArray[i]);
+            for (int j = 0; j < counter; j++) {
+                remove(indexOf(newArray[i]));
             }
+
         }
     }
     /*
