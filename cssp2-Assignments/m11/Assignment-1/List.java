@@ -261,7 +261,7 @@ public class List {
         for(int i = 0; i < size - testlist.size + 1; i++) {
             System.out.println(subList(i, i + testlist.size).toString() + "sublist");
             System.out.println(testlist.toString() + "testlist");
-            if(subList(i, i + testlist.size).list.equals(testlist.list)) {
+            if(Arrays.equals(subList(i, i + testlist.size).list, testlist.list)) {
                 return true;
             }
         }
