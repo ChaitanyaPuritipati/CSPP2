@@ -65,6 +65,12 @@ final class Student {
  */
 class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused
+    }
+    /**
      * { listexecution }.
      *
      * @param      stdin  The stdin
