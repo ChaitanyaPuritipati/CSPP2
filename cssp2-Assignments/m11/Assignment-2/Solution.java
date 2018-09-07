@@ -63,7 +63,7 @@ final class Student {
 /**
  * Class for solution.
  */
-final class Solution {
+class Solution {
     /**
      * { listexecution }.
      *
