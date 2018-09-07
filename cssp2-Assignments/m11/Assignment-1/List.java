@@ -228,6 +228,7 @@ public class List {
         for (int i = 0; i < newArray.length; i++) {
             int counter = count(newArray[i]);
             for (int j = 0; j < counter; j++) {
+                System.out.println(indexOf(newArray[i]));
                 remove(indexOf(newArray[i]));
             }
 
