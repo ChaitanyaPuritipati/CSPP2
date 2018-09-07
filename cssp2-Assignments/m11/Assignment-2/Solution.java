@@ -34,7 +34,8 @@ final class Student {
      *
      * @return     { boolean type }
      */
-    public boolean equals(final Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) {
+    //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -62,13 +63,13 @@ final class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * { listexecution }.
      *
      * @param      stdin  The stdin
      */
-    public static void executeListInteger(Scanner stdin) {
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -125,8 +126,9 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Integer[] a = new Integer[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
