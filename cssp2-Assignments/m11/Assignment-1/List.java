@@ -216,13 +216,11 @@ public class List {
 	 array.
 	*/
 	public void removeAll(int[] newArray) {
-		for (int i = 0; i < list.length - newArray.length; i++) {
-			if (Arrays.equals(subList(i, i+newArray.length).list, newArray)) {
-				for(int j = i; j < i + newArray.length; j++) {
-					list[j] = 0;
+		for (int i = 0; i < newArray.length; i++) {
+			for(int j = 0; j < size; j++) {
+				if(list[j] == newArray[i]) {
+					remove(j);
 				}
-				size = size - newArray.length;
-			return;	
 			}
 		}
 	}
@@ -249,19 +247,12 @@ public class List {
 	exactly matching with the given list or not.
 	*/
 	public boolean equals(List testlist ) {
-		for (int i = 0; i < list.length - 5; i++) {
-			int flag = 1;
-			for (int element : testlist.list){
-				if(!(subList(i, i+5).contains(element))) {
-                     flag = 0;
-                     break;
-				}
-			}
-			if (flag == 1) {
-				return true;
+		for (int i = 0; i < testlist.size; i++) {
+			if (!(contains(testlist.list[i]))) {
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 	/*
 	* Removes all the elements from list
@@ -269,8 +260,8 @@ public class List {
 	* the simpler.
 	*/
 	public void clear() {
-		 list = new int[10];
-		 size = 0;
+		list = new int[10];
+		size = 0;
 	}
 	public void resize() {
 		list = Arrays.copyOf(list, 2 * list.length);
