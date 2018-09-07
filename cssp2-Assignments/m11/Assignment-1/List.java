@@ -230,6 +230,7 @@ public class List {
 			}
 			if (flag == 1) {
 				index = i;
+				System.out.println(index);
 				for (int l = index; l < index + newArray.length; l++) {
 					remove(l);
 				}
