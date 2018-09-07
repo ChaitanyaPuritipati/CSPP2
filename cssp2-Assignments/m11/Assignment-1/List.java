@@ -217,37 +217,14 @@ public class List {
 	*/
 	public void removeAll(int[] newArray) {
 		for (int i = 0; i < list.length - newArray.length; i++) {
-			System.out.println(subList(i, i+newArray.length).toString());
 			if (Arrays.equals(subList(i, i+newArray.length).list, newArray)) {
-				System.out.println("entered");
 				for(int j = i; j < i + newArray.length; j++) {
+					System.out.println(j);
 					remove(j);
 				}
 			return;	
 			}
 		}
-		// int index;
-		// int i;
-		// for (i = 0; i < list.length; i++) {
-		// 	int k = 0;
-		// 	int flag = 1;
-		// 	for (int j = i; j < i + newArray.length; j++) {
-		// 		if (list[j] != newArray[k]) {
-		// 			flag = 0;
-		// 			break;
-		// 		}
-		// 		k++;
-		// 	}
-		// 	if (flag == 1) {
-		// 		index = i;
-		// 		System.out.println(index + "hello");
-		// 		for (int l = index; l < index + newArray.length; l++) {
-		// 			remove(l);
-		// 		}
-		// 	} else {
-		// 		return;
-		// 	}
-		// }
 	}
 	/*
 	Returns a list object containing elements, including startIndex and
