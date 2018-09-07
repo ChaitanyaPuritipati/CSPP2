@@ -202,7 +202,8 @@ final class Solution {
                 break;
             case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(l.indexOf(Double.parseDouble(tokens[1])));
+                    System.out.println(l.indexOf(
+                                           Double.parseDouble(tokens[1])));
                 }
                 break;
             case "get":
@@ -212,7 +213,8 @@ final class Solution {
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(l.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(l.contains(
+                                           Double.parseDouble(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -229,19 +231,21 @@ final class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Double[] a = new Double[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Double.parseDouble(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
-                if (tokens.length != 2) break;
+            case "subList":
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
                 if (object != null)
                     System.out.println(object);
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
