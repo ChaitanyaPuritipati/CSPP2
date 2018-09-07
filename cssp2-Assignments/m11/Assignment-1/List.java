@@ -218,23 +218,22 @@ public class List {
 	public void removeAll(int[] newArray) {
 		int index;
 		int i;
-		for(i = 0; i < list.length; i++) {
+		for (i = 0; i < list.length; i++) {
 			int k = 0;
 			int flag = 1;
 			for (int j = i; j < i + newArray.length; j++) {
 				if (list[j] != newArray[k]) {
 					flag = 0;
-                    break;
+					break;
 				}
 				k++;
 			}
 			if (flag == 1) {
-                index = i;
-                for(int l = index; l < index + newArray.length; l++) {
-                	remove(l);
-                }
-			}
-			else {
+				index = i;
+				for (int l = index; l < index + newArray.length; l++) {
+					remove(l);
+				}
+			} else {
 				return;
 			}
 		}
@@ -252,7 +251,7 @@ public class List {
 			return null;
 		}
 		List newlist = new List();
-		for(int i = start; i < end; i++) {
+		for (int i = start; i < end; i++) {
 			newlist.add(list[i]);
 		}
 		return newlist;
@@ -263,12 +262,19 @@ public class List {
 	*/
 	public boolean equals(List testlist ) {
 		for (int i = 0; i < list.length - 5; i++) {
-			    if (subList(i, i + 5) == testlist ) {
-			    	return true;
-			    }    
+			int flag = 1;
+			for (int element : testlist.list){
+				if(!(subList(i, i+5).contains(element))) {
+                     flag = 0;
+                     break;
+				}
 			}
-		return false;	
+			if (flag == 1) {
+				return true;
+			}
 		}
+		return false;
+	}
 	/*
 	* Removes all the elements from list
 	* Think about this case and make the method
