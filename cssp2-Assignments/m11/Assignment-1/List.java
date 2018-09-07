@@ -218,6 +218,9 @@ public class List {
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             for(int j = 0; j < size; j++) {
+                System.out.println(size + "size");
+                System.out.println(list[j] + "list");
+                System.out.println(newArray[i] + "new");
                 if(list[j] == newArray[i]) {
                     remove(j);
                 }
