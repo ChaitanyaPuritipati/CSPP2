@@ -256,10 +256,8 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(List testlist ) {
-        for(int i = 0; i < size - testlist.size + 1; i++) {
-            if(Arrays.equals(subList(i, i + testlist.size).list, testlist.list)) {
-                return true;
-            }
+        if (Arrays.equals(list, testlist.list)) {
+            return true;
         }
         return false;
     }
