@@ -255,7 +255,7 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List testlist ) {
+    public boolean equals(List testlist) {
         if (Arrays.equals(list, testlist.list)) {
             return true;
         }
