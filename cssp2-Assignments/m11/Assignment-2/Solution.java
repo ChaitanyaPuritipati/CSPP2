@@ -14,7 +14,7 @@ final class Student {
      * @param      testname  The name
      */
     Student(final String testname) {
-    //A constructor used to initialize the instance variables
+        //A constructor used to initialize the instance variables
         this.name = testname;
     }
     /**
@@ -22,7 +22,8 @@ final class Student {
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+        //Getter method which returns the value of instance variable
         return this.name;
     }
     @Override
