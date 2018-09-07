@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * List of.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -81,7 +84,6 @@ public class List {
         list = new int[ten];
 
     }
-
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
