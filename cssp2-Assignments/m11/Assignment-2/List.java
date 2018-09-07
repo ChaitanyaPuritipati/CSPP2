@@ -213,6 +213,7 @@ public class List<E> {
 		for (int i = 0; i < list.length - 5; i++) {
 			int flag = 1;
 			for (E element : listdata.list) {
+				System.out.println(subList(i, i+5).toString());
 				if (!(subList(i, i + 5).contains(element))) {
 					flag = 0;
 					break;
