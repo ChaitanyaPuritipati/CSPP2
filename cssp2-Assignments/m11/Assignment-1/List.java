@@ -173,7 +173,7 @@ public class List {
      *
      * @return     { int type }.
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
             return -1;
@@ -208,7 +208,7 @@ public class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -228,7 +228,7 @@ public class List {
      *
      * @return     { int type }.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -245,7 +245,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
         }
@@ -275,7 +275,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int counter = count(newArray[i]);
             for (int j = 0; j < counter; j++) {
@@ -298,7 +298,7 @@ public class List {
      *
      * @return     { list return type }.
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         if (start < 0 || end < 0 || start >= end || (end - start == 1)) {
             System.out.println("Index Out of Bounds Exception");
             return null;
@@ -320,7 +320,7 @@ public class List {
      *
      * @return     { boolean type }
      */
-    public boolean equals(List testlist) {
+    public boolean equals(final List testlist) {
         if (Arrays.equals(list, testlist.list)) {
             return true;
         }
@@ -413,13 +413,16 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
