@@ -210,20 +210,12 @@ public class List<E> {
 	  i.e a List object is exactly matching with the given list or not.
 	 */
 	public boolean equals(List<E> listdata) {
-		for (int i = 0; i < size - listdata.list.length + 1 ; i++) {
-			int flag = 1;
-			for (E element : listdata.list) {
-				System.out.println(subList(i, i + listdata.list.length).toString());
-				if (!(subList(i, i + listdata.list.length).contains(element))) {
-					flag = 0;
-					break;
-				}
-			}
-			if (flag == 1) {
-				return true;
+		for (int i = 0; i < listdata.size; i++) {
+			if(!(contains(listdata.list[i]))) {
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 	/*Removes all the elements from list*/
 	public void clear() {
