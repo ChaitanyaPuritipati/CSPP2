@@ -230,6 +230,7 @@ public class List {
             for (int j = 0; j < counter; j++) {
                 System.out.println(indexOf(newArray[i]) + "hello" + newArray[i]);
                 remove(indexOf(newArray[i]));
+                System.out.println(list.toString());
             }
 
         }
