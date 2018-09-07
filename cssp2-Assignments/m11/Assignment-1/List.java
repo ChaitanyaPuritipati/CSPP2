@@ -219,10 +219,9 @@ public class List {
 		for (int i = 0; i < list.length - newArray.length; i++) {
 			if (Arrays.equals(subList(i, i+newArray.length).list, newArray)) {
 				for(int j = i; j < i + newArray.length; j++) {
-					System.out.println(size() + "hello");
-					System.out.println(j);
-					remove(j);
+					list[j] = 0;
 				}
+				size = size - newArray.length;
 			return;	
 			}
 		}
