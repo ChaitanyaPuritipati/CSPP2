@@ -195,6 +195,11 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         int[] stringlist = new int[size];
@@ -207,6 +212,13 @@ public class List {
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
+     */
+    /**
+     * { contains function }.
+     *
+     * @param      item  The item
+     *
+     * @return     { boolean type }
      */
     public boolean contains(final int item) {
         // Replace the code below
