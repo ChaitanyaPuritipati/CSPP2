@@ -535,7 +535,7 @@ final class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add((lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -580,7 +580,9 @@ final class Solution {
             executeListDouble(stdin);
             break;
 
-        case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+        case "O":
+        //This case will be executed for Student type list
+        //i.e to store List of Student Objects
             executeListStudent(stdin);
             break;
         default:
