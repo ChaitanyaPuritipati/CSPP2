@@ -196,7 +196,7 @@ public class List<E> {
 	 indicates the endIndex.
 	 */
 	public List subList(int n, int n2) {
-		if (n < 0 || n2 < 0 || n > n2) {
+		if (n < 0 || n2 < 0 || n >= n2 || (n2 - n == 1)) {
 			System.out.println("Index Out of Bounds Exception");
 			return null;
 		}
@@ -210,12 +210,10 @@ public class List<E> {
 	  i.e a List object is exactly matching with the given list or not.
 	 */
 	public boolean equals(List<E> listdata) {
-		for (int i = 0; i < listdata.size; i++) {
-			if(!(contains(listdata.list[i]))) {
-				return false;
+			if (Arrays.equals(list, listdata.list)) {
+				return true;
 			}
-		}
-		return true;
+		return false;
 	}
 	/*Removes all the elements from list*/
 	public void clear() {
