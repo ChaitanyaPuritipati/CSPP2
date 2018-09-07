@@ -256,12 +256,12 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(List testlist ) {
-        for (int i = 0; i < testlist.size; i++) {
-            if (!(contains(testlist.list[i]))) {
-                return false;
+        for(int i = 0; i < size - testlist.size + 1; i++) {
+            if(subList(i, i + testlist.size).list == testlist.list) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
     /*
     * Removes all the elements from list
