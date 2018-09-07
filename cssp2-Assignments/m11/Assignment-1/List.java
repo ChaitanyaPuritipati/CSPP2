@@ -217,7 +217,7 @@ public class List {
     */
     public int count(final int item) {
         int count = 0;
-        for (int i = 0; i < list.length; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 count++;
             }
