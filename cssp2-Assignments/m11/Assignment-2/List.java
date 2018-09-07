@@ -178,14 +178,27 @@ public class List<E> {
 	/* Removes all of its elements that
 	 * are contained in the specified int array.
 	 */
+	/**
+	 * { count function }.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { int type }.
+	 */
+	public int count(final E item) {
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (list[i].equals(item)) {
+				count++;
+			}
+		}
+		return count;
+	}
 	public void removeAll(E[] items) {
-		for (int i = 0; i < list.length - items.length; i++) {
-			if (Arrays.equals(subList(i, i + items.length).list, items)) {
-				for (int j = i; j < i + items.length; j++) {
-					list[j] = null;
-				}
-				size = size - items.length;
-				return;
+		for (int i = 0; i < items.length; i++) {
+			int counter = count(items[i]);
+			for (int j = 0; j < counter; j++) {
+				remove(indexOf(items[i]));
 			}
 		}
 	}
@@ -210,9 +223,9 @@ public class List<E> {
 	  i.e a List object is exactly matching with the given list or not.
 	 */
 	public boolean equals(List<E> listdata) {
-			if (Arrays.equals(list, listdata.list)) {
-				return true;
-			}
+		if (Arrays.equals(list, listdata.list)) {
+			return true;
+		}
 		return false;
 	}
 	/*Removes all the elements from list*/
