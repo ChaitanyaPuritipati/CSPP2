@@ -210,7 +210,7 @@ public class List<E> {
 	  i.e a List object is exactly matching with the given list or not.
 	 */
 	public boolean equals(List<E> listdata) {
-		for (int i = 0; i < list.length - 5; i++) {
+		for (int i = 0; i < list.length - listdata.list.length; i++) {
 			int flag = 1;
 			for (E element : listdata.list) {
 				System.out.println(subList(i, i + listdata.list.length).toString());
