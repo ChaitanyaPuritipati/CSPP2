@@ -217,8 +217,7 @@ public class List {
 	*/
 	public void removeAll(int[] newArray) {
 		for (int i = 0; i < list.length - newArray.length; i++) {
-			System.out.println(subList(i, i+newArray.length).list);
-			System.out.println(newArray);
+			subList(i, i+newArray.length).toString();
 			if (subList(i, i + newArray.length).list == newArray) {
 				for(int j = i; j < i + newArray.length; j++) {
 					remove(j);
