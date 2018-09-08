@@ -83,8 +83,11 @@ class Set {
      */
     public void add(final int item) {
         try {
-            set[size] = item;
-            size++;
+            if (!(contains(item))) {
+                set[size] = item;
+                size++;
+            }
+
         } catch (Exception  e) {
             resize();
             add(item);
