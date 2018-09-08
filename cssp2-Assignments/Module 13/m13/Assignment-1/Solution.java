@@ -90,7 +90,7 @@ class Set {
     			int[] testarr = new int[2];
     			testarr[0] = setarr[i];
     			testarr[1] = other.setarr[j];
-    			cartarr[i][j] = 0;
+    			cartarr[i][j] = j;
     		}
     	}
     	return cartarr;
