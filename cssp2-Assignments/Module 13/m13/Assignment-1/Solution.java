@@ -90,9 +90,7 @@ class Set {
     			int[] testarr = new int[2];
     			testarr[0] = setarr[i];
     			testarr[1] = other.setarr[j];
-    			System.out.println(Arrays.toString(testarr) + "-----hello");
     			cartarr[i] = testarr;
-    			System.out.println(Arrays.toString(cartarr[i]) + "------HI");
     		}
     	}
     	return cartarr;
