@@ -1,0 +1,1 @@
+1) https://stackoverflow.com/questions/40202033/cartesian-product-of-two-arrays
