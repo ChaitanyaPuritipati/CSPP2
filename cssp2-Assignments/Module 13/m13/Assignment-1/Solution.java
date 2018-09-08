@@ -44,7 +44,7 @@ class Set {
      *
      * @return     { boolean type }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (setarr[i] == item) {
                 return true;
@@ -76,7 +76,7 @@ class Set {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (size == setarr.length) {
             resize();
         }
@@ -90,7 +90,7 @@ class Set {
      *
      * @param      items  The items
      */
-    public void add(int[] items) {
+    public void add(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
@@ -102,7 +102,7 @@ class Set {
      *
      * @return     { set type }
      */
-    public Set intersection(Set items) {
+    public Set intersection(final Set items) {
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
             if (items.contains(setarr[i])) {
@@ -118,7 +118,7 @@ class Set {
      *
      * @return     { set type }
      */
-    public Set retainAll(int[] items) {
+    public Set retainAll(final int[] items) {
         Set newsetarr = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < items.length; j++) {
@@ -137,17 +137,17 @@ class Set {
      *
      * @return     { 2D array }
      */
-    public int[][] cartesianProduct(Set other) {
+    public int[][] cartesianProduct(final Set other) {
         if (size == 0 || other.size == 0) {
             return null;
         }
-        int[][] cartarr = new int[size*other.size][2];
-          for (int i = 0, k = 0; i < size; i++) {
-            for (int j = 0; j < other.size; j++,k++) {
-                    cartarr[k][0] = setarr[i];
-                    cartarr[k][1] = other.setarr[j];
-                }
+        int[][] cartarr = new int[size * other.size][2];
+        for (int i = 0, k = 0; i < size; i++) {
+            for (int j = 0; j < other.size; j++, k++) {
+                cartarr[k][0] = setarr[i];
+                cartarr[k][1] = other.setarr[j];
             }
+        }
         return cartarr;
     }
 }
