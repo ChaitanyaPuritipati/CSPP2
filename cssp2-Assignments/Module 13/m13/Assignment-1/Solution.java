@@ -90,7 +90,7 @@ class Set {
     			Set testarr = new Set();
     			testarr.add(setarr[i]);
     			testarr.add(setarr[j]);
-    			System.out.println(testarr.toString());
+    			System.out.println(testarr.toString() + "-----hello");
     			//cartarr[i][j] = testarr.setarr;
     		}
     	}
