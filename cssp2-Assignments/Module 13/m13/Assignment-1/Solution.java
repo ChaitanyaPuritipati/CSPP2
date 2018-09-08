@@ -91,7 +91,8 @@ class Set {
     			testarr[0] = setarr[i];
     			testarr[1] = other.setarr[j];
     			System.out.println(Arrays.toString(testarr) + "-----hello");
-    			//cartarr[i][j] = testarr.setarr;
+    			cartarr[i] = testarr;
+    			System.out.println(Arrays.toString(cartarr[i]) + "------HI");
     		}
     	}
     	return cartarr;
