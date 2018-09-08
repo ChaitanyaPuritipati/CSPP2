@@ -57,7 +57,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public String print() {
+    public String toString() {
         if (size == 0) {
             return "{}";
         }
