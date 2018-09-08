@@ -84,10 +84,10 @@ class Set {
 			return null;
 		}
 		int[][] cartarr = new int[size*other.size][2];
-		  for (int i = 0; i < size; i++) {
+		  for (int i = 0, k = 0; i < size; i++) {
 			for (int j = 0; j < other.size; j++) {
-					cartarr[i][0] = setarr[i];
-					cartarr[i][1] = other.setarr[j];
+					cartarr[k][0] = setarr[i];
+					cartarr[k][1] = other.setarr[j];
 				}
 			}
 		return cartarr;
