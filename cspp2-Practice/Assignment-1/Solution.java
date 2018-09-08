@@ -90,8 +90,9 @@ class Set {
 
         } catch (Exception  e) {
             resize();
-            add(item);
-
+            if(!(contains(item))) {
+               add(item); 
+            }
         }
     }
 
@@ -104,11 +105,17 @@ class Set {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             try {
+                if (!(contains(newArray[i]))) {
                 set[size] = newArray[i];
                 size++;
-            } catch (Exception  e) {
+                }
+
+            } 
+            catch (Exception  e) {
                 resize();
-                add(newArray[i]);
+                if(!(contains(newArray[i]))) {
+                    add(newArray[i]);
+                }
             }
         }
     }
