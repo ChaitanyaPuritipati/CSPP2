@@ -87,9 +87,9 @@ class Set {
     	int[][] cartarr = new int[size][other.size];
     	for(int i = 0; i < size; i++) {
     		for(int j = 0; j < other.size; j++) {
-    			Set testarr = new Set();
-    			testarr.add(setarr[i]);
-    			testarr.add(setarr[j]);
+    			int[] testarr = new int[2];
+    			testarr[0] = setarr[i];
+    			testarr[1] = other.setarr[j];
     			System.out.println(testarr.toString() + "-----hello");
     			//cartarr[i][j] = testarr.setarr;
     		}
