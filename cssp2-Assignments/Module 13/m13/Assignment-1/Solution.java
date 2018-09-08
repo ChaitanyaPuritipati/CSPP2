@@ -85,7 +85,7 @@ class Set {
 		}
 		int[][] cartarr = new int[size*other.size][2];
 		  for (int i = 0, k = 0; i < size; i++) {
-			for (int j = 0; j < other.size; j++) {
+			for (int j = 0; j < other.size; j++,k++) {
 					cartarr[k][0] = setarr[i];
 					cartarr[k][1] = other.setarr[j];
 				}
