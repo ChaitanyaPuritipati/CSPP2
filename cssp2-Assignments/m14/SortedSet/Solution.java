@@ -66,8 +66,8 @@ class Set {
 			return str;
 		}
 	}
-	public String toString(int[] items) {
-		if (size == 0) {
+	public static String toString(int[] items) {
+		if (items.length == 0) {
 			return "{}";
 		} else {
 			String str = "";
