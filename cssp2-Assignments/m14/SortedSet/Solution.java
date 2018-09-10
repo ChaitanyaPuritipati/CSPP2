@@ -164,26 +164,43 @@ class sortedsetADT extends Set {
 		Arrays.sort(setarr, 0, size);
 		return super.toString();
 	}
-	Set subSet(int startelement, int endelement) {
+	int[] subSet(int startelement, int endelement) {
 		if (startelement > endelement) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
 		}
 		Arrays.sort(setarr, 0, size);
-		Set subsetarr = new Set();
+		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if(setarr[i] >= startelement && setarr[i] < endelement) {
-				subsetarr.add(setarr[i]);
+				count++;
+			}
+		}
+		int[] subsetarr = new int[count];
+		int j = 0;
+		for (int i = 0; i < size; i++) {
+			if(setarr[i] >= startelement && setarr[i] < endelement) {
+				subsetarr[j] = setarr[i];
 			}
 		}
 		return subsetarr;
 	}
-	Set headSet(int testelement) {
+	int[] headSet(int testelement) {
 		Arrays.sort(setarr, 0, size);
-		Set headsetarr = new Set();
+		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if(setarr[i] < testelement) {
-				headsetarr.add(setarr[i]);
+				// headsetarr.add(setarr[i]);
+                count++;
+			}
+		}
+		int[] headsetarr = new int[count];
+		int j = 0; 
+		for (int i = 0; i < size; i++) {
+			if(setarr[i] < testelement) {
+				// headsetarr.add(setarr[i]);
+                headsetarr[j] = setarr[i];
+                j++;
 			}
 		}
 		return headsetarr;
@@ -239,7 +256,7 @@ class Solution {
 			case "subSet":
 				String[] argtokens = tokens[1].split(",");
 				if((inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])))!= null) {
-					System.out.println(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])));
+					System.out.println(Arrays.toString(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1]))));
 				}
 				break;
 			case "headSet":
