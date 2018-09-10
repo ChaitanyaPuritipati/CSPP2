@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
+/**
+ * Class for set.
+ */
 class Set {
     /**
      * { It is of int type }.
@@ -146,6 +149,13 @@ class Set {
         }
         return cartarr;
     }
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
