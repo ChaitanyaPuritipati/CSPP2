@@ -237,7 +237,7 @@ class Solution {
 			String str = "";
 			str = str + "{";
 			int i;
-			for (i = 0; i < items.length - 2; i++) {
+			for (i = 0; i < items.length - 1; i++) {
 				str = str + items[i] + ", ";
 			}
 			str = str + items[i] + "}";
