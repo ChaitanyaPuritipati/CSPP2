@@ -156,15 +156,33 @@ class Set {
         return -1;
     }
 }
-
+/**
+ * Class for sortedset adt.
+ */
 class sortedsetADT extends Set {
+    /**
+     * Constructs the object.
+     */
     sortedsetADT() {
         super();
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         Arrays.sort(setarr, 0, size);
         return super.toString();
     }
+    /**
+     * { subSet function }.
+     *
+     * @param      startelement  The startelement
+     * @param      endelement    The endelement
+     *
+     * @return     { int array }
+     */
     int[] subSet(int startelement, int endelement) {
         if (startelement > endelement) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -187,6 +205,13 @@ class sortedsetADT extends Set {
         }
         return subsetarr;
     }
+    /**
+     * { headSet function }.
+     *
+     * @param      testelement  The testelement
+     *
+     * @return     { Integer array }
+     */
     int[] headSet(int testelement) {
         Arrays.sort(setarr, 0, size);
         int count = 0;
@@ -205,6 +230,11 @@ class sortedsetADT extends Set {
         }
         return headsetarr;
     }
+    /**
+     * { To retrive last element }.
+     *
+     * @return     { Integer type }
+     */
     int last() {
         if (size <= 0) {
             System.out.println("Set Empty Exception");
@@ -214,8 +244,23 @@ class sortedsetADT extends Set {
         return setarr[size - 1];
     }
 }
-
+/**
+ * Class for solution.
+ */
 class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+        //unused
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { integer array }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -228,6 +273,13 @@ class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @param      items  The items
+     *
+     * @return     String representation of the object.
+     */
     public static String toString(int[] items) {
         if (items.length == 0) {
             return "{}";
@@ -242,6 +294,11 @@ class Solution {
             return str;
         }
     }
+    /**
+     * { Main function starts here }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(new BufferedInputStream(System.in));
         sortedsetADT inputset = new sortedsetADT();
