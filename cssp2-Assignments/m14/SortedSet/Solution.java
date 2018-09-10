@@ -167,6 +167,7 @@ class sortedsetADT extends Set {
 	Set subSet(int startelement, int endelement) {
 		if (startelement > endelement) {
 			System.out.println("Invalid Arguments to Subset Exception");
+			return null;
 		}
 		Arrays.sort(setarr, 0, size);
 		Set subsetarr = new Set();
