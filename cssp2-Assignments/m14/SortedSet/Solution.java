@@ -213,7 +213,7 @@ class Solution {
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
 			System.out.println(tokens[0] + "tokensfirst");
-			System.out.println(tokens[1] + "tokenssecond");
+			// System.out.println(tokens[1] + "tokenssecond");
 			switch (tokens[0]) {
 			case "size":
 				System.out.println(inputset.size());
