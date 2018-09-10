@@ -66,20 +66,7 @@ class Set {
 			return str;
 		}
 	}
-	public static String toString(int[] items) {
-		if (items.length == 0) {
-			return "{}";
-		} else {
-			String str = "";
-			str = str + "{";
-			int i = 0;
-			for (i = 0; i < items.length; i++) {
-				str = str + items[i] + ", ";
-			}
-			str = str + items[i] + "}";
-			return str;
-		}
-	}
+	
 	/**
 	 * { To add an item }.
 	 *
@@ -243,6 +230,20 @@ class Solution {
 		       .mapToInt(Integer::parseInt)
 		       .toArray();
 	}
+	public static String toString(int[] items) {
+		if (items.length == 0) {
+			return "{}";
+		} else {
+			String str = "";
+			str = str + "{";
+			int i = 0;
+			for (i = 0; i < items.length; i++) {
+				str = str + items[i] + ", ";
+			}
+			str = str + items[i] + "}";
+			return str;
+		}
+	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(new BufferedInputStream(System.in));
 		sortedsetADT inputset = new sortedsetADT();
@@ -271,11 +272,11 @@ class Solution {
 			case "subSet":
 				String[] argtokens = tokens[1].split(",");
 				if((inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])))!= null) {
-					System.out.println(inputset.toString(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1]))));
+					System.out.println(toString(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1]))));
 				}
 				break;
 			case "headSet":
-				System.out.println(inputset.toString(inputset.headSet(Integer.parseInt(tokens[1]))));
+				System.out.println(toString(inputset.headSet(Integer.parseInt(tokens[1]))));
 				break;
 			case "last":
 				System.out.println(inputset.last());
