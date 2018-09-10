@@ -339,9 +339,10 @@ final class Solution {
                 String[] argtokens = tokens[1].split(",");
                 if ((inputset.subSet(Integer.parseInt(argtokens[0]),
                                      Integer.parseInt(argtokens[1]))) != null) {
-                    System.out.println(toString(inputset.subSet(
-                                                    Integer.parseInt(argtokens[0]),
-                                                    Integer.parseInt(argtokens[1]))));
+                    System.out.println(toString(
+                                           inputset.subSet(
+                                               Integer.parseInt(argtokens[0]),
+                                               Integer.parseInt(argtokens[1]))));
                 }
                 break;
             case "headSet":
