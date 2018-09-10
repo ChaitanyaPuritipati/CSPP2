@@ -181,6 +181,7 @@ class sortedsetADT extends Set {
 		for (int i = 0; i < size; i++) {
 			if(setarr[i] >= startelement && setarr[i] < endelement) {
 				subsetarr[j] = setarr[i];
+				j++;
 			}
 		}
 		return subsetarr;
