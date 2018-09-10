@@ -86,7 +86,6 @@ class Set {
 	 * @param      items  The items
 	 */
 	public void addAll(final int[] items) {
-		System.out.println("Entered addAll");
 		for (int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
@@ -223,6 +222,7 @@ class Solution {
 			case "print":
 				System.out.println(inputset);
 				break;
+			case "addAll":
 			case "add":
 				int[] intarray = intArray(tokens[1]);
 				if (intarray.length == 1) {
