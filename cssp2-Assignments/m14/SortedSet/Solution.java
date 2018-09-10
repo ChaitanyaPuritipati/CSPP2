@@ -164,25 +164,28 @@ class sortedsetADT extends Set {
 		Arrays.sort(setarr, 0, size);
 		return super.toString();
 	}
-	int[] subSet(int startelement, int endelement) {
+	Set subSet(int startelement, int endelement) {
 		if (startelement > endelement) {
 			System.out.println("Invalid Arguments to Subset Exception");
 		}
 		Arrays.sort(setarr, 0, size);
-		System.out.println(super.toString());
 		Set subsetarr = new Set();
-		for (int i = indexOf(startelement); i < indexOf(endelement); i++) {
-			subsetarr.add(setarr[i]);
+		for (int i = 0; i < size; i++) {
+			if(setarr[i] >= startelement && setarr[i] < endelement) {
+				subsetarr.add(setarr[i]);
+			}
 		}
-		return subsetarr.setarr;
+		return subsetarr;
 	}
-	int[] headSet(int testelement) {
+	Set headSet(int testelement) {
 		Arrays.sort(setarr, 0, size);
 		Set headsetarr = new Set();
-		for (int i = 0; i < indexOf(testelement); i++) {
-			headsetarr.add(setarr[i]);
+		for (int i = 0; i < size; i++) {
+			if(setarr[i] < testelement) {
+				headsetarr.add(setarr[i]);
+			}
 		}
-		return headsetarr.setarr;
+		return headsetarr;
 	}
 	int last() {
 		if (size <= 0) {
