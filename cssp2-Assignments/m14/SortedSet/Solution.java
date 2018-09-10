@@ -22,11 +22,16 @@ class Set {
         size = 0;
     }
     /**
-     * { To resize }.
+     * { get method }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int[] get() {
         return setarr;
     }
+    /**
+     * { To resize }.
+     */
     public void resize() {
         setarr = Arrays.copyOf(setarr, 2 * setarr.length);
     }
