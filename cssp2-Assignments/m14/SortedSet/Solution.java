@@ -247,7 +247,7 @@ class Sortedsetadt extends Set {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -299,7 +299,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(new BufferedInputStream(System.in));
         Sortedsetadt inputset = new Sortedsetadt();
         while (scan.hasNext()) {
@@ -336,6 +336,7 @@ class Solution {
             case "last":
                 System.out.println(inputset.last());
                 break;
+            default:    
             }
         }
     }
