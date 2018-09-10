@@ -236,8 +236,8 @@ class Solution {
 		} else {
 			String str = "";
 			str = str + "{";
-			int i = 0;
-			for (i = 0; i < items.length; i++) {
+			int i;
+			for (i = 0; i < items.length - 2; i++) {
 				str = str + items[i] + ", ";
 			}
 			str = str + items[i] + "}";
