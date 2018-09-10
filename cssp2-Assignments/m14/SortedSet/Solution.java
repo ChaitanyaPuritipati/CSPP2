@@ -21,7 +21,7 @@ class Set {
 	/**
 	 * { To resize }.
 	 */
-	private void resize() {
+	public void resize() {
 		setarr = Arrays.copyOf(setarr, 2 * setarr.length);
 	}
 	/**
