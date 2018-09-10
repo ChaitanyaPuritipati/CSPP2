@@ -271,11 +271,11 @@ class Solution {
 			case "subSet":
 				String[] argtokens = tokens[1].split(",");
 				if((inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])))!= null) {
-					System.out.println(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])));
+					System.out.println(inputset.toString(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1]))));
 				}
 				break;
 			case "headSet":
-				System.out.println(Arrays.toString(inputset.headSet(Integer.parseInt(tokens[1]))));
+				System.out.println(inputset.toString(inputset.headSet(Integer.parseInt(tokens[1]))));
 				break;
 			case "last":
 				System.out.println(inputset.last());
