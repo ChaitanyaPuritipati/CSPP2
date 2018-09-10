@@ -24,6 +24,9 @@ class Set {
     /**
      * { To resize }.
      */
+    public int[] get() {
+        return setarr;
+    }
     public void resize() {
         setarr = Arrays.copyOf(setarr, 2 * setarr.length);
     }
@@ -182,7 +185,7 @@ class Sortedsetadt extends Set {
      * @return     String representation of the object.
      */
     public String toString() {
-        Arrays.sort(setarr, 0, size);
+        Arrays.sort(super.get(), 0, size);
         return super.toString();
     }
     /**
@@ -201,15 +204,15 @@ class Sortedsetadt extends Set {
         Arrays.sort(setarr, 0, size);
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (setarr[i] >= startelement && setarr[i] < endelement) {
+            if (super.get()[i] >= startelement && super.get()[i] < endelement) {
                 count++;
             }
         }
         int[] subsetarr = new int[count];
         int j = 0;
         for (int i = 0; i < size; i++) {
-            if (setarr[i] >= startelement && setarr[i] < endelement) {
-                subsetarr[j] = setarr[i];
+            if (super.get()[i] >= startelement && super.get()[i] < endelement) {
+                subsetarr[j] = super.get()[i];
                 j++;
             }
         }
