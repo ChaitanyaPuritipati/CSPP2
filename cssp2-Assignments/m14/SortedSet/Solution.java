@@ -8,11 +8,11 @@ class Set {
     /**
      * { It is of int type }.
      */
-    int[] setarr;
+    private int[] setarr;
     /**
      * { It is of int type }.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      */
@@ -185,7 +185,7 @@ class Sortedsetadt extends Set {
      * @return     String representation of the object.
      */
     public String toString() {
-        Arrays.sort(super.get(), 0, size);
+        Arrays.sort(super.get(), 0, size());
         return super.toString();
     }
     /**
@@ -201,16 +201,16 @@ class Sortedsetadt extends Set {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
-        Arrays.sort(setarr, 0, size);
+        Arrays.sort(super.get(), 0, size());
         int count = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size(); i++) {
             if (super.get()[i] >= startelement && super.get()[i] < endelement) {
                 count++;
             }
         }
         int[] subsetarr = new int[count];
         int j = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size(); i++) {
             if (super.get()[i] >= startelement && super.get()[i] < endelement) {
                 subsetarr[j] = super.get()[i];
                 j++;
@@ -226,18 +226,18 @@ class Sortedsetadt extends Set {
      * @return     { Integer array }
      */
     int[] headSet(final int testelement) {
-        Arrays.sort(setarr, 0, size);
+        Arrays.sort(super.get(), 0, size());
         int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (setarr[i] < testelement) {
+        for (int i = 0; i < size(); i++) {
+            if (super.get()[i] < testelement) {
                 count++;
             }
         }
         int[] headsetarr = new int[count];
         int j = 0;
-        for (int i = 0; i < size; i++) {
-            if (setarr[i] < testelement) {
-                headsetarr[j] = setarr[i];
+        for (int i = 0; i < size(); i++) {
+            if (super.get()[i] < testelement) {
+                headsetarr[j] = super.get()[i];
                 j++;
             }
         }
@@ -249,12 +249,12 @@ class Sortedsetadt extends Set {
      * @return     { Integer type }
      */
     int last() {
-        if (size <= 0) {
+        if (size() <= 0) {
             System.out.println("Set Empty Exception");
             return -1;
         }
-        Arrays.sort(setarr, 0, size);
-        return setarr[size - 1];
+        Arrays.sort(super.get(), 0, size());
+        return super.get()[size() - 1];
     }
 }
 /**
