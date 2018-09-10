@@ -346,10 +346,8 @@ final class Solution {
             case "last":
                 System.out.println(inputset.last());
                 break;
-            default:    
+            default:
             }
         }
     }
-
-
 }
