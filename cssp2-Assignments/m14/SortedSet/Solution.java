@@ -346,7 +346,9 @@ final class Solution {
                 }
                 break;
             case "headSet":
-                System.out.println(toString(inputset.headSet(Integer.parseInt(tokens[1]))));
+                System.out.println(toString(
+                                       inputset.headSet(
+                                           Integer.parseInt(tokens[1]))));
                 break;
             case "last":
                 System.out.println(inputset.last());
