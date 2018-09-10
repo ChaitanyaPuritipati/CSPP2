@@ -251,7 +251,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         //unused
     }
     /**
