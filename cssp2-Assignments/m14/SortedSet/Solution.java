@@ -238,7 +238,9 @@ class Solution {
 				break;
 			case "subSet":
 				String[] argtokens = tokens[1].split(",");
-				System.out.println(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])));
+				if((inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])))!= null) {
+					System.out.println(inputset.subSet(Integer.parseInt(argtokens[0]), Integer.parseInt(argtokens[1])));
+				}
 				break;
 			case "headSet":
 				System.out.println(inputset.headSet(Integer.parseInt(tokens[1])));
