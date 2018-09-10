@@ -159,11 +159,11 @@ class Set {
 /**
  * Class for sortedset adt.
  */
-class sortedsetadt extends Set {
+class Sortedsetadt extends Set {
     /**
      * Constructs the object.
      */
-    sortedsetadt() {
+    Sortedsetadt() {
         super();
     }
     /**
@@ -301,7 +301,7 @@ class Solution {
      */
     public static void main(String[] args) {
         Scanner scan = new Scanner(new BufferedInputStream(System.in));
-        sortedsetadt inputset = new sortedsetadt();
+        Sortedsetadt inputset = new Sortedsetadt();
         while (scan.hasNext()) {
             String line = scan.nextLine();
             String[] tokens = line.split(" ");
