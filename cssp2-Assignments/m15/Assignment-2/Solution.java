@@ -230,15 +230,15 @@ class Sortedsetadt extends Set {
      * @return     { Integer array }
      */
     int[] headSet(final int testelement) throws Exception {
-        if (size() <= 0) {
-            throw new Exception("Set Empty Exception");
-        }
         Arrays.sort(super.get(), 0, size());
         int count = 0;
         for (int i = 0; i < size(); i++) {
             if (super.get()[i] < testelement) {
                 count++;
             }
+        }
+        if(count == 0) {
+            throw new Exception("Set Empty Exception");
         }
         int[] headsetarr = new int[count];
         int j = 0;
