@@ -103,11 +103,12 @@ class Set {
         }
     }
     /**
-     * { To return intersection }.
+     * { interection method }.
      *
-     * @param      items  The items
+     * @param      item1  The item 1
+     * @param      item2  The item 2
      *
-     * @return     { set type }
+     * @return     { Set type }
      */
     public Set intersection( int[] item1, int[] item2) {
         Set newsetarr = new Set();
@@ -122,11 +123,12 @@ class Set {
         return newsetarr;
     }
     /**
-     * { To retain all the elements }.
+     * { retainAll }.
      *
-     * @param      items  The items
+     * @param      item1  The item 1
+     * @param      item2  The item 2
      *
-     * @return     { set type }
+     * @return     { Set type }
      */
     public Set retainAll(final int[] item1, final int[] item2) {
         Set newsetarr = new Set();
