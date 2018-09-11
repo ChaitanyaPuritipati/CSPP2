@@ -110,7 +110,7 @@ class Set {
      *
      * @return     { Set type }
      */
-    public Set intersection( int[] item1, int[] item2) {
+    public Set intersection(final int[] item1, final int[] item2) {
         Set newsetarr = new Set();
         for (int i = 0; i < item1.length; i++) {
             for (int j = 0; j < item2.length; j++) {
