@@ -406,7 +406,7 @@ public class Solution {
                 }
                 break;
             case "count":
-                l.count(Integer.parseInt(tokens[1]));
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;    
             case "get":
                 if (tokens.length == 2) {
