@@ -109,11 +109,13 @@ class Set {
      *
      * @return     { set type }
      */
-    public Set intersection(final Set items) {
+    public Set intersection( int[] item1, int[] item2) {
         Set newsetarr = new Set();
-        for (int i = 0; i < size; i++) {
-            if (items.contains(setarr[i])) {
-                newsetarr.add(setarr[i]);
+        for (int i = 0; i < item1.length; i++) {
+            for(int j = 0; j < item2.length; j++) {
+                if(item1[i] == item2[j]) {
+                  newsetarr.add(setarr[i]);  
+                }
             }
         }
         return newsetarr;
