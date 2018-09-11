@@ -371,10 +371,12 @@ final class Solution {
                 }
                 break;
             case "intersection":
-                System.out.println(inputset.intersection(intArray(tokens[1]), intArray(tokens[2])));
+                System.out.println(inputset.intersection(
+                                       intArray(tokens[1]), intArray(tokens[2])));
                 break;
             case "retainAll":
-                System.out.println(inputset.retainAll(intArray(tokens[1]), intArray(tokens[2])));
+                System.out.println(inputset.retainAll(
+                                       intArray(tokens[1]), intArray(tokens[2])));
                 break;
             case "headSet":
                 try {
