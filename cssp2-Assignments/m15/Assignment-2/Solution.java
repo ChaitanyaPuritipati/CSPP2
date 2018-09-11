@@ -199,12 +199,14 @@ class Sortedsetadt extends Set {
         return super.toString();
     }
     /**
-     * { subSet function }.
+     * { subSet method }.
      *
      * @param      startelement  The startelement
      * @param      endelement    The endelement
      *
-     * @return     { int array }
+     * @return     { int Array }
+     *
+     * @throws     Exception     { exception_description }
      */
     int[] subSet(final int startelement, final int endelement) throws Exception {
         if (startelement > endelement) {
@@ -228,11 +230,13 @@ class Sortedsetadt extends Set {
         return subsetarr;
     }
     /**
-     * { headSet function }.
+     * { headSet method }.
      *
      * @param      testelement  The testelement
      *
-     * @return     { Integer array }
+     * @return     { int Array }
+     *
+     * @throws     Exception    { exception_description }
      */
     int[] headSet(final int testelement) throws Exception {
         Arrays.sort(super.get(), 0, size());
