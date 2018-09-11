@@ -208,7 +208,8 @@ class Sortedsetadt extends Set {
      *
      * @throws     Exception     { exception_description }
      */
-    int[] subSet(final int startelement, final int endelement) throws Exception {
+    int[] subSet(final int startelement, final int endelement)
+    throws Exception {
         if (startelement > endelement) {
             throw new Exception("Invalid Arguments to Subset Exception");
         }
