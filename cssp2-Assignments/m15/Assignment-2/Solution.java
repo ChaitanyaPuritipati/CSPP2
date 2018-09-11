@@ -261,9 +261,11 @@ class Sortedsetadt extends Set {
         return headsetarr;
     }
     /**
-     * { To retrive last element }.
+     * { last method }.
      *
-     * @return     { Integer type }
+     * @return     { int type }
+     *
+     * @throws     Exception  { exception_description }
      */
     int last() throws Exception {
         if (size() <= 0) {
