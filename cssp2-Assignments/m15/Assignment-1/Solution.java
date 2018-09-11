@@ -140,9 +140,11 @@ public class Solution {
      *
      */
     /**
-     * { remove function }.
+     * { remove method }.
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
@@ -286,7 +288,9 @@ public class Solution {
     /**
      * Removes all.
      *
-     * @param      newArray  The new array
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
      */
     public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < newArray.length; i++) {
@@ -306,10 +310,12 @@ public class Solution {
     /**
      * { sublist function }.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
-     * @return     { list return type }.
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public Solution subList(final int start, final int end) throws Exception {
         if (start < 0 || end < 0 || start >= end || (end - start == 1)) {
