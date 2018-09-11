@@ -360,6 +360,9 @@ final class Solution {
 
                 }
                 break;
+            case "intersection":
+                   System.out.println(inputset.intersection(intArray(tokens[1]), intArray(tokens[2])));
+                   break;    
             case "headSet":
                 try {
                     System.out.println(toString(
