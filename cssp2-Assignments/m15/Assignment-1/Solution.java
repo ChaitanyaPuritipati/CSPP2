@@ -405,6 +405,9 @@ public class Solution {
                                            Integer.parseInt(tokens[1])));
                 }
                 break;
+            case "count":
+                l.count(Integer.parseInt(tokens[1]));
+                break;    
             case "get":
                 if (tokens.length == 2) {
                     System.out.println(l.get(
