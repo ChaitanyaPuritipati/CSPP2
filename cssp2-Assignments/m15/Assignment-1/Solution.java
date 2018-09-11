@@ -413,7 +413,7 @@ public class Solution {
                 break;
             case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
-                break;    
+                break;
             case "get":
                 if (tokens.length == 2) {
                     System.out.println(l.get(
@@ -458,8 +458,9 @@ public class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 try {
-                    Solution object = l.subList(Integer.parseInt(arrstring3[0]),
-                                                Integer.parseInt(arrstring3[1]));
+                    Solution object = l.subList(
+                                          Integer.parseInt(arrstring3[0]),
+                                          Integer.parseInt(arrstring3[1]));
                     System.out.println(object);
                 } catch (Exception e) {
                     System.out.println("Index Out of Bounds Exception");
