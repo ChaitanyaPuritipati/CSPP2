@@ -114,7 +114,7 @@ class Set {
         for (int i = 0; i < item1.length; i++) {
             for(int j = 0; j < item2.length; j++) {
                 if(item1[i] == item2[j]) {
-                  newsetarr.add(setarr[i]);  
+                  newsetarr.add(item1[i]);  
                 }
             }
         }
