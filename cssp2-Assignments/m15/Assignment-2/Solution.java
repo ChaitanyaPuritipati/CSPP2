@@ -112,9 +112,9 @@ class Set {
     public Set intersection( int[] item1, int[] item2) {
         Set newsetarr = new Set();
         for (int i = 0; i < item1.length; i++) {
-            for(int j = 0; j < item2.length; j++) {
-                if(item1[i] == item2[j]) {
-                  newsetarr.add(item1[i]); 
+            for (int j = 0; j < item2.length; j++) {
+                if (item1[i] == item2[j]) {
+                    newsetarr.add(item1[i]);
                 }
             }
         }
@@ -128,16 +128,16 @@ class Set {
      *
      * @return     { set type }
      */
-    public Set retainAll(final int[] items) {
+    public Set retainAll(final int[] item1, final int[] item2) {
         Set newsetarr = new Set();
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < items.length; j++) {
-                if (setarr[i] == items[j]) {
-                    newsetarr.add(setarr[i]);
-                    break;
+        for (int i = 0; i < item1.length; i++) {
+            for (int j = 0; j < item2.length; j++) {
+                if (item1[i] == item2[j]) {
+                    newsetarr.add(item1[i]);
                 }
             }
         }
+        Arrays.sort(newsetarr.setarr, 0, newsetarr.size);
         return newsetarr;
     }
     /**
@@ -240,7 +240,7 @@ class Sortedsetadt extends Set {
                 count++;
             }
         }
-        if(count == 0) {
+        if (count == 0) {
             throw new Exception("Set Empty Exception");
         }
         int[] headsetarr = new int[count];
@@ -362,14 +362,17 @@ final class Solution {
                 }
                 break;
             case "intersection":
-                   System.out.println(inputset.intersection(intArray(tokens[1]), intArray(tokens[2])));
-                   break;    
+                System.out.println(inputset.intersection(intArray(tokens[1]), intArray(tokens[2])));
+                break;
+            case "retainAll":
+                System.out.println(inputset.retainAll(intArray(tokens[1]), intArray(tokens[2])));
+                break;
             case "headSet":
                 try {
                     System.out.println(toString(
                                            inputset.headSet(
                                                Integer.parseInt(tokens[1]))));
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Set Empty Exception");
                 }
 
