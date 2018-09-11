@@ -114,10 +114,11 @@ class Set {
         for (int i = 0; i < item1.length; i++) {
             for(int j = 0; j < item2.length; j++) {
                 if(item1[i] == item2[j]) {
-                  newsetarr.add(item1[i]);  
+                  newsetarr.add(item1[i]); 
                 }
             }
         }
+        Arrays.sort(newsetarr.setarr, 0, newsetarr.size);
         return newsetarr;
     }
     /**
