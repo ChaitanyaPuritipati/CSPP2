@@ -42,6 +42,7 @@ class BookYourShow {
 					}
 				}
 			}
+			System.out.println(showobj.showseats[indexOf(moviename, moviedate)]);
 			bookdetails[k][0] = moviename;
 			bookdetails[k][1] = moviedate;
 			bookdetails[k][2] = user.patname;
