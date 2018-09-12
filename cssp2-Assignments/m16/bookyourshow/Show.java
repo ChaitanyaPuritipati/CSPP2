@@ -15,7 +15,6 @@ class Show {
 		showseats = Arrays.copyOf(showseats, 2 * size);
 	}
 	void add(String name, String date, String seats) {
-        System.out.println("entered");
         System.out.println(name + date + seats);
 		if (size == movname.length) {
 			resize();
@@ -24,6 +23,5 @@ class Show {
 		movdate[size] = date;
 		showseats[size] = seats;
 		size++;
-		System.out.println(size);
 	}
 }
