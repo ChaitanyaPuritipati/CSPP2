@@ -17,6 +17,7 @@ class Show {
 	}
 	void addall(String name, String date, String seats) {
 		if (size == movname.length) {
+			System.out.println("intlo");
 			resize();
 		}
 		System.out.println(name + "chaitu");
