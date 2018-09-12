@@ -61,7 +61,7 @@ class BookYourShow {
 	}
 	void showAll() {
 		for (int i = 0; i < showobj.size; i++) {
-			System.out.println(showobj.movname[i] +","+ showobj.movdate[i] +","+ showobj.showseats[i]);
+			System.out.println(showobj.movname[i] +","+ showobj.movdate[i] +","+ "[" +showobj.showseats[i] + "]");
 		}
 	}
 }
