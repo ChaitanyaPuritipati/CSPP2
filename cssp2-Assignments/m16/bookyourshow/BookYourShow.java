@@ -4,7 +4,7 @@ class BookYourShow {
 	String[][] bookdetails = new String[10000][5];
 	void add(String moviename, String moviedate, String movieseats) {
 		System.out.println(moviename);
-		showobj.add(moviename, moviedate, movieseats);
+		showobj.addall(moviename, moviedate, movieseats);
 	}
 	String get(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
