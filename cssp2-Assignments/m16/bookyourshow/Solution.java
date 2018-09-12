@@ -6,15 +6,15 @@ final class Solution {
     /**
      * { three }.
      */
-    int three = 3;
+    private int three = 3;
     /**
      * { four }.
      */
-    int four = 4;
+    private int four = 4;
     /**
      * { five }.
      */
-    int five = 5;
+    private int five = 5;
     /**
      * Constructs the object.
      */
