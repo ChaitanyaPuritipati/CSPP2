@@ -28,14 +28,15 @@ class BookYourShow {
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
 		if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
-			String[] mainseats;
-			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
-			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
-			mainseats = showobj.showseats[indexOf(moviename, moviedate)].split(",");
+			String mainseats;
+			String[] mainseatsarr;
+			mainseats  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
+			mainseats  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
+			mainseatsarr = showobj.showseats[indexOf(moviename, moviedate)].split(",");
 			int count = 0;
 			for (int i = 0; i < testseats.length; i++) {
-				for (int j = 0; j < mainseats.length; j++) {
-					if (testseats[i].equals(mainseats[j])) {
+				for (int j = 0; j < mainseatsarr.length; j++) {
+					if (testseats[i].equals(mainseatsarr[j])) {
 						showobj.showseats[indexOf(moviename, moviedate)] = showobj.showseats[indexOf(moviename, moviedate)].replaceFirst(testseats[i], "N/A");
 					}
 				}
@@ -61,7 +62,7 @@ class BookYourShow {
 	}
 	void showAll() {
 		for (int i = 0; i < showobj.size; i++) {
-			System.out.println(showobj.movname[i] +","+ showobj.movdate[i] +","+ "[" +showobj.showseats[i] + "]");
+			System.out.println(showobj.movname[i] +","+ showobj.movdate[i] +"," + showobj.showseats[i] );
 		}
 	}
 }
