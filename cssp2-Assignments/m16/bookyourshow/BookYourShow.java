@@ -7,7 +7,7 @@ class BookYourShow {
 	}
 	String get(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
-			System.out.println(showobj.movname[i]);
+			System.out.println(showobj.movname[i] + "Vcha");
 			if (showobj.movname[i].equals(moviename) && showobj.movdate[i].equals(moviedate)) {
 				String str = moviename + "," + moviedate;
 				return str;
