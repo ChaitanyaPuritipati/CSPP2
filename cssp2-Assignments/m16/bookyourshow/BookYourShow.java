@@ -42,6 +42,7 @@ class BookYourShow {
 					}
 				}
 			}
+			System.out.println(count + "HIIIIII");
 			if (count != testseats.length) {
 				return;
 			} else {
