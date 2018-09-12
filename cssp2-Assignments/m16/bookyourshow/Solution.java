@@ -20,7 +20,7 @@ class Solution {
                            break;
                 case "print":
                            par = tokens[1].split(",");
-                           bookshow.print(par[0], par[1], par[2]);
+                           System.out.println(bookshow.print(par[0], par[1], par[2]));
                            break;                      
 			}
 		}
