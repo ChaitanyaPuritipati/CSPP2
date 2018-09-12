@@ -27,9 +27,7 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
-		System.out.println(testseats.length + "counter");
 		if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
-			System.out.println("entered booking loop");
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
@@ -55,9 +53,6 @@ class BookYourShow {
 	}
 	String print(String moviename, String moviedate, String mobile) {
 		for (int i = 0; i < bookdetails.length; i++) {
-			 System.out.println(bookdetails[i][0] + "hello");
-			 System.out.println(bookdetails[i][1] + "How");
-			 System.out.println(bookdetails[i][3] + "I know");
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return moviename + moviedate + mobile;
 			}
