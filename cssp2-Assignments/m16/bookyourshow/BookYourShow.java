@@ -27,7 +27,9 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
+		System.out.println(testseats.length + "counter");
 		if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
+			System.out.println("entered booking loop");
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
@@ -49,7 +51,6 @@ class BookYourShow {
 				bookdetails[k][3] = user.patmob;
 				bookdetails[k][4] = movieseats;
 				k++;
-				System.out.println(bookdetails[k][0]);
 				return;
 			}
 		} else {
