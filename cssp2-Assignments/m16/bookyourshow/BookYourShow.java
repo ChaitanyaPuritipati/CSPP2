@@ -36,8 +36,7 @@ class BookYourShow {
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseats.length; j++) {
 					if (testseats[i].equals(mainseats[j])) {
-						System.out.println(testseats[i]);
-						showobj.showseats[indexOf(moviename, moviedate)] = showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i], "N/A");
+						showobj.showseats[indexOf(moviename, moviedate)] = showobj.showseats[indexOf(moviename, moviedate)].replaceFirst(testseats[i], "N/A");
 					}
 				}
 			}
