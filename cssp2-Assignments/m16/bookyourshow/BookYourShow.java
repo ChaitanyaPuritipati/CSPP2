@@ -53,6 +53,7 @@ class BookYourShow {
 		}
 	}
 	String print(String moviename, String moviedate, String mobile) {
+		System.out.println(k);
 		for (int i = 0; i < k - 1; i++) {
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return mobile + " " + moviename + " " + moviedate;
