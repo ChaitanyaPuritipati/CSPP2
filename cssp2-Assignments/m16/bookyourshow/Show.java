@@ -12,14 +12,15 @@ class Show {
 	void resize() {
 		movname = Arrays.copyOf(movname, 2 * size);
 		movdate = Arrays.copyOf(movdate, 2 * size);
-        showseats = Arrays.copyOf(showseats, 2 * size);
+		showseats = Arrays.copyOf(showseats, 2 * size);
 	}
 	void add(String name, String date, String seats) {
-         if(size == movname.length) {
-         	resize();
-         }
-         movname[size++] = name;
-         movdate[size++] = date;
-         showseats[size++] = seats;
+        System.out.println("entered");
+		if (size == movname.length) {
+			resize();
+		}
+		movname[size++] = name;
+		movdate[size++] = date;
+		showseats[size++] = seats;
 	}
 }
