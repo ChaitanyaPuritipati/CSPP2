@@ -38,16 +38,10 @@ class BookYourShow {
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseats.length; j++) {
 					if (testseats[i].equals(mainseats[j])) {
-						System.out.println(testseats[i] + "test");
-						System.out.println(mainseats[j] + "main");
-						count++;
+                        showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i],"N/A");
 					}
 				}
 			}
-			System.out.println(count + "HIIIIII");
-			if (count != testseats.length) {
-				return;
-			} else {
 				bookdetails[k][0] = moviename;
 				bookdetails[k][1] = moviedate;
 				bookdetails[k][2] = user.patname;
@@ -55,7 +49,6 @@ class BookYourShow {
 				bookdetails[k][4] = movieseats;
 				k++;
 				return;
-			}
 		} else {
 			return;
 		}
