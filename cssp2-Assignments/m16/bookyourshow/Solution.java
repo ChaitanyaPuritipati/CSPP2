@@ -4,18 +4,6 @@ import java.util.Scanner;
  */
 final class Solution {
     /**
-     * { three }.
-     */
-    private int three = 3;
-    /**
-     * { four }.
-     */
-    private int four = 4;
-    /**
-     * { five }.
-     */
-    private int five = 5;
-    /**
      * Constructs the object.
      */
     private Solution() {
@@ -27,6 +15,9 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
         BookYourShow bookshow = new BookYourShow();
         Scanner input = new Scanner(System.in);
         while (input.hasNext()) {
@@ -34,12 +25,12 @@ final class Solution {
             String[] tokens = line.split(" ", 2);
             switch (tokens[0]) {
             case "add":
-                String[] par = tokens[1].split(",", 3);
+                String[] par = tokens[1].split(",", three);
                 bookshow.add(par[0], par[1], par[2]);
                 break;
             case "book":
-                par = tokens[1].split(",", 5);
-                bookshow.book(par[0], par[1], par[2], par[3], par[4]);
+                par = tokens[1].split(",", five);
+                bookshow.book(par[0], par[1], par[2], par[three], par[four]);
                 break;
             case "print":
                 par = tokens[1].split(",");
