@@ -41,6 +41,7 @@ class BookYourShow {
 					if (testseats[i].equals(mainseats[j])) {
 						System.out.println("entedkakbubcbubdub");
 						showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i], "N/A");
+						System.out.println(showobj.showseats);
 					}
 				}
 			}
