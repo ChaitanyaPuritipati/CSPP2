@@ -16,7 +16,7 @@ class BookYourShow {
 	}
 	int indexOf(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
-			if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
+			if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
 				return i;
 			}
 		}
@@ -27,7 +27,7 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
-		if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
+		if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
@@ -36,17 +36,17 @@ class BookYourShow {
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseats.length; j++) {
 					if (testseats[i].equals(mainseats[j])) {
-                        showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i],"N/A");
+						showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i], "N/A");
 					}
 				}
 			}
-				bookdetails[k][0] = moviename;
-				bookdetails[k][1] = moviedate;
-				bookdetails[k][2] = user.patname;
-				bookdetails[k][3] = user.patmob;
-				bookdetails[k][4] = movieseats;
-				k++;
-				return;
+			bookdetails[k][0] = moviename;
+			bookdetails[k][1] = moviedate;
+			bookdetails[k][2] = user.patname;
+			bookdetails[k][3] = user.patmob;
+			bookdetails[k][4] = movieseats;
+			k++;
+			return;
 		} else {
 			return;
 		}
@@ -54,7 +54,7 @@ class BookYourShow {
 	String print(String moviename, String moviedate, String mobile) {
 		for (int i = 0; i < bookdetails.length; i++) {
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
-				return moviename + moviedate + mobile;
+				return mobile + " " + moviename + " " + moviedate;
 			}
 		}
 		return "Invalid";
