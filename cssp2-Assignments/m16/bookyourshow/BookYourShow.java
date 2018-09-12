@@ -28,6 +28,7 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
+		System.out.println(get(moviename, moviedate));
 		if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
