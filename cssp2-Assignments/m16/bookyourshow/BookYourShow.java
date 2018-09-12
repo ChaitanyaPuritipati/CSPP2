@@ -27,6 +27,10 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
+		if(get(moviename, moviedate).equals("No show")) {
+			System.out.println("No show");
+			return;
+		}
 		if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
 			String mainseats;
 			String[] mainseatsarr;
