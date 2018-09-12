@@ -20,9 +20,10 @@ class Show {
 		if (size == movname.length) {
 			resize();
 		}
-		movname[size++] = name;
-		movdate[size++] = date;
-		showseats[size++] = seats;
+		movname[size] = name;
+		movdate[size] = date;
+		showseats[size] = seats;
+		size++;
 		System.out.println(size);
 	}
 }
