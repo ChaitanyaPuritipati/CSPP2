@@ -41,13 +41,13 @@ class BookYourShow {
 					}
 				}
 			}
+			System.out.println(k + "value of k");
 			bookdetails[k][0] = moviename;
 			bookdetails[k][1] = moviedate;
 			bookdetails[k][2] = user.patname;
 			bookdetails[k][3] = user.patmob;
 			bookdetails[k][4] = movieseats;
 			k++;
-			System.out.println(k);
 			return;
 		} else {
 			return;
