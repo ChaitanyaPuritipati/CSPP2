@@ -1,0 +1,70 @@
+class BookYourShow {
+	int k = 0;
+	Show showobj = new Show();
+	String[][] bookdetails = new String[10000][5];
+	void add(String moviename, String moviedate, String movieseats) {
+		showobj.add(moviename, moviedate, movieseats);
+	}
+	boolean get(String moviename, String moviedate) {
+		for (int i = 0; i < showobj.size; i++) {
+			if (showobj.movname[i].equals(moviename) && showobj.movdate[i].equals(moviedate)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	int indexOf(String moviename, String moviedate) {
+		for (int i = 0; i < showobj.size; i++) {
+			if (get(moviename, moviedate)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	void book(String moviename, String moviedate, String username, String usermobile, String movieseats) {
+		Patron user = new Patron(username, usermobile);
+		movieseats = movieseats.replace("[", "");
+		movieseats = movieseats.replace("]", "");
+		String[] testseats = movieseats.split(",");
+		if (get(moviename, moviedate)) {
+			String[] mainseats;
+			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
+			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
+			mainseats = showobj.showseats[indexOf(moviename, moviedate)].split(",");
+			int count = 0;
+			for (int i = 0; i < testseats.length; i++) {
+				for (int j = 0; j < mainseats.length; j++) {
+					if (testseats[i].equals(mainseats[j])) {
+						count++;
+					}
+				}
+			}
+			if (count != testseats.length) {
+				return;
+			} else {
+				bookdetails[k][0] = moviename;
+				bookdetails[k][1] = moviedate;
+				bookdetails[k][2] = user.patname;
+				bookdetails[k][3] = user.patmob;
+				bookdetails[k][4] = movieseats;
+				return;
+			}
+		} else {
+			return;
+		}
+	}
+	String print(String moviename, String moviedate, String mobile) {
+		for (int i = 0; i < bookdetails.length; i++) {
+			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
+				return moviename + moviedate + mobile;
+			}
+		}
+		return "Invalid";
+	}
+	void showAll() {
+		for (int i = 0; i < showobj.size; i++) {
+			System.out.println(showobj.movname[i] + showobj.movdate[i] + showobj.showseats[i]);
+		}
+	}
+}
+
