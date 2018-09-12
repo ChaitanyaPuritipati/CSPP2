@@ -19,15 +19,9 @@ class Show {
 		if (size >= movname.length) {
 			resize();
 		}
-		System.out.println(name + "chaitu");
-		System.out.println(date + "chaitu");
-		System.out.println(seats + "chaitu");
 		movname[size] = seats;
 		movdate[size] = date;
 		showseats[size] = seats;
-		System.out.println(movname[0]);
-		System.out.println(movdate[0]);
-		System.out.println(showseats[0]);
 		size++;
 	}
 }
