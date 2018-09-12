@@ -17,6 +17,7 @@ class BookYourShow {
 	int indexOf(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
 			if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
+				System.out.println(i);
 				return i;
 			}
 		}
