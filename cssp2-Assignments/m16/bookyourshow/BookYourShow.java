@@ -23,6 +23,7 @@ class BookYourShow {
 		return -1;
 	}
 	void book(String moviename, String moviedate, String username, String usermobile, String movieseats) {
+		System.out.println("entered");
 		Patron user = new Patron(username, usermobile);
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
