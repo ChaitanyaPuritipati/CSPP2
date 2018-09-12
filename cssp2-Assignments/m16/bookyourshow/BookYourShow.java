@@ -37,9 +37,9 @@ class BookYourShow {
 			int count = 0;
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseats.length; j++) {
-					System.out.println(testseats[i] + "test");
-					System.out.println(mainseats[j] + "main");
 					if (testseats[i].equals(mainseats[j])) {
+						System.out.println(testseats[i] + "test");
+						System.out.println(mainseats[j] + "main");
 						count++;
 					}
 				}
