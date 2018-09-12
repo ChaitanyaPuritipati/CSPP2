@@ -46,6 +46,7 @@ class BookYourShow {
 			bookdetails[k][2] = user.patname;
 			bookdetails[k][3] = user.patmob;
 			bookdetails[k][4] = movieseats;
+			System.out.println(bookdetails[k][0]);
 			k++;
 			return;
 		} else {
