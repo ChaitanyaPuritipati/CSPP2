@@ -7,7 +7,6 @@ class BookYourShow {
 	}
 	String get(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
-			System.out.println(showobj.movname[i] + "Vcha");
 			if (showobj.movname[i].equals(moviename) && showobj.movdate[i].equals(moviedate)) {
 				String str = moviename + "," + moviedate;
 				return str;
@@ -24,7 +23,6 @@ class BookYourShow {
 		return -1;
 	}
 	void book(String moviename, String moviedate, String username, String usermobile, String movieseats) {
-		System.out.println("entered");
 		Patron user = new Patron(username, usermobile);
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
@@ -43,13 +41,11 @@ class BookYourShow {
 					}
 				}
 			}
-			System.out.println(showobj.showseats[indexOf(moviename, moviedate)]);
 			bookdetails[k][0] = moviename;
 			bookdetails[k][1] = moviedate;
 			bookdetails[k][2] = user.patname;
 			bookdetails[k][3] = user.patmob;
 			bookdetails[k][4] = movieseats;
-			System.out.println(bookdetails[k][0] + "BookWoeld");
 			k++;
 			return;
 		} else {
@@ -57,7 +53,6 @@ class BookYourShow {
 		}
 	}
 	String print(String moviename, String moviedate, String mobile) {
-		System.out.println(k - 1);
 		for (int i = 0; i < k - 1; i++) {
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return mobile + " " + moviename + " " + moviedate;
