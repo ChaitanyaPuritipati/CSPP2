@@ -15,7 +15,6 @@ class BookYourShow {
 		return "No show";
 	}
 	int indexOf(String moviename, String moviedate) {
-		System.out.println(showobj.size + "SIze check");
 		for (int i = 0; i < showobj.size; i++) {
 			System.out.println(get(moviename, moviedate));
 			if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
@@ -33,16 +32,12 @@ class BookYourShow {
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");
-			System.out.println(indexOf(moviename, moviedate));
 			mainseats = showobj.showseats[indexOf(moviename, moviedate)].split(",");
 			int count = 0;
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseats.length; j++) {
 					if (testseats[i].equals(mainseats[j])) {
-						System.out.println("entedkakbubcbubdub");
-						System.out.println(testseats[i]);
-						showobj.showseats[indexOf(moviename, moviedate)].replaceAll(testseats[i], "N/A");
-						System.out.println(showobj.showseats[indexOf(moviename, moviedate)]);
+						showobj.showseats[indexOf(moviename, moviedate)] = showobj.showseats[indexOf(moviename, moviedate)].replace(testseats[i], "N/A");
 					}
 				}
 			}
