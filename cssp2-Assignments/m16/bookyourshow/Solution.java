@@ -26,6 +26,9 @@ class Solution {
                            par = tokens[1].split(",");
                            System.out.println(bookshow.get(par[0], par[1]));
                            break;
+                case "showAll":
+                           bookshow.showAll();
+                           break;           
 			}
 		}
 	}
