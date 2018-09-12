@@ -49,6 +49,7 @@ class BookYourShow {
 				bookdetails[k][3] = user.patmob;
 				bookdetails[k][4] = movieseats;
 				k++;
+				System.out.println(bookdetails[k][0]);
 				return;
 			}
 		} else {
@@ -57,9 +58,9 @@ class BookYourShow {
 	}
 	String print(String moviename, String moviedate, String mobile) {
 		for (int i = 0; i < bookdetails.length; i++) {
-			System.out.println(bookdetails[i][0] + "hello");
-			System.out.println(bookdetails[i][1] + "How");
-			System.out.println(bookdetails[i][3] + "I know");
+			// System.out.println(bookdetails[i][0] + "hello");
+			// System.out.println(bookdetails[i][1] + "How");
+			// System.out.println(bookdetails[i][3] + "I know");
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return moviename + moviedate + mobile;
 			}
