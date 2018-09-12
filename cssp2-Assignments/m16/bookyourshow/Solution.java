@@ -14,7 +14,7 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         BookYourShow bookshow = new BookYourShow();
         Scanner input = new Scanner(System.in);
         while (input.hasNext()) {
@@ -40,6 +40,7 @@ final class Solution {
                 case "showAll":
                            bookshow.showAll();
                            break;
+                default:
             }
         }
     }
