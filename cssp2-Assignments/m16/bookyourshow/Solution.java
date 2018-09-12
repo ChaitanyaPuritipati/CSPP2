@@ -21,7 +21,11 @@ class Solution {
                 case "print":
                            par = tokens[1].split(",");
                            System.out.println(bookshow.print(par[0], par[1], par[2]));
-                           break;                      
+                           break;
+                case "get":
+                           par = tokens[1].split(",");
+                           System.out.println(bookshow.get(par[0], par[1]));
+                           break;
 			}
 		}
 	}
