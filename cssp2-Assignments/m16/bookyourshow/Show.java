@@ -16,6 +16,7 @@ class Show {
 	}
 	void add(String name, String date, String seats) {
         System.out.println("entered");
+        System.out.println(name + date + seats);
 		if (size == movname.length) {
 			resize();
 		}
