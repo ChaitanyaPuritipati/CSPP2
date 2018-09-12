@@ -41,6 +41,7 @@ class BookYourShow {
 			for (int i = 0; i < testseats.length; i++) {
 				for (int j = 0; j < mainseatsarr.length; j++) {
 					if (testseats[i].equals(mainseatsarr[j])) {
+						System.out.println(testseats[i] + "hello");
 						showobj.showseats[indexOf(moviename, moviedate)] = showobj.showseats[indexOf(moviename, moviedate)].replaceFirst(testseats[i], "N/A");
 					}
 				}
@@ -57,9 +58,6 @@ class BookYourShow {
 		}
 	}
 	String print(String moviename, String moviedate, String mobile) {
-		// if(get(moviename, moviedate).equals("No show")) {
-		// 	return "No show";
-		// }
 		for (int i = 0; i <= k - 1; i++) {
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return mobile + " " + moviename + " " + moviedate;
