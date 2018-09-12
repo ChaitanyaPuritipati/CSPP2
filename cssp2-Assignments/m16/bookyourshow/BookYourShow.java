@@ -1,5 +1,5 @@
 class BookYourShow {
-	int k = 0;
+	int k;
 	Show showobj = new Show();
 	String[][] bookdetails = new String[10000][5];
 	void add(String moviename, String moviedate, String movieseats) {
@@ -41,7 +41,6 @@ class BookYourShow {
 					}
 				}
 			}
-			System.out.println(k + "value of k");
 			bookdetails[k][0] = moviename;
 			bookdetails[k][1] = moviedate;
 			bookdetails[k][2] = user.patname;
