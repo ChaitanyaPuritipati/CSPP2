@@ -55,6 +55,7 @@ class BookYourShow {
 	String print(String moviename, String moviedate, String mobile) {
 		System.out.println(k + "value of k at the end of looping");
 		for (int i = 0; i < k - 1; i++) {
+			System.out.println(bookdetails[i][0] + "----" + bookdetails[i][1] + "------" + bookdetails[i][3] +"----");
 			if (bookdetails[i][0].equals(moviename) && bookdetails[i][1].equals(moviedate) && bookdetails[i][3].equals(mobile)) {
 				return mobile + " " + moviename + " " + moviedate;
 			}
