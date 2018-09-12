@@ -15,9 +15,8 @@ class BookYourShow {
 		return "No show";
 	}
 	int indexOf(String moviename, String moviedate) {
-		for (int i = 0; i <= showobj.size; i++) {
-			if (get(moviename, moviedate).equals(moviename + "," + moviedate)) {
-				System.out.println(i + "indexofitsvalue");
+		for (int i = 0; i < showobj.size; i++) {
+			if (get(moviename, moviedate).equals(showobj.movname[i] + "," + showobj.movdate[i])) {
 				return i;
 			}
 		}
