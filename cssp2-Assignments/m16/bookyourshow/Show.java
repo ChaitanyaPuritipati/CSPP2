@@ -8,6 +8,7 @@ class Show {
 		movname = new String[10];
 		movdate = new String[10];
 		showseats = new String[10];
+		size = 0;
 	}
 	void resize() {
 		movname = Arrays.copyOf(movname, 2 * size);
