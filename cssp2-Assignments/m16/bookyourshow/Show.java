@@ -19,7 +19,7 @@ class Show {
 		if (size >= movname.length) {
 			resize();
 		}
-		movname[size] = seats;
+		movname[size] = name;
 		movdate[size] = date;
 		showseats[size] = seats;
 		size++;
