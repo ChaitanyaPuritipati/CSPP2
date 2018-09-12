@@ -20,8 +20,8 @@ class Show {
 			resize();
 		}
 		System.out.println(name + "chaitu");
-		movname[size] = name;
-		movdate[size] = date;
+		movname[size] = "acha";
+		movdate[size] = "bacha";
 		showseats[size] = seats;
 		System.out.println(movname[size]);
 		System.out.println(movdate[size]);
