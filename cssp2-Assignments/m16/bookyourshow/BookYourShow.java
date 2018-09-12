@@ -5,17 +5,18 @@ class BookYourShow {
 	void add(String moviename, String moviedate, String movieseats) {
 		showobj.add(moviename, moviedate, movieseats);
 	}
-	boolean get(String moviename, String moviedate) {
+	String get(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
 			if (showobj.movname[i].equals(moviename) && showobj.movdate[i].equals(moviedate)) {
-				return true;
+				String str = moviename + "," + moviedate;
+				return str;
 			}
 		}
-		return false;
+		return "No show";
 	}
 	int indexOf(String moviename, String moviedate) {
 		for (int i = 0; i < showobj.size; i++) {
-			if (get(moviename, moviedate)) {
+			if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
 				return i;
 			}
 		}
@@ -26,7 +27,7 @@ class BookYourShow {
 		movieseats = movieseats.replace("[", "");
 		movieseats = movieseats.replace("]", "");
 		String[] testseats = movieseats.split(",");
-		if (get(moviename, moviedate)) {
+		if (get(moviename, moviedate).equals(moviename+","+moviedate)) {
 			String[] mainseats;
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("[", "");
 			showobj.showseats[indexOf(moviename, moviedate)]  = showobj.showseats[indexOf(moviename, moviedate)].replace("]", "");

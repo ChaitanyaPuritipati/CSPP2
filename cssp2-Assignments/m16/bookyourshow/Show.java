@@ -21,9 +21,6 @@ class Show {
 		movname[size] = name;
 		movdate[size] = date;
 		showseats[size] = seats;
-		System.out.println(movname[size]);
-		System.out.println(movdate[size]);
-		System.out.println(showseats[size]);
 		size++;
 	}
 }
