@@ -16,8 +16,7 @@ class Show {
 		showseats = Arrays.copyOf(showseats, 2 * size);
 	}
 	void addall(String name, String date, String seats) {
-		if (size == movname.length) {
-			System.out.println("intlo");
+		if (size >= movname.length) {
 			resize();
 		}
 		System.out.println(name + "chaitu");
