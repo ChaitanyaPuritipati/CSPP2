@@ -20,6 +20,7 @@ class Solution {
         		            	System.out.println(par[0]);
         		            	if(catitem.proname.equals(par[0])) {
                                      price = catitem.prounitprice;
+                                     break;
         		            	}
         		            }
         		            inpitem = new item(par[0], Integer.parseInt(par[1]), price);
