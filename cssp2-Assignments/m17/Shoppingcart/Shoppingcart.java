@@ -60,7 +60,7 @@ class Shoppingcart {
 	}
 	void showcart() {
 		for (item cartitem : cartitems) {
-			if (cartitem != null) {
+			if (cartitem != null && cartitem.proquantity != 0) {
 				System.out.println(cartitem.proname + " " + cartitem.proquantity);
 			}
 		}
