@@ -37,8 +37,11 @@ class Solution {
 				shop.removefromcart(inpitem);
 				break;
 			case "catalog":
-			     shop.showcatalog();
-			     break;	
+				shop.showcatalog();
+				break;
+			case "show":
+				shop.showcart();
+				break;
 			default:
 			}
 		}
