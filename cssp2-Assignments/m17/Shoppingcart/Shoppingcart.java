@@ -103,7 +103,7 @@ class Shoppingcart {
 	}
 	double payableamount() {
 		double payamt = 0;
-		payamt = totalamount() + (totalamount() * 0.15) + discamt;
+		payamt = totalamount() + (totalamount() * 0.15) - discamt;
 		return payamt;
 	}
 }
