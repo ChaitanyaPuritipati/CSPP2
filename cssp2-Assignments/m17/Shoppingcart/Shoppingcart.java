@@ -42,8 +42,10 @@ class Shoppingcart {
 		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
 	}
 	void showcatalog() {
-		for(item catitem : catitems) {
-			System.out.println(catitem);
+		for (item catitem : catitems) {
+			if (catitem != null) {
+				System.out.println(catitem);
+			}
 		}
 	}
 }
