@@ -74,7 +74,7 @@ class Shoppingcart {
 	}
 	void applycoupon(String couponcode) {
 		int flag = 0;
-		if(coucnt >= 1) {
+		if (coucnt >= 1) {
 			return;
 		}
 		for (int i = 0; i < 4; i++) {
@@ -118,12 +118,14 @@ class Shoppingcart {
 		return payamt;
 	}
 	void print() {
-		System.out.println("Name  "+"quantity  "+"Price");
-		for(item cartitem : cartitems) {
-			System.out.println(cartitem.proname + " " + cartitem.proquantity + " " + cartitem.prounitprice);
+		System.out.println("Name  " + "quantity  " + "Price");
+		for (item cartitem : cartitems) {
+			if (cartitem != null) {
+				System.out.println(cartitem.proname + " " + cartitem.proquantity + " " + cartitem.prounitprice);
+			}
 		}
 		System.out.println("totalAmount: " + totalamount());
-		System.out.println("Total:"+ totalamount());
+		System.out.println("Total:" + totalamount());
 		System.out.println("Disc%:" + discamt);
 		System.out.println("payable amount: " + payableamount());
 	}
