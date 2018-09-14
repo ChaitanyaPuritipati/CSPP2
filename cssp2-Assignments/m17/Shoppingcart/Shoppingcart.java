@@ -39,11 +39,6 @@ class Shoppingcart {
 		return -1;
 	}
 	void removefromcart(item argitem) {
-		for (int i = indexof(argitem); i < cartsize; i++) {
-			cartitems[i] = cartitems[i + 1];
-			System.out.println(cartitems[i]);
-		}
-		cartsize--;
+		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
 	}
-
 }
