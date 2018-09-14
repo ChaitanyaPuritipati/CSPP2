@@ -37,17 +37,17 @@ class Shoppingcart {
 		if (cartsize == cartitems.length) {
 			cartresize();
 		}
-		for(int j = 0; j < catsize; j++) {
-			if(catitems[j].proname.equals(argitem.proname) && (catitems[j].proquantity >= argitem.proquantity)) {
-				// System.out.println(argitem.proquantity + "item weight");
-				// System.out.println(catitems[j].proquantity + "before removing");
+		for (int j = 0; j < catsize; j++) {
+			if (catitems[j].proname.equals(argitem.proname)) {
+				if(catitems[j].proquantity < argitem.proquantity) {
+					return;
+				}
 				catitems[j].proquantity = catitems[j].proquantity - argitem.proquantity;
-				// System.out.println(catitems[j].proquantity + "removed from cat");
 				break;
 			}
 		}
-		for(int i = 0; i < cartsize; i++) {
-			if(cartitems[i].proname.equals(argitem.proname)) {
+		for (int i = 0; i < cartsize; i++) {
+			if (cartitems[i].proname.equals(argitem.proname)) {
 				cartitems[i].proquantity = cartitems[i].proquantity + argitem.proquantity;
 				return;
 			}
@@ -90,43 +90,29 @@ class Shoppingcart {
 		return totalamnt;
 	}
 	void applycoupon(String couponcode) {
-		// int flag = 0;
 		if (coucnt >= 1) {
 			return;
 		}
-		// for (int i = 0; i < 4; i++) {
-		// 	if (coupons[i].equals(couponcode)) {
-		// 		flag = 1;
-		// 	}
-		// }
-		// if (flag == 0) {
-		// 	System.out.println("Invalid coupon");
-		// 	return;
-		// }
 		switch (couponcode) {
 		case "IND10":
-			// coupons[0] = "N/A";
 			discamt = discamt + (totalamount() * 0.1);
 			coucnt++;
 			break;
 		case "IND20":
-			// coupons[1] = "N/A";
 			discamt = discamt + (totalamount() * 0.2);
 			coucnt++;
 			break;
 		case "IND30":
-			// coupons[2] = "N/A";
 			discamt = discamt + (totalamount() * 0.3);
 			coucnt++;
 			break;
 		case "IND50":
-			// coupons[3] = "N/A";
 			discamt = discamt + (totalamount() * 0.5);
 			coucnt++;
 			break;
-		default: 
-		    System.out.println("Invalid coupon");
-		    break;
+		default:
+			System.out.println("Invalid coupon");
+			break;
 		}
 
 	}
@@ -139,11 +125,11 @@ class Shoppingcart {
 	}
 	void print() {
 		System.out.println("Name   quantity   Price");
-			for (int i = 0; i < cartsize; i++) {
-				if (cartitems[i].proquantity != 0) {
-					System.out.println(cartitems[i].proname + " " + cartitems[i].proquantity + " " + cartitems[i].prounitprice);
-				}
+		for (int i = 0; i < cartsize; i++) {
+			if (cartitems[i].proquantity != 0) {
+				System.out.println(cartitems[i].proname + " " + cartitems[i].proquantity + " " + cartitems[i].prounitprice);
 			}
+		}
 		System.out.println("Total:" + totalamount());
 		System.out.println("Disc%:" + discamt);
 		System.out.println("Tax:" + tax);
