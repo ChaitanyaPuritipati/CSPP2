@@ -103,7 +103,10 @@ class Shoppingcart {
 	}
 	double payableamount() {
 		double payamt = 0;
+		System.out.println(totalamount() + "fullamt");
+		System.out.println(discamt + "discount amount");
 		payamt = totalamount() - discamt;
+		System.out.println(payamt + "removed discount");
 		payamt = payamt + (payamt * 0.15);
 		return payamt;
 	}
