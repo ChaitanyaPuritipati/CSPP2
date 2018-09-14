@@ -64,6 +64,7 @@ class Shoppingcart {
 		if (cartitems[indexof(argitem)].proquantity == 0) {
 			System.out.println("entered looppppppp");
 			System.out.println(indexof(argitem));
+			System.out.println(cartsize + "size of cart");
 			for (int i = indexof(argitem); i < cartsize - 1; i++) {
 				System.out.println(cartitems[i].proname + "before");
 				cartitems[i] = cartitems[i + 1];
