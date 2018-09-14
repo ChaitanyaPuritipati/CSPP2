@@ -51,17 +51,17 @@ class Shoppingcart {
 	void showcart() {
 		for (item cartitem : cartitems) {
 			if (cartitem != null) {
-                System.out.println(cartitem.proname + " " + cartitem.proquantity);
+				System.out.println(cartitem.proname + " " + cartitem.proquantity);
 			}
 		}
 	}
 	void totalamount() {
 		double totalamnt = 0;
 		for (item cartitem : cartitems) {
-			if(cartitem != null) {
-                totalamnt = totalamnt + ((cartitem.proquantity) * (cartitem.prounitprice));
+			if (cartitem != null) {
+				totalamnt = totalamnt + ((cartitem.proquantity) * (cartitem.prounitprice));
 			}
 		}
-		System.out.println(totalamnt);
+		System.out.println("totalAmount: " + totalamnt);
 	}
 }
