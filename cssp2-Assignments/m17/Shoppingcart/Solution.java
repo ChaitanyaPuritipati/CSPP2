@@ -14,7 +14,13 @@ class Solution {
         		            break;
         		case "add":
         		            par = tokens[1].split(",");
-        		            inpitem = new item(par[0], Integer.parseInt(par[1]), Integer.parseInt(par[2]));
+        		            int price = 0;
+        		            for(item catitem : shop.catitems) {
+        		            	if(catitem.proname.equals(par[0])) {
+                                     price = catitem.prounitprice;
+        		            	}
+        		            }
+        		            inpitem = new item(par[0], Integer.parseInt(par[1]), price);
         		            shop.addtocart(inpitem);
         		            break;             
         	}
