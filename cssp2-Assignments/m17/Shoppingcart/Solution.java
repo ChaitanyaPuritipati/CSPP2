@@ -1,5 +1,19 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
+		//unused
+	}
+	/**
+	 * { Main function starts here }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Shoppingcart shop = new Shoppingcart();
 		Scanner input = new Scanner(System.in);
@@ -43,17 +57,17 @@ class Solution {
 				shop.showcart();
 				break;
 			case "totalAmount":
-			    System.out.println("totalAmount: " + shop.totalamount());
+				System.out.println("totalAmount: " + shop.totalamount());
 				break;
 			case "payableAmount":
-			    System.out.println("Payable amount: " + shop.payableamount());	
-			    break;
+				System.out.println("Payable amount: " + shop.payableamount());
+				break;
 			case "coupon":
-			    shop.applycoupon(tokens[1]);
-			    break; 
+				shop.applycoupon(tokens[1]);
+				break;
 			case "print":
-			    shop.print();
-			    break;           
+				shop.print();
+				break;
 			default:
 			}
 		}
