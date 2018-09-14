@@ -37,6 +37,12 @@ class Shoppingcart {
 		if (cartsize == cartitems.length) {
 			cartresize();
 		}
+		for(int i = 0; i < cartsize; i++) {
+			if(cartitems[i].proname.equals(argitem.proname)) {
+				cartitems[i].proquantity = cartitems[i].proquantity + argitem.proquantity;
+				return;
+			}
+		}
 		cartitems[cartsize] = argitem;
 		cartsize++;
 	}
