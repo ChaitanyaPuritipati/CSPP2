@@ -118,7 +118,7 @@ class Shoppingcart {
 		return payamt;
 	}
 	void print() {
-		System.out.println("Name  " + "quantity  " + "Price");
+		System.out.println("Name   " + "quantity   " + "Price");
 		for (item cartitem : cartitems) {
 			if (cartitem != null) {
 				System.out.println(cartitem.proname + " " + cartitem.proquantity + " " + cartitem.prounitprice);
