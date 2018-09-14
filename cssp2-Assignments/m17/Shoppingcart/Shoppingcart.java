@@ -49,6 +49,7 @@ class Shoppingcart {
 		}
 	}
 	void showcart() {
+		System.out.println(cartsize + "size of it");
 		for (item cartitem : cartitems) {
 			if (cartitem != null) {
                 System.out.println(cartitem.proname + " " + cartitem.proquantity);
