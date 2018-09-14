@@ -1,3 +1,6 @@
 class Solution {
-	Shoppingcart shop = new Shoppingcart();
+	public static void main(String[] args) {
+		Shoppingcart shop = new Shoppingcart();
+
+	}
 }
