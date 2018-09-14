@@ -22,7 +22,8 @@ class Solution {
         		            }
         		            inpitem = new item(par[0], Integer.parseInt(par[1]), price);
         		            shop.addtocart(inpitem);
-        		            break;             
+        		            break;
+        		default:                        
         	}
         }
 	}
