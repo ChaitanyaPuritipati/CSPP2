@@ -49,11 +49,19 @@ class Shoppingcart {
 		}
 	}
 	void showcart() {
-		System.out.println(cartsize + "size of it");
 		for (item cartitem : cartitems) {
 			if (cartitem != null) {
                 System.out.println(cartitem.proname + " " + cartitem.proquantity);
 			}
 		}
+	}
+	void totalamount() {
+		double totalamnt = 0;
+		for (item cartitem : cartitems) {
+			if(cartitem != null) {
+                totalamnt = totalamnt + ((cartitem.proquantity) * (cartitem.prounitprice));
+			}
+		}
+		System.out.println(totalamnt);
 	}
 }

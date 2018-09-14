@@ -42,6 +42,9 @@ class Solution {
 			case "show":
 				shop.showcart();
 				break;
+			case "totalAmount":
+				shop.totalamount();
+				break;
 			default:
 			}
 		}
