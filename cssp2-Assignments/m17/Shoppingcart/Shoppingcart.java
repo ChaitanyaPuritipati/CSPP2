@@ -7,12 +7,14 @@ class Shoppingcart {
 	String[] coupons = new String[4];
 	double discamt = 0;
 	int coucnt;
+	double tax;
 	Shoppingcart() {
 		catitems = new item[10];
 		cartitems = new item[10];
 		catsize = 0;
 		cartsize = 0;
 		coucnt = 0;
+		tax = 0;
 		coupons[0] = "IND10";
 		coupons[1] = "IND20";
 		coupons[2] = "IND30";
@@ -114,7 +116,8 @@ class Shoppingcart {
 	double payableamount() {
 		double payamt = 0;
 		payamt = totalamount() - discamt;
-		payamt = payamt + (payamt * 0.15);
+		tax = (payamt * 0.15);
+		payamt = payamt + tax;
 		return payamt;
 	}
 	void print() {
@@ -127,6 +130,7 @@ class Shoppingcart {
 		System.out.println("totalAmount: " + totalamount());
 		System.out.println("Total:" + totalamount());
 		System.out.println("Disc%:" + discamt);
+		System.out.println("Tax:" + tax);
 		System.out.println("payable amount: " + payableamount());
 	}
 }
