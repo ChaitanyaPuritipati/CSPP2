@@ -60,6 +60,12 @@ class Shoppingcart {
 	}
 	void removefromcart(item argitem) {
 		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
+		if (cartitems[indexof(argitem)].proquantity == 0) {
+			for (int i = indexof(argitem); i < cartsize - 1; i++) {
+				cartitems[i] = cartitems[i + 1];
+			}
+			cartsize--;
+		}
 		for (int j = 0; j < catsize; j++) {
 			if (catitems[j].proname.equals(argitem.proname)) {
 				catitems[j].proquantity = catitems[j].proquantity + argitem.proquantity;
@@ -76,7 +82,8 @@ class Shoppingcart {
 	}
 	void showcart() {
 		for (item cartitem : cartitems) {
-			if (cartitem != null && cartitem.proquantity != 0) {
+			// && cartitem.proquantity != 0
+			if (cartitem != null) {
 				System.out.println(cartitem.proname + " " + cartitem.proquantity);
 			}
 		}
