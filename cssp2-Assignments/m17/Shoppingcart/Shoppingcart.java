@@ -60,7 +60,9 @@ class Shoppingcart {
 	}
 	void removefromcart(item argitem) {
 		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
+		System.out.println(cartitems[indexof(argitem)] + "entered");
 		if (cartitems[indexof(argitem)].proquantity == 0) {
+			System.out.println("entered looppppppp");
 			for (int i = indexof(argitem); i < cartsize - 1; i++) {
 				cartitems[i] = cartitems[i + 1];
 			}
