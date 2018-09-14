@@ -73,6 +73,8 @@ class Shoppingcart {
 	void applycoupon(String couponcode) {
 		int flag = 0;
 		for (int i = 0; i < 4; i++) {
+			System.out.println(coupons[i] + "array");
+			System.out.println(couponcode + "code");
 			if (coupons[i].equals(couponcode)) {
 				flag = 1;
 			}
