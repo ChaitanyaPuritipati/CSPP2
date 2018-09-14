@@ -82,7 +82,6 @@ class Shoppingcart {
 	}
 	void showcart() {
 		for (item cartitem : cartitems) {
-			// && cartitem.proquantity != 0
 			if (cartitem != null) {
 				System.out.println(cartitem.proname + " " + cartitem.proquantity);
 			}
@@ -134,9 +133,7 @@ class Shoppingcart {
 	void print() {
 		System.out.println("Name   quantity   Price");
 		for (int i = 0; i < cartsize; i++) {
-			// if (cartitems[i].proquantity != 0) {
 				System.out.println(cartitems[i].proname + " " + cartitems[i].proquantity + " " + cartitems[i].prounitprice);
-			// }
 		}
 		System.out.println("Total:" + totalamount());
 		System.out.println("Disc%:" + discamt);
