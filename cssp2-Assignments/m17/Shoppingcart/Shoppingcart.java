@@ -40,6 +40,10 @@ class Shoppingcart {
 	}
 	void removefromcart(item argitem) {
 		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
-		System.out.println(cartitems[indexof(argitem)].proquantity);
+	}
+	void showcatalog() {
+		for(item catitem : catitems) {
+			System.out.println(catitem);
+		}
 	}
 }

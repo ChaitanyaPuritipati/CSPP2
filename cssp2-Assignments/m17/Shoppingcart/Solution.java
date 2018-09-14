@@ -9,12 +9,12 @@ class Solution {
 			switch (tokens[0]) {
 			case "Item":
 				String[] par = tokens[1].split(",");
-				item inpitem = new item(par[0], Integer.parseInt(par[1]), Integer.parseInt(par[2]));
+				item inpitem = new item(par[0], Integer.parseInt(par[1]), Double.parseDouble(par[2]));
 				shop.addtocatalog(inpitem);
 				break;
 			case "add":
 				par = tokens[1].split(",");
-				int price = 0;
+				double price = 0;
 				for (item catitem : shop.catitems) {
 					if (catitem.proname.equals(par[0])) {
 						price = catitem.prounitprice;
@@ -36,6 +36,9 @@ class Solution {
 				inpitem = new item(par[0], Integer.parseInt(par[1]), price);
 				shop.removefromcart(inpitem);
 				break;
+			case "catalog":
+			     shop.showcatalog();
+			     break;	
 			default:
 			}
 		}

@@ -1,13 +1,13 @@
 class item {
 	String proname;
 	int proquantity;
-	int prounitprice;
-	item(String name, int quant, int price) {
+	double prounitprice;
+	item(String name, int quant, double price) {
 		proname = name;
 		proquantity = quant;
 		prounitprice = price;
 	}
 	public String toString() {
-		return proname + "," + proquantity + "," + prounitprice;
+		return proname + " " + proquantity + " " + prounitprice;
 	}
 }
