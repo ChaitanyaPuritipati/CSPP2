@@ -4,7 +4,7 @@ class Shoppingcart {
 	int cartsize;
 	item[] cartitems;
 	item[] catitems;
-	String[] coupons = new String[4];
+	// String[] coupons = new String[4];
 	double discamt = 0;
 	int coucnt;
 	double tax;
@@ -15,10 +15,10 @@ class Shoppingcart {
 		cartsize = 0;
 		coucnt = 0;
 		tax = 0;
-		coupons[0] = "IND10";
-		coupons[1] = "IND20";
-		coupons[2] = "IND30";
-		coupons[3] = "IND50";
+		// coupons[0] = "IND10";
+		// coupons[1] = "IND20";
+		// coupons[2] = "IND30";
+		// coupons[3] = "IND50";
 	}
 	void catresize() {
 		catitems = Arrays.copyOf(catitems, 2 * catsize);
@@ -81,41 +81,43 @@ class Shoppingcart {
 		return totalamnt;
 	}
 	void applycoupon(String couponcode) {
-		int flag = 0;
+		// int flag = 0;
 		if (coucnt >= 1) {
 			return;
 		}
-		for (int i = 0; i < 4; i++) {
-			if (coupons[i].equals(couponcode)) {
-				flag = 1;
-			}
-		}
-		if (flag == 0) {
-			System.out.println("Invalid coupon");
-			return;
-		}
+		// for (int i = 0; i < 4; i++) {
+		// 	if (coupons[i].equals(couponcode)) {
+		// 		flag = 1;
+		// 	}
+		// }
+		// if (flag == 0) {
+		// 	System.out.println("Invalid coupon");
+		// 	return;
+		// }
 		switch (couponcode) {
 		case "IND10":
-			coupons[0] = "N/A";
+			// coupons[0] = "N/A";
 			discamt = discamt + (totalamount() * 0.1);
 			coucnt++;
 			break;
 		case "IND20":
-			coupons[1] = "N/A";
+			// coupons[1] = "N/A";
 			discamt = discamt + (totalamount() * 0.2);
 			coucnt++;
 			break;
 		case "IND30":
-			coupons[2] = "N/A";
+			// coupons[2] = "N/A";
 			discamt = discamt + (totalamount() * 0.3);
 			coucnt++;
 			break;
 		case "IND50":
-			coupons[3] = "N/A";
+			// coupons[3] = "N/A";
 			discamt = discamt + (totalamount() * 0.5);
 			coucnt++;
 			break;
-		default:
+		default: 
+		    System.out.println("Invalid coupon");
+		    break;
 		}
 
 	}
