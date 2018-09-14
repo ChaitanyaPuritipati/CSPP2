@@ -121,7 +121,7 @@ class Shoppingcart {
 		return payamt;
 	}
 	void print() {
-		System.out.println("Name   " + "quantity   " + "Price");
+		System.out.println("Name   quantity   Price");
 		for (int j = 0; j < catsize; j++) {
 			for (int i = 0; i < cartsize; i++) {
 				if (cartitems[i].proquantity != 0 && catitems[j].proname.equals(cartitems[i].proname)) {
