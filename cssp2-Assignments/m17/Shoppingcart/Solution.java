@@ -16,8 +16,6 @@ class Solution {
         		            par = tokens[1].split(",");
         		            int price = 0;
         		            for(item catitem : shop.catitems) {
-        		            	System.out.println(catitem.proname);
-        		            	System.out.println(par[0]);
         		            	if(catitem.proname.equals(par[0])) {
                                      price = catitem.prounitprice;
                                      break;

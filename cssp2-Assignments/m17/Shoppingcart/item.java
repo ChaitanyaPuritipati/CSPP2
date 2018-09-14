@@ -7,4 +7,7 @@ class item {
 		proquantity = quant;
 		prounitprice = price;
 	}
+	public String toString() {
+		return proname + "," + proquantity + "," + prounitprice;
+	}
 }

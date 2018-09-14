@@ -20,13 +20,18 @@ class Shoppingcart {
     	if(catsize == catitems.length) {
     		catresize();
     	}
-    	catitems[catsize++] = argitem; 
+    	catitems[catsize] = argitem;
+    	System.out.println(cartitems[catsize]);
+    	catsize++;
+
     }
     void addtocart(item argitem) {
     	if(cartsize == cartitems.length) {
     		cartresize();
     	}
-    	cartitems[cartsize++] = argitem;
+    	cartitems[cartsize] = argitem;
+    	System.out.println(cartitems[cartsize]);
+    	cartsize++;
     }
 
 }
