@@ -37,6 +37,14 @@ class Shoppingcart {
 		if (cartsize == cartitems.length) {
 			cartresize();
 		}
+		for(int j = 0; j < catsize; j++) {
+			if(catitems[j].proname.equals(argitem.proname) && (catitems[j].proquantity >= argitem.proquantity)) {
+				System.out.println(catitems[j].proquantity + "before removing");
+				catitems[j].proquantity = catitems[j].proquantity - argitem.proquantity;
+				System.out.println(catitems[j].proquantity + "removed from cat");
+				break;
+			}
+		}
 		for(int i = 0; i < cartsize; i++) {
 			if(cartitems[i].proname.equals(argitem.proname)) {
 				cartitems[i].proquantity = cartitems[i].proquantity + argitem.proquantity;
