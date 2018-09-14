@@ -48,4 +48,11 @@ class Shoppingcart {
 			}
 		}
 	}
+	void showcart() {
+		for (item cartitem : cartitems) {
+			if (cartitem != null) {
+                System.out.println(cartitem.proname + " " + cartitem.proquantity);
+			}
+		}
+	}
 }
