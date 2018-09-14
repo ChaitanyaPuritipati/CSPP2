@@ -65,7 +65,7 @@ class Shoppingcart {
 			System.out.println("entered looppppppp");
 			System.out.println(indexof(argitem));
 			System.out.println(cartsize + "size of cart");
-			for (int i = indexof(argitem); i < cartsize - 1; i++) {
+			for (int i = indexof(argitem); i <= cartsize - 1; i++) {
 				System.out.println(cartitems[i].proname + "before");
 				cartitems[i] = cartitems[i + 1];
 				System.out.println(cartitems[i].proname + "after");
