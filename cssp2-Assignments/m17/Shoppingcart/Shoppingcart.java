@@ -122,9 +122,11 @@ class Shoppingcart {
 	}
 	void print() {
 		System.out.println("Name   " + "quantity   " + "Price");
-		for (int i = cartsize - 1; i >=0; i--) {
-			if (cartitems[i].proquantity != 0) {
-				System.out.println(cartitems[i].proname + " " + cartitems[i].proquantity + " " + cartitems[i].prounitprice);
+		for (int j = 0; j < catsize; j++) {
+			for (int i = 0; i < cartsize; i++) {
+				if (cartitems[i].proquantity != 0 && cartitems[j].proname.equals(catitems[i])) {
+					System.out.println(catitems[j].proname + " " + cartitems[i].proquantity + " " + cartitems[i].prounitprice);
+				}
 			}
 		}
 		System.out.println("totalAmount: " + totalamount());
