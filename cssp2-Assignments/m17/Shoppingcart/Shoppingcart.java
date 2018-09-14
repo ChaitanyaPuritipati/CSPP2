@@ -85,7 +85,6 @@ class Shoppingcart {
 			}
 		}
 		if (flag == 0) {
-			System.out.println("Invalid Coupon");
 			return;
 		}
 		switch (couponcode) {
