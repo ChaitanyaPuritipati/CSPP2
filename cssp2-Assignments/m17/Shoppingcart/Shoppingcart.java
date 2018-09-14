@@ -73,8 +73,6 @@ class Shoppingcart {
 	void applycoupon(String couponcode) {
 		int flag = 0;
 		for (int i = 0; i < 4; i++) {
-			System.out.println(coupons[i] + "array");
-			System.out.println(couponcode + "code");
 			if (coupons[i].equals(couponcode)) {
 				flag = 1;
 			}
@@ -84,19 +82,19 @@ class Shoppingcart {
 		}
 		switch (couponcode) {
 		case "IND10":
-			coupons[0] = null;
+			coupons[0] = "N/A";
 			discamt = discamt + (totalamount() * 0.1);
 			break;
 		case "IND20":
-			coupons[1] = null;
+			coupons[1] = "N/A";
 			discamt = discamt + (totalamount() * 0.2);
 			break;
 		case "IND30":
-			coupons[2] = null;
+			coupons[2] = "N/A";
 			discamt = discamt + (totalamount() * 0.3);
 			break;
 		case "IND50":
-			coupons[3] = null;
+			coupons[3] = "N/A";
 			discamt = discamt + (totalamount() * 0.5);
 			break;
 		default:
