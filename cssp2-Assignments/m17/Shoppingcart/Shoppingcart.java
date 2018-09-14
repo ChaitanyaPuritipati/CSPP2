@@ -21,7 +21,7 @@ class Shoppingcart {
     		catresize();
     	}
     	catitems[catsize] = argitem;
-    	System.out.println(cartitems[catsize]);
+    	System.out.println(catitems[catsize]);
     	catsize++;
 
     }
