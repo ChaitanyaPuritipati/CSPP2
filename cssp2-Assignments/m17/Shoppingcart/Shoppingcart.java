@@ -74,7 +74,7 @@ class Shoppingcart {
 	}
 	void applycoupon(String couponcode) {
 		int flag = 0;
-		if(coucnt > 1) {
+		if(coucnt >= 1) {
 			return;
 		}
 		for (int i = 0; i < 4; i++) {
