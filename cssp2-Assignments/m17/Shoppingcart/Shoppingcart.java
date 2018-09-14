@@ -4,11 +4,17 @@ class Shoppingcart {
 	int cartsize;
 	item[] cartitems;
 	item[] catitems;
+	String[] coupons = new String[4];
+	double discamt = 0;
 	Shoppingcart() {
 		catitems = new item[10];
 		cartitems = new item[10];
 		catsize = 0;
 		cartsize = 0;
+		coupons[0] = "IND10";
+		coupons[1] = "IND20";
+		coupons[2] = "IND30";
+		coupons[3] = "IND50";
 	}
 	void catresize() {
 		catitems = Arrays.copyOf(catitems, 2 * catsize);
@@ -64,8 +70,40 @@ class Shoppingcart {
 		}
 		return totalamnt;
 	}
-	// void payableamount() {
-	// 	double payamt = 0;
-	// 	payamt = totalamount() +
-	// }
+	void applycoupon(String couponcode) {
+		int flag = 0;
+		for (int i = 0; i < 4; i++) {
+			if (coupons[i].equals(couponcode)) {
+				flag = 1;
+			}
+		}
+		if (flag == 0) {
+			return;
+		}
+		switch (couponcode) {
+		case "IND10":
+			coupons[0] = null;
+			discamt = discamt + (totalamount() * 0.1);
+			break;
+		case "IND20":
+			coupons[1] = null;
+			discamt = discamt + (totalamount() * 0.2);
+			break;
+		case "IND30":
+			coupons[2] = null;
+			discamt = discamt + (totalamount() * 0.3);
+			break;
+		case "IND50":
+			coupons[3] = null;
+			discamt = discamt + (totalamount() * 0.5);
+			break;
+		default:
+		}
+
+	}
+	double payableamount() {
+		double payamt = 0;
+		payamt = totalamount() + (totalamount() * 0.15) + discamt;
+		return payamt;
+	}
 }

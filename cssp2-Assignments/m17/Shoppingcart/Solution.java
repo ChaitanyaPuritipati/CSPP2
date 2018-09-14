@@ -45,6 +45,12 @@ class Solution {
 			case "totalAmount":
 			    System.out.println("totalAmount: " + shop.totalamount());
 				break;
+			case "payableAmount":
+			    System.out.println("payable amount: " + shop.payableamount());	
+			    break;
+			case "coupon":
+			    shop.applycoupon(tokens[1]);
+			    break;        
 			default:
 			}
 		}
