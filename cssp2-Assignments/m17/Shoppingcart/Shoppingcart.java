@@ -41,7 +41,9 @@ class Shoppingcart {
 	void removefromcart(item argitem) {
 		for (int i = indexof(argitem); i < cartsize; i++) {
 			cartitems[i] = cartitems[i + 1];
+			System.out.println(cartitems[i]);
 		}
+		cartsize--;
 	}
 
 }
