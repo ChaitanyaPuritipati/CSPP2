@@ -50,7 +50,10 @@ class Solution {
 			    break;
 			case "coupon":
 			    shop.applycoupon(tokens[1]);
-			    break;        
+			    break; 
+			case "print":
+			    shop.print();
+			    break;           
 			default:
 			}
 		}

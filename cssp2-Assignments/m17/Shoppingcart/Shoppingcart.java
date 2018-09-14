@@ -113,11 +113,18 @@ class Shoppingcart {
 	}
 	double payableamount() {
 		double payamt = 0;
-		System.out.println(totalamount() + "fullamt");
-		System.out.println(discamt + "discount amount");
 		payamt = totalamount() - discamt;
-		System.out.println(payamt + "removed discount");
 		payamt = payamt + (payamt * 0.15);
 		return payamt;
+	}
+	void print() {
+		System.out.println("Name  "+"quantity  "+"Price");
+		for(item cartitem : cartitems) {
+			System.out.println(cartitem.proname + " " + cartitem.proquantity + " " + cartitem.prounitprice);
+		}
+		System.out.println("totalAmount: " + totalamount());
+		System.out.println("Total:"+ totalamount());
+		System.out.println("Disc%:" + discamt);
+		System.out.println("payable amount: " + payableamount());
 	}
 }
