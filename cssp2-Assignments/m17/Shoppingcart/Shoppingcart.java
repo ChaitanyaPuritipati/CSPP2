@@ -4,7 +4,6 @@ class Shoppingcart {
 	int cartsize;
 	item[] cartitems;
 	item[] catitems;
-	// String[] coupons = new String[4];
 	double discamt = 0;
 	int coucnt;
 	double tax;
@@ -15,10 +14,6 @@ class Shoppingcart {
 		cartsize = 0;
 		coucnt = 0;
 		tax = 0;
-		// coupons[0] = "IND10";
-		// coupons[1] = "IND20";
-		// coupons[2] = "IND30";
-		// coupons[3] = "IND50";
 	}
 	void catresize() {
 		catitems = Arrays.copyOf(catitems, 2 * catsize);
@@ -39,7 +34,7 @@ class Shoppingcart {
 		}
 		for (int j = 0; j < catsize; j++) {
 			if (catitems[j].proname.equals(argitem.proname)) {
-				if(catitems[j].proquantity < argitem.proquantity) {
+				if (catitems[j].proquantity < argitem.proquantity) {
 					return;
 				}
 				catitems[j].proquantity = catitems[j].proquantity - argitem.proquantity;
@@ -65,6 +60,12 @@ class Shoppingcart {
 	}
 	void removefromcart(item argitem) {
 		cartitems[indexof(argitem)].proquantity = cartitems[indexof(argitem)].proquantity - argitem.proquantity;
+		for (int j = 0; j < catsize; j++) {
+			if (catitems[j].proname.equals(argitem.proname)) {
+				catitems[j].proquantity = catitems[j].proquantity + argitem.proquantity;
+				break;
+			}
+		}
 	}
 	void showcatalog() {
 		for (item catitem : catitems) {
