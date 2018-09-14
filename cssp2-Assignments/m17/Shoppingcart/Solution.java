@@ -43,7 +43,7 @@ class Solution {
 				shop.showcart();
 				break;
 			case "totalAmount":
-				shop.totalamount();
+			    System.out.println("totalAmount: " + shop.totalamount());
 				break;
 			default:
 			}

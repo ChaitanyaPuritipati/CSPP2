@@ -55,13 +55,17 @@ class Shoppingcart {
 			}
 		}
 	}
-	void totalamount() {
+	double totalamount() {
 		double totalamnt = 0;
 		for (item cartitem : cartitems) {
 			if (cartitem != null) {
 				totalamnt = totalamnt + ((cartitem.proquantity) * (cartitem.prounitprice));
 			}
 		}
-		System.out.println("totalAmount: " + totalamnt);
+		return totalamnt;
 	}
+	// void payableamount() {
+	// 	double payamt = 0;
+	// 	payamt = totalamount() +
+	// }
 }
