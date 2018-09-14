@@ -104,6 +104,8 @@ class Shoppingcart {
 	double payableamount() {
 		double payamt = 0;
 		System.out.println(discamt);
+		System.out.println("tax");
+		System.out.println(totalamount()*0.15);
 		payamt = totalamount() + (totalamount() * 0.15) - discamt;
 		return payamt;
 	}
