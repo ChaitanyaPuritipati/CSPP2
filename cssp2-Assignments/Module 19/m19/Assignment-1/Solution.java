@@ -94,13 +94,15 @@ public final class Solution {
                 return;
             }
             if (tokens[1].split(",").length < 2) {
-                System.out.println(tokens[0] +
-                                   " does not have enough answer choices");
+                System.out.println(tokens[0]
+                                   + " does not have enough answer choices");
                 errorflag = true;
                 return;
             }
             if (Integer.parseInt(tokens[2]) > four) {
-                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                System.out.println(
+                    "Error! Correct answer choice number is out of range for question text 1"
+                );
                 errorflag = true;
                 return;
             }
