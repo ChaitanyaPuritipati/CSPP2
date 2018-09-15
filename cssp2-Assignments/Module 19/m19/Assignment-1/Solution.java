@@ -65,6 +65,10 @@ public final class Solution {
         for(int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
+            if(tokens.length != 5) {
+                System.out.println("Error Malformed Question!");
+                return;
+            }
             question newques = new question(tokens[0], tokens[1], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             quiz.addtoques(newques);
         }
@@ -95,6 +99,6 @@ public final class Solution {
     //  */
     // public static void displayScore(final Quiz quiz) {
     //     // write your code here to display the score report
-        
+
     // }
 }
