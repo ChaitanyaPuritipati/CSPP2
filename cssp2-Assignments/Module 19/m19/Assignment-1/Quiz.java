@@ -61,18 +61,22 @@ class Quiz {
 		userchoices[userchoicecount++] = userchoice;
 	}
 	int calculatescore() {
-		for(int i = 0; i < questioncount; i++) {
-			System.out.println(questions[i].anschoice + "answerchoice of question");
-			System.out.println(userchoices[i].split(" ")[1] + "userchoiceeeeeee");
-			if(questions[i].anschoice.equals((userchoices[i].split(" ")[1]))) {
-				  System.out.println("entering right answer loop");
-                  totalscore = totalscore + questions[i].maxmarks;
+		for (int i = 0; i < questioncount; i++) {
+			if (userchoices[i].split(" ")[1].equals("a") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
+				if (questions[i].anschoice.equals("1")) {
+					questions[i].anschoice = "a";
+				} else if (questions[i].anschoice.equals("2")) {
+					questions[i].anschoice = "b";
+				} else if (questions[i].anschoice.equals("3")) {
+					questions[i].anschoice = "c";
+				} else {
+					questions[i].anschoice = "d";
+				}
+			}
+			if (questions[i].anschoice.equals((userchoices[i].split(" ")[1]))) {
+				totalscore = totalscore + questions[i].maxmarks;
 			} else {
-				System.out.println("entering penalty loop");
-				System.out.println(totalscore);
-				System.out.println(questions[i].penaltymarks);
 				totalscore = totalscore + questions[i].penaltymarks;
-				System.out.println(totalscore);
 			}
 		}
 		return totalscore;
