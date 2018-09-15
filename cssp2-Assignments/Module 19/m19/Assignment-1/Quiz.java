@@ -63,8 +63,9 @@ class Quiz {
 	}
 	int calculatescore() {
 		for (int i = 0; i < questioncount; i++) {
-			if (userchoices[i].split(" ")[1].equals("1") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
+			if (userchoices[i].split(" ")[1].equals("1") || userchoices[i].split(" ")[1].equals("2") || userchoices[i].split(" ")[1].equals("3") || userchoices[i].split(" ")[1].equals("4")) {
 				if (questions[i].anschoice.equals("1")) {
+					System.out.println("entered");
 					questions[i].anschoice = questions[i].choices.split(",")[0].split(" ")[1];
 				} else if (questions[i].anschoice.equals("2")) {
 					questions[i].anschoice = questions[i].choices.split(",")[1].split(" ")[1];
