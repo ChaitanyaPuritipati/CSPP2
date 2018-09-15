@@ -48,7 +48,7 @@ class Quiz {
 		questioncount++;
 	}
 	void displayqueschoices() {
-		for (int i = 0; i < questions.length; i++) {
+		for (int i = 0; i < questioncount; i++) {
 			if (i > 0) {
 				System.out.println();
 			}
