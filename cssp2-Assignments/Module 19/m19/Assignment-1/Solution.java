@@ -76,6 +76,11 @@ public final class Solution {
                 errorflag = true;
                 return;
             }
+            if(Integer.parseInt(tokens[2]) > 4) {
+                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                errorflag = true;
+                return;
+            }
             question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             quiz.addtoques(newques);
         }
