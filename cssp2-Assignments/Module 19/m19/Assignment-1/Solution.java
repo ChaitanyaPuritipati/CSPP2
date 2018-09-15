@@ -4,7 +4,10 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
-    static boolean errorflag = false;
+    /**
+     * { error flag }.
+     */
+    private static boolean errorflag = false;
     /**
     * Constructs the object.
     */
@@ -12,10 +15,17 @@ public final class Solution {
         // leave this blank
     }
     /**
+     * Constructs the object.
+     */
+    public static boolean getflag() {
+        return errorflag;
+    }
+    /**
      * main function to execute test cases.
      *
      * @param      args  The arguments
      */
+
     public static void main(final String[] args) {
         // instantiate this Quiz
         Quiz q = new Quiz();
@@ -113,7 +123,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if(errorflag) {
+        if(getflag()) {
             return;
         }
         for (int i = 0; i < answerCount; i++) {
@@ -129,7 +139,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        if(errorflag) {
+        if(getflag()) {
             return;
         }
         System.out.println("Total Score: " + quiz.calculatescore());
