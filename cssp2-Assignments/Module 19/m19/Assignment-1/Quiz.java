@@ -62,10 +62,17 @@ class Quiz {
 	}
 	int calculatescore() {
 		for(int i = 0; i < questioncount; i++) {
+			System.out.println(questions[i].anschoice + "answerchoice of question");
+			System.out.println(userchoices[i].split(" ")[1] + "userchoiceeeeeee");
 			if(questions[i].anschoice.equals((userchoices[i].split(" ")[1]))) {
+				  System.out.println("entering right answer loop");
                   totalscore = totalscore + questions[i].maxmarks;
 			} else {
+				System.out.println("entering penalty loop");
+				System.out.println(totalscore);
+				System.out.println(questions[i].penaltymarks);
 				totalscore = totalscore - questions[i].penaltymarks;
+				System.out.println(totalscore);
 			}
 		}
 		return totalscore;
