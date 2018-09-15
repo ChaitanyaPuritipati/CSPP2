@@ -72,7 +72,7 @@ public final class Solution {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
             if (tokens.length != 5){
-                System.out.println("Error Malformed Question!");
+                System.out.println("Error! Malformed Question");
                 errorflag = true;
                 return;
             }
