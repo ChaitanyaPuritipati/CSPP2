@@ -63,15 +63,15 @@ class Quiz {
 	}
 	int calculatescore() {
 		for (int i = 0; i < questioncount; i++) {
-			if (userchoices[i].split(" ")[1].equals("a") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
+			if (userchoices[i].split(" ")[1].equals("1") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
 				if (questions[i].anschoice.equals("1")) {
-					questions[i].anschoice = "a";
+					questions[i].anschoice = questions[i].choices.split(",")[0].split(" ")[1];
 				} else if (questions[i].anschoice.equals("2")) {
-					questions[i].anschoice = "b";
+					questions[i].anschoice = questions[i].choices.split(",")[1].split(" ")[1];
 				} else if (questions[i].anschoice.equals("3")) {
-					questions[i].anschoice = "c";
+					questions[i].anschoice = questions[i].choices.split(",")[2].split(" ")[1];
 				} else {
-					questions[i].anschoice = "d";
+					questions[i].anschoice = questions[i].choices.split(",")[3].split(" ")[1];
 				}
 			}
 			System.out.println(questions[i].questionname);
