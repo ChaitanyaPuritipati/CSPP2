@@ -15,7 +15,9 @@ public final class Solution {
         // leave this blank
     }
     /**
-     * Constructs the object.
+     * { flag function }.
+     *
+     * @return     { boolean type }
      */
     public static boolean getflag() {
         return errorflag;
@@ -73,7 +75,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if(questionCount == 0) {
+        if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
             errorflag = true;
             return;
@@ -81,27 +83,27 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
-            if (tokens.length != 5 || tokens[0].equals("")){
+            if (tokens.length != 5 || tokens[0].equals("")) {
                 System.out.println("Error! Malformed question");
                 errorflag = true;
                 return;
             }
-            if(tokens[1].split(",").length < 2) {
+            if (tokens[1].split(",").length < 2) {
                 System.out.println(tokens[0] + " does not have enough answer choices");
                 errorflag = true;
                 return;
             }
-            if(Integer.parseInt(tokens[2]) > 4) {
+            if (Integer.parseInt(tokens[2]) > 4) {
                 System.out.println("Error! Correct answer choice number is out of range for question text 1");
                 errorflag = true;
                 return;
             }
-            if(Integer.parseInt(tokens[3]) < 0) {
+            if (Integer.parseInt(tokens[3]) < 0) {
                 System.out.println("Invalid max marks for " + tokens[0]);
                 errorflag = true;
                 return;
             }
-            if(Integer.parseInt(tokens[4]) > 0) {
+            if (Integer.parseInt(tokens[4]) > 0) {
                 System.out.println("Invalid penalty for " + tokens[0]);
                 errorflag = true;
                 return;
@@ -123,7 +125,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if(getflag()) {
+        if (getflag()) {
             return;
         }
         for (int i = 0; i < answerCount; i++) {
@@ -139,7 +141,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        if(getflag()) {
+        if (getflag()) {
             return;
         }
         System.out.println("Total Score: " + quiz.calculatescore());
