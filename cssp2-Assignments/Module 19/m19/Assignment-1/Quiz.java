@@ -47,11 +47,7 @@ class Quiz {
 		// System.out.print(displaychoices[displaychoices.length-1]);
 		questioncount++;
 	}
-	void addtochoices(String userchoice) {
-		if (userchoicecount == userchoices.length) {
-			userresize();
-		}
-		userchoices[userchoicecount++] = userchoice;
+	void displayqueschoices() {
 		for (int i = 0; i < questions.length; i++) {
 			if (i > 0) {
 				System.out.println();
@@ -63,6 +59,11 @@ class Quiz {
 			}
 			System.out.print(displaychoices[displaychoices.length - 1]);
 		}
-
+	}
+	void addtochoices(String userchoice) {
+		if (userchoicecount == userchoices.length) {
+			userresize();
+		}
+		userchoices[userchoicecount++] = userchoice;
 	}
 }

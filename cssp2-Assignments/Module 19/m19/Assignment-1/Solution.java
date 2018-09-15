@@ -90,8 +90,8 @@ public final class Solution {
             String choiceline = s.nextLine();
             quiz.addtochoices(choiceline);
         }
+        quiz.displayqueschoices();
     }
-
     /**
      * Displays the score report
      *
