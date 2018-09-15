@@ -52,8 +52,8 @@ class Quiz {
 			}
 			System.out.print(displaychoices[displaychoices.length - 1]);
 			System.out.println();
-			System.out.println();
 		}
+		System.out.println();
 	}
 	void addtochoices(String userchoice) {
 		if (userchoicecount == userchoices.length) {
