@@ -34,18 +34,18 @@ public final class Solution {
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
-                // case "START_QUIZ":
-                // System.out.println("|------------|");
-                // System.out.println("| Start Quiz |");
-                // System.out.println("|------------|");
-                // startQuiz(s, q, Integer.parseInt(tokens[1]));
-                // break;
-                // case "SCORE_REPORT":
-                // System.out.println("|--------------|");
-                // System.out.println("| Score Report |");
-                // System.out.println("|--------------|");
-                // displayScore(q);
-                // break;
+                case "START_QUIZ":
+                System.out.println("|------------|");
+                System.out.println("| Start Quiz |");
+                System.out.println("|------------|");
+                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                break;
+                case "SCORE_REPORT":
+                System.out.println("|--------------|");
+                System.out.println("| Score Report |");
+                System.out.println("|--------------|");
+                displayScore(q);
+                break;
                 default:
                 break;
             }
@@ -65,8 +65,7 @@ public final class Solution {
         for(int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
-            System.out.println(tokens[0]);
-            if(tokens.length != 5  || tokens[0].equals("") || tokens[1].equals(null) || tokens[2].equals(null) || tokens[3].equals(null) || tokens[4].equals(null)) {
+            if(tokens.length != 5  || tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
                 System.out.println("Error Malformed Question!");
                 return;
             }
@@ -76,30 +75,30 @@ public final class Solution {
         
     }
 
-    // /**
-    //  * Starts a quiz.
-    //  *
-    //  * @param      s            The scanner object for user input
-    //  * @param      quiz         The quiz object
-    //  * @param      answerCount  The answer count
-    //  */
-    // public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
-    //     // write your code here to display the quiz questions
-    //     // read the user responses from the console
-    //     // store the user respones in the quiz object
-    //     for(int i = 0; i < answerCount; i++) {
-    //         String choiceline = s.newLine();
-    //         quiz.addtochoices(choiceline);
-    //     }
-    // }
+    /**
+     * Starts a quiz.
+     *
+     * @param      s            The scanner object for user input
+     * @param      quiz         The quiz object
+     * @param      answerCount  The answer count
+     */
+    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+        // write your code here to display the quiz questions
+        // read the user responses from the console
+        // store the user respones in the quiz object
+        for(int i = 0; i < answerCount; i++) {
+            String choiceline = s.nextLine();
+            quiz.addtochoices(choiceline);
+        }
+    }
 
-    // /**
-    //  * Displays the score report
-    //  *
-    //  * @param      quiz     The quiz object
-    //  */
-    // public static void displayScore(final Quiz quiz) {
-    //     // write your code here to display the score report
+    /**
+     * Displays the score report
+     *
+     * @param      quiz     The quiz object
+     */
+    public static void displayScore(final Quiz quiz) {
+        // write your code here to display the score report
 
-    // }
+    }
 }
