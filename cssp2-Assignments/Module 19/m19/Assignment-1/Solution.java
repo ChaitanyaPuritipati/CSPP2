@@ -91,6 +91,11 @@ public final class Solution {
                 errorflag = true;
                 return;
             }
+            if(Integer.parseInt(tokens[4]) > 0) {
+                System.out.println("Invalid penalty for " + tokens[0]);
+                errorflag = true;
+                return;
+            }
             question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             quiz.addtoques(newques);
         }
