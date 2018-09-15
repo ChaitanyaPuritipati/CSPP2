@@ -65,8 +65,13 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
-            if (tokens.length != 5  || tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
+            // || tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")
+            if (tokens.length != 5){
                 System.out.println("Error Malformed Question!");
+                return;
+            }
+            if(tokens[0].equals("")) {
+                System.out.println("Quiz does not have questions");
                 return;
             }
             question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
