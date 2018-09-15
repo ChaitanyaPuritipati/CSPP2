@@ -66,7 +66,7 @@ public final class Solution {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
             System.out.println(tokens[0]);
-            if(tokens.length != 5  || tokens[0].equals(null) || tokens[1].equals(null) || tokens[2].equals(null) || tokens[3].equals(null) || tokens[4].equals(null)) {
+            if(tokens.length != 5  || tokens[0].equals("") || tokens[1].equals(null) || tokens[2].equals(null) || tokens[3].equals(null) || tokens[4].equals(null)) {
                 System.out.println("Error Malformed Question!");
                 return;
             }
