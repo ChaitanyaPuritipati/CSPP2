@@ -4,6 +4,7 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
+    static boolean errorflag = false;
     /**
     * Constructs the object.
     */
@@ -64,6 +65,7 @@ public final class Solution {
         // add the question objects to the quiz class
         if(questionCount == 0) {
             System.out.println("Quiz does not have questions");
+            errorflag = true;
             return;
         }
         for (int i = 0; i < questionCount; i++) {
@@ -71,6 +73,7 @@ public final class Solution {
             String[] tokens = textline.split(":");
             if (tokens.length != 5){
                 System.out.println("Error Malformed Question!");
+                errorflag = true;
                 return;
             }
             question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
@@ -90,6 +93,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        if(errorflag) {
+            return;
+        }
         for (int i = 0; i < answerCount; i++) {
             String choiceline = s.nextLine();
             quiz.addtochoices(choiceline);
@@ -103,6 +109,9 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        if(errorflag) {
+            return;
+        }
         System.out.println("Total Score: " + quiz.calculatescore());
     }
 }
