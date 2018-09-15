@@ -71,7 +71,9 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(
+        final Scanner s, final Quiz quiz,
+        final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -83,6 +85,9 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
+            final int five = 5;
+            final int four = 4;
+            final int three = 3;
             if (tokens.length != 5 || tokens[0].equals("")) {
                 System.out.println("Error! Malformed question");
                 errorflag = true;
@@ -93,22 +98,22 @@ public final class Solution {
                 errorflag = true;
                 return;
             }
-            if (Integer.parseInt(tokens[2]) > 4) {
+            if (Integer.parseInt(tokens[2]) > four) {
                 System.out.println("Error! Correct answer choice number is out of range for question text 1");
                 errorflag = true;
                 return;
             }
-            if (Integer.parseInt(tokens[3]) < 0) {
+            if (Integer.parseInt(tokens[three]) < 0) {
                 System.out.println("Invalid max marks for " + tokens[0]);
                 errorflag = true;
                 return;
             }
-            if (Integer.parseInt(tokens[4]) > 0) {
+            if (Integer.parseInt(tokens[four]) > 0) {
                 System.out.println("Invalid penalty for " + tokens[0]);
                 errorflag = true;
                 return;
             }
-            question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+            question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[three]), Integer.parseInt(tokens[four]));
             quiz.addtoques(newques);
         }
         quiz.displayquescount();
