@@ -71,7 +71,7 @@ class Quiz {
 				System.out.println("entering penalty loop");
 				System.out.println(totalscore);
 				System.out.println(questions[i].penaltymarks);
-				totalscore = totalscore - questions[i].penaltymarks;
+				totalscore = totalscore + questions[i].penaltymarks;
 				System.out.println(totalscore);
 			}
 		}
