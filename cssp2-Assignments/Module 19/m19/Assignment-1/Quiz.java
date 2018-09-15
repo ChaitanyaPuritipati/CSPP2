@@ -58,6 +58,7 @@ class Quiz {
 				System.out.print(displaychoices[j] + "   ");
 			}
 			System.out.print(displaychoices[displaychoices.length - 1]);
+			System.out.println();
 		}
 	}
 	void addtochoices(String userchoice) {
