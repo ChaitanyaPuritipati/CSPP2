@@ -73,9 +73,12 @@ class Quiz {
 					questions[i].anschoice = "d";
 				}
 			}
+			System.out.println(questions[i].questionname);
 			if (questions[i].anschoice.equals((userchoices[i].split(" ")[1]))) {
+				System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].maxmarks);
 				totalscore = totalscore + questions[i].maxmarks;
 			} else {
+				System.out.println(" Wrong Answer! - Penalty: " + questions[i].penaltymarks);
 				totalscore = totalscore + questions[i].penaltymarks;
 			}
 		}
