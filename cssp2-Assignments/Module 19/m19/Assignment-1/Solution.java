@@ -101,7 +101,8 @@ public final class Solution {
             }
             if (Integer.parseInt(tokens[2]) > four) {
                 System.out.println(
-                    "Error! Correct answer choice number is out of range for question text 1"
+                    "Error! Correct answer choice number" 
+                    + " is out of range for question text 1"
                 );
                 errorflag = true;
                 return;
