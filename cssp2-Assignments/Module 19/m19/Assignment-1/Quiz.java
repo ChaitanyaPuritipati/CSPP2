@@ -64,7 +64,6 @@ class Quiz {
 	int calculatescore() {
 		for (int i = 0; i < questioncount; i++) {
 			String[] testchoices = questions[i].choices.split(",");
-			System.out.println(testchoices.length);
 			if (userchoices[i].split(" ")[1].equals("a") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
 				if (questions[i].anschoice.equals("1")) {
 					questions[i].anschoice = "a";
