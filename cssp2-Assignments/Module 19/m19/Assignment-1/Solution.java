@@ -76,6 +76,11 @@ public final class Solution {
                 errorflag = true;
                 return;
             }
+            if(tokens[1].split(",").length < 2) {
+                System.out.println(tokens[0] + "does not have enough answer choices");
+                errorflag = true;
+                return;
+            }
             if(Integer.parseInt(tokens[2]) > 4) {
                 System.out.println("Error! Correct answer choice number is out of range for question text 1");
                 errorflag = true;
