@@ -71,7 +71,7 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String textline = s.nextLine();
             String[] tokens = textline.split(":");
-            if (tokens.length != 5){
+            if (tokens.length != 5 || tokens[0].equals("")){
                 System.out.println("Error! Malformed question");
                 errorflag = true;
                 return;
