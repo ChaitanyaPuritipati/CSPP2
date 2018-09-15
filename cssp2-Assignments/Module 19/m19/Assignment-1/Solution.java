@@ -88,7 +88,7 @@ public final class Solution {
             final int five = 5;
             final int four = 4;
             final int three = 3;
-            if (tokens.length != 5 || tokens[0].equals("")) {
+            if (tokens.length != five || tokens[0].equals("")) {
                 System.out.println("Error! Malformed question");
                 errorflag = true;
                 return;
