@@ -101,7 +101,7 @@ public final class Solution {
             }
             if (Integer.parseInt(tokens[2]) > four) {
                 System.out.println(
-                    "Error! Correct answer choice number" 
+                    "Error! Correct answer choice number"
                     + " is out of range for question text 1"
                 );
                 errorflag = true;
@@ -117,7 +117,10 @@ public final class Solution {
                 errorflag = true;
                 return;
             }
-            question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[three]), Integer.parseInt(tokens[four]));
+            question newques = new question(tokens[0],
+                                            tokens[1], tokens[2],
+                                            Integer.parseInt(tokens[three]),
+                                            Integer.parseInt(tokens[four]));
             quiz.addtoques(newques);
         }
         quiz.displayquescount();
