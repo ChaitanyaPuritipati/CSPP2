@@ -75,11 +75,14 @@ class Quiz {
 				}
 			}
 			// if (userchoices[i].split(" ")[1].equals("1") || userchoices[i].split(" ")[1].equals("2") || userchoices[i].split(" ")[1].equals("3") || userchoices[i].split(" ")[1].equals("4")) {
+			if (questions[i].choices.split(",").length == 2) {
 				if (questions[i].anschoice.equals("1")) {
-					questions[i].anschoice = questions[i].choices.split(",", 4)[0];
+					questions[i].anschoice = "4";
 				} else if (questions[i].anschoice.equals("2")) {
-					questions[i].anschoice = questions[i].choices.split(",", 4)[1];
+					questions[i].anschoice = "2";
 				}
+			}
+
 			// }
 			// if (userchoices[i].split(" ")[1].equals("a") || userchoices[i].split(" ")[1].equals("b") || userchoices[i].split(" ")[1].equals("c") || userchoices[i].split(" ")[1].equals("d")) {
 			// 	if (questions[i].anschoice.equals("1")) {
