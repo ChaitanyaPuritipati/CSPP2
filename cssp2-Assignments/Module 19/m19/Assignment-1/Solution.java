@@ -140,7 +140,7 @@ public final class Solution {
         quiz.displayqueschoices();
     }
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
