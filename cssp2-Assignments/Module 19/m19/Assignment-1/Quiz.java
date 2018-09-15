@@ -3,9 +3,9 @@ class question {
 	String questionname;
 	int maxmarks;
 	String choices;
-	int anschoice;
+	String anschoice;
 	int penaltymarks;
-	question(String name, String choicestr, int choice, int marks, int penalty) {
+	question(String name, String choicestr, String choice, int marks, int penalty) {
 		questionname = name;
 		maxmarks = marks;
 		choices = choicestr;
@@ -62,7 +62,7 @@ class Quiz {
 	}
 	int calculatescore() {
 		for(int i = 0; i < questioncount; i++) {
-			if(questions[i].anschoice == Integer.parseInt(userchoices[i].split(" ")[1])) {
+			if(questions[i].anschoice.equals((userchoices[i].split(" ")[1]))) {
                   totalscore = totalscore + questions[i].maxmarks;
 			} else {
 				totalscore = totalscore - questions[i].penaltymarks;

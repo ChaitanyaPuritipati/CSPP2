@@ -69,7 +69,7 @@ public final class Solution {
                 System.out.println("Error Malformed Question!");
                 return;
             }
-            question newques = new question(tokens[0], tokens[1], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+            question newques = new question(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             quiz.addtoques(newques);
         }
         quiz.displayquescount();        
