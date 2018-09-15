@@ -48,9 +48,10 @@ class Quiz {
 			System.out.println(questions[i].questionname + "(" + questions[i].maxmarks + ")");
 			String[] displaychoices = questions[i].choices.split(",");
 			for (int j = 0; j < displaychoices.length - 1; j++) {
-				System.out.print(displaychoices[j] + "		");
+				System.out.print(displaychoices[j] + "	");
 			}
 			System.out.print(displaychoices[displaychoices.length - 1]);
+			System.out.println();
 			System.out.println();
 		}
 	}
