@@ -18,9 +18,11 @@ class Quiz {
 	int questioncount;
 	String[] userchoices = new String[4];
 	int userchoicecount;
+	int totalscore;
 	Quiz() {
 		questioncount = 0;
 		userchoicecount = 0;
+		totalscore = 0;
 	}
 	void quesresize() {
 		questions = Arrays.copyOf(questions, 2 * questioncount);
@@ -36,15 +38,6 @@ class Quiz {
 			quesresize();
 		}
 		questions[questioncount] = inputques;
-		// if(questioncount > 0) {
-		// 	System.out.println();
-		// }
-		// System.out.println(questions[questioncount].questionname + "(" + questions[questioncount].maxmarks + ")");
-		// String[] displaychoices = questions[questioncount].choices.split(",");
-		// for(int i = 0; i < displaychoices.length - 1; i++) {
-		// 	System.out.print(displaychoices[i] + "   ");
-		// }
-		// System.out.print(displaychoices[displaychoices.length-1]);
 		questioncount++;
 	}
 	void displayqueschoices() {
@@ -66,5 +59,15 @@ class Quiz {
 			userresize();
 		}
 		userchoices[userchoicecount++] = userchoice;
+	}
+	int calculatescore() {
+		for(int i = 0; i < questioncount; i++) {
+			if(questions[i].anschoice == Integer.parseInt(userchoices[i].split(" ")[1])) {
+                  totalscore = totalscore + questions[i].maxmarks;
+			} else {
+				totalscore = totalscore - questions[i].penaltymarks;
+			}
+		}
+		return totalscore;
 	}
 }
