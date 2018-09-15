@@ -94,7 +94,8 @@ public final class Solution {
                 return;
             }
             if (tokens[1].split(",").length < 2) {
-                System.out.println(tokens[0] + " does not have enough answer choices");
+                System.out.println(tokens[0] +
+                                   " does not have enough answer choices");
                 errorflag = true;
                 return;
             }
