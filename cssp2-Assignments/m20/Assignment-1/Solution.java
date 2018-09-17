@@ -335,7 +335,8 @@ public final class Solution {
 				String line = scan.nextLine();
 				String[] tokens = line.split(":");
 				if (tokens.length != five) {
-					System.out.println("Error! Malformed question");
+					System.out.println(
+					    "Error! Malformed question");
 					errorflag = true;
 					return;
 				}
@@ -355,12 +356,6 @@ public final class Solution {
 		}
 		System.out.println(q + " are added to the quiz");
 	}
-	// for (int i = 0; i < q; i++) {
-	// 	String line = scan.nextLine();
-	// 	String[] tokens = line.split(":");
-	// 	Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-	// 	quiz.addQuestion(newques);
-	// }
 	/**
 	 * Starts a quiz.
 	 *
