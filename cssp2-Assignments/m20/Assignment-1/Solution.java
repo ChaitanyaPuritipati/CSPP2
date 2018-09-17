@@ -227,11 +227,23 @@ class Quiz {
  */
 public final class Solution {
 	/**
+	 * { errorflag }.
+	 */
+	private static boolean errorflag = false;
+	/**
 	* Constructs the object.
 	*/
 	private Solution() {
 		// leave this blank
 	}
+	/**
+     * { flag function }.
+     *
+     * @return     { boolean type }
+     */
+    public static boolean getflag() {
+        return errorflag;
+    }
 	/**
 	 * main function to execute test cases.
 	 *
@@ -295,6 +307,7 @@ public final class Solution {
 			}
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
+			errorflag = true;
 			return;
 		}
 		System.out.println(q + " are added to the quiz");
@@ -317,6 +330,9 @@ public final class Solution {
 		// write your code here to display the quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
+		if(getflag()) {
+			return;
+		}
 		for (int i = 0; i < q; i++) {
 			String choiceline = scan.nextLine();
 			// String[] choices = choiceline.split(" ");
@@ -331,6 +347,9 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
+		if(getflag()) {
+			return;
+		}
 		System.out.println(quiz.showReport());
 	}
 }
