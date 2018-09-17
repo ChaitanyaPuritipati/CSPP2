@@ -225,12 +225,18 @@ class Quiz {
 		int totalscore = 0;
 		for (int i = 0; i < size; i++) {
 			s = s + questions[i].getQuestionText() + "\n";
-			if (questions[i].evaluateResponse(questions[i].getResponse())) {
-				totalscore = totalscore + questions[i].getMaxMarks();
-				s = s + " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
+			if (questions[i].evaluateResponse(
+			            questions[i].getResponse())) {
+				totalscore = totalscore
+				             + questions[i].getMaxMarks();
+				s = s
+				    + " Correct Answer! - Marks Awarded: "
+				    + questions[i].getMaxMarks() + "\n";
 			} else {
-				totalscore = totalscore + questions[i].getPenalty();
-				s = s + " Wrong Answer! - Penalty: " + questions[i].getPenalty() + "\n";
+				totalscore = totalscore
+				             + questions[i].getPenalty();
+				s = s + " Wrong Answer! - Penalty: "
+				    + questions[i].getPenalty() + "\n";
 			}
 		}
 		s = s + "Total Score: " + totalscore;
