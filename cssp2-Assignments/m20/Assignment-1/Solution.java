@@ -69,7 +69,15 @@ class Question {
 	 * @return     The correct answer.
 	 */
 	public String getCorrectAnswer() {
-		return Integer.toString(this.correctAnswer);
+		if(this.correctAnswer == 1) {
+			return this.choices[0];
+		} else if(this.correctAnswer == 2) {
+			return this.choices[1];
+		} else if(this.correctAnswer == 3) {
+			return this.choices[2];
+		} else {
+			return this.choices[3];
+		}
 	}
 	/**
 	 * Gets the question text.
@@ -188,6 +196,8 @@ class Quiz {
 		int totalscore = 0;
 		for(int i = 0; i < size; i++) {
 			s = s + questions[i].getQuestionText() + "\n";
+			System.out.println(questions[i].getResponse() + "responsessssss");
+			System.out.println(questions[i].getCorrectAnswer() + "Right answer choiceeeeeeeeee");
 			if(questions[i].evaluateResponse(questions[i].getResponse())) {
 				totalscore = totalscore + questions[i].getMaxMarks();
 				s = s + " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
@@ -288,8 +298,8 @@ public final class Solution {
 		// store the user respone in the question object
 		for(int i = 0; i < q; i++) {
 			String choiceline = scan.nextLine();
-			String[] choices = choiceline.split(" ");
-            quiz.getQuestion(i).setResponse(choices[1]);
+			// String[] choices = choiceline.split(" ");
+            quiz.getQuestion(i).setResponse(choiceline);
             System.out.println(quiz.getQuestion(i));
 		}
 	}
