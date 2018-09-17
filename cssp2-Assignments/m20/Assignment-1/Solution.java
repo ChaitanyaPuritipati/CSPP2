@@ -71,14 +71,16 @@ class Question {
 	 * @return     The correct answer.
 	 */
 	public String getCorrectAnswer() {
+		final int three = 3;
+		final int four = 4;
 		if (this.correctAnswer == 1) {
 			return this.choices[0];
 		} else if (this.correctAnswer == 2) {
 			return this.choices[1];
-		} else if (this.correctAnswer == 3) {
+		} else if (this.correctAnswer == three) {
 			return this.choices[2];
-		} else if (this.correctAnswer == 4) {
-			return this.choices[3];
+		} else if (this.correctAnswer == four) {
+			return this.choices[three];
 		} else {
 			return "choice " + this.correctAnswer;
 		}
