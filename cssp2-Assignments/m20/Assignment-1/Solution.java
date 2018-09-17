@@ -282,12 +282,15 @@ public final class Solution {
 			String line = s.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list operation
+			// invoke the 
+			// corresponding method
 			switch (tokens[0]) {
 			case "LOAD_QUESTIONS":
 				System.out.println("|----------------|");
 				System.out.println("| Load Questions |");
-				System.out.println("|----------------|");
+				System.out.println(
+				    "|----------------|");
 				loadQuestions(s, q, Integer.parseInt(tokens[1]));
 				break;
 			case "START_QUIZ":
