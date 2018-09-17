@@ -196,8 +196,8 @@ class Quiz {
 		int totalscore = 0;
 		for(int i = 0; i < size; i++) {
 			s = s + questions[i].getQuestionText() + "\n";
-			System.out.println(questions[i].getResponse() + "responsessssss");
-			System.out.println(questions[i].getCorrectAnswer() + "Right answer choiceeeeeeeeee");
+			// System.out.println(questions[i].getResponse() + "responsessssss");
+			// System.out.println(questions[i].getCorrectAnswer() + "Right answer choiceeeeeeeeee");
 			if(questions[i].evaluateResponse(questions[i].getResponse())) {
 				totalscore = totalscore + questions[i].getMaxMarks();
 				s = s + " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
