@@ -186,7 +186,7 @@ class Quiz {
 	public String showReport() {
 		String s = "";
 		int totalscore = 0;
-		for(int i = 0; i < questions.length; i++) {
+		for(int i = 0; i < size; i++) {
 			s = s + questions[i].getQuestionText() + "\n";
 			if(questions[i].evaluateResponse(questions[i].getResponse())) {
 				totalscore = totalscore + questions[i].getMaxMarks();
