@@ -179,7 +179,7 @@ class Quiz {
 			throw new Exception("Error! Correct answer choice number"
 			                    + " is out of range for question text 1");
 		} else if (q.getMaxMarks() < 0) {
-			throw new Exception("Invalid max marks for" + q.getQuestionText());
+			throw new Exception("Invalid max marks for " + q.getQuestionText());
 		} else if (q.getPenalty() > 0) {
 			throw new Exception("Invalid penalty for " + q.getQuestionText());
 		}
