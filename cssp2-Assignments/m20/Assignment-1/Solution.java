@@ -171,9 +171,7 @@ class Quiz {
 	 * @param      q     The question
 	 */
 	public void addQuestion(final Question q) throws Exception {
-		if (q.getQuestionText().equals("")) {
-			throw new Exception("Error! Malformed question");
-		} else if (q.getChoice().length < 2) {
+		if (q.getChoice().length < 2) {
 			throw new Exception(q.getQuestionText() + " does not have enough answer choices");
 		} else if ((!("abcd1234".contains(q.getCorrectAnswer().split(" ")[1])))) {
 			throw new Exception("Error! Correct answer choice number"
@@ -307,6 +305,11 @@ public final class Solution {
 			for (int i = 0; i < q; i++) {
 				String line = scan.nextLine();
 				String[] tokens = line.split(":");
+				if(tokens.length != 5) {
+					System.out.println("Error! Malformed question");
+					errorflag = true;
+					return;
+				}
 				Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 				quiz.addQuestion(newques);
 			}
