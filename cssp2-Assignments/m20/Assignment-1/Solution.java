@@ -185,13 +185,17 @@ class Quiz {
 		} else if (q.getChoice().length < 2) {
 			throw new Exception(q.getQuestionText()
 			                    + " does not have enough answer choices");
-		} else if ((!("abcd1234".contains(q.getCorrectAnswer().split(" ")[1])))) {
+		} else if ((!("abcd1234".contains(
+		                  q.getCorrectAnswer().split(" ")[1]
+		              )))) {
 			throw new Exception("Error! Correct answer choice number"
 			                    + " is out of range for question text 1");
 		} else if (q.getMaxMarks() < 0) {
-			throw new Exception("Invalid max marks for " + q.getQuestionText());
+			throw new Exception("Invalid max marks for "
+			                    + q.getQuestionText());
 		} else if (q.getPenalty() > 0) {
-			throw new Exception("Invalid penalty for " + q.getQuestionText());
+			throw new Exception("Invalid penalty for "
+			                    + q.getQuestionText());
 		}
 		questions[size++] = q;
 	}
