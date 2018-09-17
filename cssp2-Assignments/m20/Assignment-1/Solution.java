@@ -173,7 +173,7 @@ class Quiz {
 		size = 0;
 	}
 	/**
-	 * 
+	 *
 	 *
 	 * @param      q          The quarter
 	 *
@@ -183,7 +183,8 @@ class Quiz {
 		if (q.getQuestionText().equals("")) {
 			throw new Exception("Error! Malformed question");
 		} else if (q.getChoice().length < 2) {
-			throw new Exception(q.getQuestionText() + " does not have enough answer choices");
+			throw new Exception(q.getQuestionText()
+			                    + " does not have enough answer choices");
 		} else if ((!("abcd1234".contains(q.getCorrectAnswer().split(" ")[1])))) {
 			throw new Exception("Error! Correct answer choice number"
 			                    + " is out of range for question text 1");
