@@ -237,13 +237,13 @@ public final class Solution {
 		// leave this blank
 	}
 	/**
-     * { flag function }.
-     *
-     * @return     { boolean type }
-     */
-    public static boolean getflag() {
-        return errorflag;
-    }
+	 * { flag function }.
+	 *
+	 * @return     { boolean type }
+	 */
+	public static boolean getflag() {
+		return errorflag;
+	}
 	/**
 	 * main function to execute test cases.
 	 *
@@ -298,6 +298,11 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		if (q == 0) {
+			System.out.println("Quiz does not have questions");
+			errorflag = true;
+			return;
+		}
 		try {
 			for (int i = 0; i < q; i++) {
 				String line = scan.nextLine();
@@ -305,7 +310,7 @@ public final class Solution {
 				Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 				quiz.addQuestion(newques);
 			}
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			errorflag = true;
 			return;
@@ -330,7 +335,7 @@ public final class Solution {
 		// write your code here to display the quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
-		if(getflag()) {
+		if (getflag()) {
 			return;
 		}
 		for (int i = 0; i < q; i++) {
@@ -347,7 +352,7 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
-		if(getflag()) {
+		if (getflag()) {
 			return;
 		}
 		System.out.println(quiz.showReport());
