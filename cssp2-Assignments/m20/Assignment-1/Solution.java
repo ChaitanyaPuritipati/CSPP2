@@ -189,8 +189,9 @@ class Quiz {
 		} else if ((!("abcd1234".contains(
 		                  q.getCorrectAnswer().split(" ")[1]
 		              )))) {
-			throw new Exception("Error! Correct answer choice number"
-			                    + " is out of range for question text 1");
+			throw new Exception(
+			    "Error! Correct answer choice number"
+			    + " is out of range for question text 1");
 		} else if (q.getMaxMarks() < 0) {
 			throw new Exception("Invalid max marks for "
 			                    + q.getQuestionText());
