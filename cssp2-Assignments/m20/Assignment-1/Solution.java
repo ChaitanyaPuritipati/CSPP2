@@ -131,7 +131,6 @@ class Question {
         	s = s + choices[i] + "	";
         }
         s = s + choices[choices.length - 1] + "\n";
-        s = s + "\n";
 		return s;
 	}
 }
