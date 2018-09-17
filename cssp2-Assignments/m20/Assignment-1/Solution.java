@@ -286,7 +286,6 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		System.out.println(q + " are added to the quiz");
 		try {
 			for (int i = 0; i < q; i++) {
 				String line = scan.nextLine();
@@ -296,8 +295,9 @@ public final class Solution {
 			}
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
+			return;
 		}
-
+		System.out.println(q + " are added to the quiz");
 	}
 	// for (int i = 0; i < q; i++) {
 	// 	String line = scan.nextLine();
