@@ -43,7 +43,9 @@ class Question {
 	 * @param      penalty1        The penalty 1
 	 */
 	Question(final String question1, final String[] choices1,
-	         final int correctAnswer1, final int maxMarks1, final int penalty1) {
+	         final int correctAnswer1,
+	         final int maxMarks1,
+	         final int penalty1) {
 		this.questiontext = question1;
 		this.choices = choices1;
 		this.correctAnswer = correctAnswer1;
@@ -75,7 +77,7 @@ class Question {
 			return this.choices[1];
 		} else if (this.correctAnswer == 3) {
 			return this.choices[2];
-		} else if(this.correctAnswer == 4) {
+		} else if (this.correctAnswer == 4) {
 			return this.choices[3];
 		} else {
 			return "choice " + this.correctAnswer;
