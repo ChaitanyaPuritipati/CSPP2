@@ -173,7 +173,6 @@ class Quiz {
 	 * @param      q     The question
 	 */
 	public void addQuestion(final Question q) throws Exception {
-		System.out.println(q.getCorrectAnswer().split(" ")[1] + "checking for right answer");
 		if (q.getQuestionText().equals("")) {
 			throw new Exception("Error! Malformed question");
 		} else if (q.getChoice().length < 2) {
