@@ -168,13 +168,16 @@ class Quiz {
 	 * Constructs the object.
 	 */
 	Quiz() {
-		questions = new Question[100];
+		final int hundred = 100;
+		questions = new Question[hundred];
 		size = 0;
 	}
 	/**
-	 * Adds a question.
+	 * 
 	 *
-	 * @param      q     The question
+	 * @param      q          The quarter
+	 *
+	 * @throws     Exception  { exception_description }
 	 */
 	public void addQuestion(final Question q) throws Exception {
 		if (q.getQuestionText().equals("")) {
