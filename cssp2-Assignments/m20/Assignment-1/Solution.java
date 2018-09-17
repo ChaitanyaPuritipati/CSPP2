@@ -171,11 +171,19 @@ class Quiz {
 	 * @param      q     The question
 	 */
 	public void addQuestion(final Question q) throws Exception {
-		try {
-			questions[size++] = q;
-		} catch (Exception e) {
-			throw new Exception(e);
+		if (q.getQuestionText().equals("")) {
+			throw new Exception("Error! Malformed question");
+		} else if (q.getChoice().length < 2) {
+			throw new Exception(q.getQuestionText() + " does not have enough answer choices");
+		} else if (Integer.parseInt(q.getCorrectAnswer().split(" ")[1]) > 4) {
+			throw new Exception("Error! Correct answer choice number"
+			                    + " is out of range for question text 1");
+		} else if (q.getMaxMarks() < 0) {
+			throw new Exception("Invalid max marks for" + q.getQuestionText());
+		} else if (q.getPenalty() > 0) {
+			throw new Exception("Invalid penalty for " + q.getQuestionText());
 		}
+		questions[size++] = q;
 	}
 
 	/**
@@ -289,13 +297,14 @@ public final class Solution {
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
-		// for (int i = 0; i < q; i++) {
-		// 	String line = scan.nextLine();
-		// 	String[] tokens = line.split(":");
-		// 	Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-		// 	quiz.addQuestion(newques);
-		// }
+
 	}
+	// for (int i = 0; i < q; i++) {
+	// 	String line = scan.nextLine();
+	// 	String[] tokens = line.split(":");
+	// 	Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+	// 	quiz.addQuestion(newques);
+	// }
 	/**
 	 * Starts a quiz.
 	 *
