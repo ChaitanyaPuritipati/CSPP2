@@ -283,7 +283,7 @@ public final class Solution {
 			// split the line using space
 			String[] tokens = line.split(" ");
 			// based on the list operation
-			// invoke the 
+			// invoke the
 			// corresponding method
 			switch (tokens[0]) {
 			case "LOAD_QUESTIONS":
@@ -291,7 +291,8 @@ public final class Solution {
 				System.out.println("| Load Questions |");
 				System.out.println(
 				    "|----------------|");
-				loadQuestions(s, q, Integer.parseInt(tokens[1]));
+				loadQuestions(s, q,
+				              Integer.parseInt(tokens[1]));
 				break;
 			case "START_QUIZ":
 				System.out.println("|------------|");
@@ -329,15 +330,22 @@ public final class Solution {
 			return;
 		}
 		try {
+			final int five = 5;
 			for (int i = 0; i < q; i++) {
 				String line = scan.nextLine();
 				String[] tokens = line.split(":");
-				if (tokens.length != 5) {
+				if (tokens.length != five) {
 					System.out.println("Error! Malformed question");
 					errorflag = true;
 					return;
 				}
-				Question newques = new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+				final int three = 3;
+				final int four = 4;
+				Question newques = new Question(
+				    tokens[0], tokens[1].split(","),
+				    Integer.parseInt(tokens[2]),
+				    Integer.parseInt(tokens[three]),
+				    Integer.parseInt(tokens[four]));
 				quiz.addQuestion(newques);
 			}
 		} catch (Exception e) {
