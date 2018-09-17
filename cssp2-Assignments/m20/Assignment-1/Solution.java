@@ -388,7 +388,9 @@ public final class Solution {
 	 * @param      quiz     The quiz object
 	 */
 	public static void displayScore(final Quiz quiz) {
-		// write your code here to display the score report using quiz object.
+		// write your code here
+		// to display the score
+		// report using quiz object.
 		if (getflag()) {
 			return;
 		}
