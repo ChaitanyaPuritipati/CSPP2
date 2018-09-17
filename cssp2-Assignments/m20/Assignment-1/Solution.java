@@ -75,8 +75,10 @@ class Question {
 			return this.choices[1];
 		} else if (this.correctAnswer == 3) {
 			return this.choices[2];
-		} else {
+		} else if(this.correctAnswer == 4) {
 			return this.choices[3];
+		} else {
+			return "choice " + this.correctAnswer;
 		}
 	}
 	/**
