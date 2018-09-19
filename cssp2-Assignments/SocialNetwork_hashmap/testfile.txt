@@ -1,0 +1,9 @@
+getconnection John
+addconnection John,chaitu
+getconnection John
+common John,Mercedes
+getconnection Mercedes
+common Bryant,Olive
+addconnection Debra,Varun
+getconnection Debra
+common Olive,Debra
