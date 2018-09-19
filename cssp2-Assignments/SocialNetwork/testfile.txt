@@ -1,0 +1,17 @@
+getconnection John
+addconnection John,chaitu
+getconnection John
+common John,Mercedes
+getconnection Mercedes
+common Bryant,Olive
+addconnection Debra,Varun
+getconnection Debra
+adduser Varun
+addconnection Varun,chaitu
+addconnection Varun,bhargav
+getconnection Varun
+adduser Varun
+addconnection Varun,bhargav
+adduser chaitu
+getconnection chaitu
+getconnection harika
