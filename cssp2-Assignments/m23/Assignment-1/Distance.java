@@ -62,20 +62,20 @@ public class Distance {
 			// eachline = eachline.replaceAll("[^a-z0-9_']","");
 			if (eachline.length() > 0) {
 				// System.out.println(eachline);
-				String[] words = eachline.split("[^'a-z0-9_]");
+				String[] words = eachline.split("\\W");
 				for (String word : words) {
-					  if(word.equals("everyone's")) {
-					  	System.out.println("YESSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
-					  }
-					 // word = word.replaceAll("[^a-z0-9_]","");
-					 // word = word.toLowerCase();
-					 if (word.length() > 0) {
+					// if(word.equals("everyone's")) {
+					// 	System.out.println("YESSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+					// }
+					// word = word.replaceAll("[^a-z0-9_]","");
+					// word = word.toLowerCase();
+					if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
 						} else {
 							worddict.put(word, 1);
 						}
-					 }
+					}
 				}
 			}
 		}
