@@ -96,7 +96,7 @@ public class Distance {
 		return innerproductvalue;
 	}
 	long angle(TreeMap<String, Integer> comparedict) {
-		// System.out.println(getMap());
+		System.out.println(getMap());
 		double compnorm = 0;
 		for (int i : comparedict.values()) {
 			compnorm = compnorm + (i * i);
