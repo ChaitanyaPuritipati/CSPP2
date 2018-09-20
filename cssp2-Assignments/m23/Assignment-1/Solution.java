@@ -16,7 +16,7 @@ public class Solution {
 				return;
 			}
 			for(File file : files) {
-				System.out.print(file.getName() + "\t");
+				System.out.print("\t" + file.getName() + "\t");
 			}
 			System.out.println();
 			for (File file : files) {
