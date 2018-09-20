@@ -15,8 +15,9 @@ public class Solution {
 				System.out.println("empty directory");
 				return;
 			}
+			System.out.print("\t" + "\t");
 			for(File file : files) {
-				System.out.print("\t" + "\t"+file.getName() + "\t");
+				System.out.print(file.getName() + "\t");
 			}
 			System.out.println();
 			for (File file : files) {
