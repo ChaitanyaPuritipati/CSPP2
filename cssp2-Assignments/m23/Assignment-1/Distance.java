@@ -63,7 +63,7 @@ public class Distance {
 			if (eachline.length() > 0) {
 				String[] words = eachline.split("[^a-z0-9_']");
 				for (String word : words) {
-					 word = word.replaceAll("[^a-z0-9_]","");
+					 // word = word.replaceAll("[^a-z0-9_]","");
 					 // word = word.toLowerCase();
 					 if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
