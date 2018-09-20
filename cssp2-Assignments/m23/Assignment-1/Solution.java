@@ -18,6 +18,7 @@ public class Solution {
 			for(File file : files) {
 				System.out.print(file.getName() + "\t");
 			}
+			System.out.println();
 			for (File file : files) {
 				for (File eachfile : files) {
 					Distance map1 = new Distance(file);
