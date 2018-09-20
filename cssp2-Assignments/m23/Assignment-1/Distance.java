@@ -60,11 +60,12 @@ public class Distance {
 	}
 	void buildingdict() {
 		for (String eachline : filelines) {
-			eachline = eachline.toLowerCase();
+			// eachline = eachline.toLowerCase();
 			if (eachline.length() > 0) {
 				String[] words = eachline.split("\\W");
 				for (String word : words) {
 					 word = word.replaceAll("[^a-z0-9_]","");
+					 word = word.toLowerCase();
 					 if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
