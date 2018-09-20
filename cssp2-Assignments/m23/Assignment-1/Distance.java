@@ -62,7 +62,7 @@ public class Distance {
 		for (String eachline : filelines) {
 			eachline = eachline.toLowerCase();
 			if (eachline.length() > 0) {
-				String[] words = eachline.split(" ");
+				String[] words = eachline.split("");
 				for (String word : words) {
 					 if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
