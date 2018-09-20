@@ -10,6 +10,10 @@ public class Solution {
 		String dirname = scan.nextLine();
 		File dir = new File(dirname);
 		File[] files = dir.listFiles();
+		if(files.length == 0) {
+			System.out.println("empty directory");
+			return;
+		}
 		for (File file : files) {
 			for (File eachfile : files) {
 				Distance map1 = new Distance(file);
