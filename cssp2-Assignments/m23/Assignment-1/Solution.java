@@ -41,7 +41,6 @@ public class Solution {
 
 					}
 				}
-				System.out.println("----------------------------------------------------------------");
 			}
 			System.out.println(max + file1 + file2);
 		}
