@@ -15,6 +15,9 @@ public class Solution {
 				System.out.println("empty directory");
 				return;
 			}
+			for(File file : files) {
+				System.out.print(file.getName() + "\t");
+			}
 			for (File file : files) {
 				for (File eachfile : files) {
 					Distance map1 = new Distance(file);
@@ -30,7 +33,7 @@ public class Solution {
 					// System.out.println(map2.norm() + " Euclidean norm\n");
 
 					// System.out.println(map2.innerProduct(map1.getMap()) + " inner product");
-					System.out.println(map1.angle(map2.getMap()) + " angle" + file.getName() + eachfile.getName());
+					System.out.print(map1.angle(map2.getMap()) + "\t");
 					if (map1.angle(map2.getMap()) > max && !(file.getName().equals(eachfile.getName()))) {
 						max = map1.angle(map2.getMap());
 						file1 = file.getName();
