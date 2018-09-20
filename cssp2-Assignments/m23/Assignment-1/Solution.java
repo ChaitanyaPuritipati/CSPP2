@@ -20,6 +20,7 @@ public class Solution {
 			}
 			System.out.println();
 			for (File file : files) {
+                System.out.print(file.getName() + "\t");
 				for (File eachfile : files) {
 					Distance map1 = new Distance(file);
 					// System.out.println(map1.getNumOfLines() + " lines  ");
@@ -34,7 +35,7 @@ public class Solution {
 					// System.out.println(map2.norm() + " Euclidean norm\n");
 
 					// System.out.println(map2.innerProduct(map1.getMap()) + " inner product");
-					System.out.print(file.getName() + "\t" + map1.angle(map2.getMap()) + "\t");
+					System.out.print(map1.angle(map2.getMap()) + "\t");
 					if (map1.angle(map2.getMap()) > max && !(file.getName().equals(eachfile.getName()))) {
 						max = map1.angle(map2.getMap());
 						file1 = file.getName();
