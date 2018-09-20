@@ -61,6 +61,7 @@ public class Distance {
 			eachline = eachline.toLowerCase();
 			// eachline = eachline.replaceAll("[^a-z0-9_']","");
 			if (eachline.length() > 0) {
+				System.out.println(eachline);
 				String[] words = eachline.split("[^a-z0-9_']");
 				for (String word : words) {
 					 // word = word.replaceAll("[^a-z0-9_]","");
@@ -96,7 +97,7 @@ public class Distance {
 		return innerproductvalue;
 	}
 	long angle(TreeMap<String, Integer> comparedict) {
-		System.out.println(getMap());
+		// System.out.println(getMap());
 		double compnorm = 0;
 		for (int i : comparedict.values()) {
 			compnorm = compnorm + (i * i);
