@@ -64,13 +64,13 @@ public class Distance {
 			if (eachline.length() > 0) {
 				String[] words = eachline.split("\\W");
 				for (String word : words) {
-					// if (word.length() > 0) {
+					 if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
 						} else {
 							worddict.put(word, 1);
 						}
-					// }
+					 }
 				}
 			}
 		}
