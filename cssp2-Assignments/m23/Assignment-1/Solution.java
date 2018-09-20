@@ -39,7 +39,8 @@ final class Solution {
                     Distance map1 = new Distance(file);
                     Distance map2 = new Distance(eachfile);
                     System.out.print(map1.angle(map2.getMap()) + "\t" + "\t");
-                    if (map1.angle(map2.getMap()) > max && !(file.getName().equals(eachfile.getName()))) {
+                    if (map1.angle(map2.getMap()) > max &&
+                            !(file.getName().equals(eachfile.getName()))) {
                         max = map1.angle(map2.getMap());
                         file1 = file.getName();
                         file2 = eachfile.getName();
