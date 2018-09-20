@@ -13,11 +13,9 @@
  *
  *
  *****************************************************************************/
-
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
 public class Distance {
 	//requirements are defined by provided tests
 	//       Test1.java, Test2.java, Test3.java, Test4.java
@@ -60,12 +58,12 @@ public class Distance {
 	}
 	void buildingdict() {
 		for (String eachline : filelines) {
-			// eachline = eachline.toLowerCase();
+			eachline = eachline.toLowerCase();
 			if (eachline.length() > 0) {
 				String[] words = eachline.split("\\W");
 				for (String word : words) {
-					 word = word.replaceAll("[^A-Za-z0-9_]","");
-					 word = word.toLowerCase();
+					 word = word.replaceAll("[^a-z0-9_]","");
+					 // word = word.toLowerCase();
 					 if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
@@ -97,6 +95,7 @@ public class Distance {
 		return innerproductvalue;
 	}
 	long angle(TreeMap<String, Integer> comparedict) {
+		System.out.println(getMap());
 		double compnorm = 0;
 		for (int i : comparedict.values()) {
 			compnorm = compnorm + (i * i);
