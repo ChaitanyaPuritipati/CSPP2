@@ -61,7 +61,7 @@ public class Distance {
 		for (String eachline : filelines) {
 			// eachline = eachline.toLowerCase();
 			eachline = eachline.replaceAll("[^a-z0-9_A-Z ]"," ");
-			eachline = eachline.replaceAll("\\s+"," ");
+			// eachline = eachline.replaceAll("\\s+"," ");
 			if (eachline.length() > 0) {
 				// System.out.println(eachline);
 				String[] words = eachline.split(" ");
