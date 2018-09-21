@@ -27,9 +27,9 @@ public class Distance {
 		try {
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
-			while (filescan.hasNext()) {
+			 while (filescan.hasNext()) {
 				// String line = filescan.nextLine();
-				String line = filescan.useDelimiter("\\A").next();
+				String line = filescan.useDelimiter("\\Z").next();
 				filelines.add(line);
 			}
 			buildingdict();
