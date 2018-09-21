@@ -60,9 +60,9 @@ public class Distance {
 	void buildingdict() {
 		for (String eachline : filelines) {
 			// eachline = eachline.toLowerCase();
-			eachline = eachline.replaceAll("[^a-z0-9_A-Z ]"," ");
-			// eachline = eachline.replaceAll("\\s+"," ");
-			if (eachline.length() > 0) {
+			eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
+			eachline = eachline.replaceAll("\\s+"," ");
+			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
 				String[] words = eachline.split(" ");
 				//String[] words = eachline.split(" ");
@@ -76,7 +76,7 @@ public class Distance {
 						}
 					}
 				}
-			}
+			// }
 		}
 	}
 	TreeMap<String, Integer> getMap() {
