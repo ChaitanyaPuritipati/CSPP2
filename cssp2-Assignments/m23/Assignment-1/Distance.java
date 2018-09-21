@@ -28,8 +28,8 @@ public class Distance {
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
 			 while (filescan.hasNext()) {
-				// String line = filescan.nextLine();
-				String line = filescan.useDelimiter("\\A").next();
+				String line = filescan.nextLine();
+				// String line = filescan.useDelimiter("\\A").next();
 				filelines.add(line);
 			}
 			buildingdict();
@@ -60,7 +60,8 @@ public class Distance {
 	void buildingdict() {
 		for (String eachline : filelines) {
 			eachline = eachline.toLowerCase();
-			// eachline = eachline.replaceAll("[^a-z0-9_']","");
+			eachline = eachline.replaceAll("[^a-z0-9_ ]"," ");
+			eachline = eachline.replaceAll("\\s+"," ");
 			if (eachline.length() > 0) {
 				// System.out.println(eachline);
 				String[] words = eachline.split(" ");
