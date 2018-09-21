@@ -63,8 +63,8 @@ public class Distance {
 			// eachline = eachline.replaceAll("[^a-z0-9_']","");
 			if (eachline.length() > 0) {
 				// System.out.println(eachline);
-				// String[] words = eachline.split("\\W");
-				String[] words = eachline.split(" ");
+				String[] words = eachline.split("\\W");
+				// String[] words = eachline.split(" ");
 				for (String word : words) {
 					// word = word.toLowerCase();
 					if (word.length() > 0) {
