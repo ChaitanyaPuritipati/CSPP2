@@ -125,7 +125,9 @@ class Task {
         } else {
             urg = "Not Urgent";
         }
-        return gettasktile() + ", " + gettaskowner() + ", " + gettasktime() + ", " + imp + ", " + urg + ", " + gettaskstatus();
+        return gettasktile() + ", " + gettaskowner()
+               + ", " + gettasktime() + ", " + imp
+               + ", " + urg + ", " + gettaskstatus();
     }
 
 }
@@ -249,6 +251,12 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+     * Constructs the object.
+     */
+    TodoistMain() {
+        //unused
+    }
 
     /**
      * Starts a test.
