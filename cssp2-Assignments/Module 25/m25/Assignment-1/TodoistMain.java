@@ -12,13 +12,13 @@ class Task {
 	private boolean urgency;
 	private String taskstatus;
 	Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception {
-		if(title.equals("")) {
+		if (title.equals("")) {
 			throw new Exception("Title not provided");
 		}
-		if(!(time > 0)) {
+		if (!(time > 0)) {
 			throw new Exception("Invalid timeToComplete " + time);
 		}
-		if(!(status.equals("done") || status.equals("todo"))) {
+		if (!(status.equals("done") || status.equals("todo"))) {
 			throw new Exception("Invalid status " + status);
 		}
 		this.tasktitle = title;
@@ -75,33 +75,56 @@ class Todoist {
 		tasks = Arrays.copyOf(tasks, 2 * size);
 	}
 	public void addTask(Task newtask) {
-		if(size == tasks.length) {
+		if (size == tasks.length) {
 			resize();
 		}
 		tasks[size++] = newtask;
 	}
 	public String toString() {
 		String arraystring = "";
-		for(int i = 0; i < size - 1; i++) {
+		for (int i = 0; i < size - 1; i++) {
 			arraystring = arraystring + tasks[i].toString() + "\n";
 		}
 		arraystring = arraystring + tasks[size - 1].toString();
 		return arraystring;
 	}
 	public Task getNextTask(String inputname) {
-		for(int i = 0; i < size; i++) {
-			if(tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
+		for (int i = 0; i < size; i++) {
+			if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
 				return tasks[i];
 			}
 		}
-		for(int j = 0; j < size; j++) {
-			if(tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
+		for (int j = 0; j < size; j++) {
+			if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
 				return tasks[j];
 			}
 		}
 		return null;
 	}
-} 
+	public Task[] getNextTask(String inputname, int count) {
+		Task[] nexttasks = new Task[count];
+		int nextsize = 0;
+		for (int i = 0; i < size; i++) {
+			if(nexttasks.length == nextsize) {
+				return nexttasks;
+			}
+			if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
+				 nexttasks[nextsize] = tasks[i];
+				 nextsize++;
+			}
+		}
+		for (int j = 0; j < size; j++) {
+			if(nexttasks.length == nextsize) {
+				return nexttasks;
+			}
+			if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
+				 nexttasks[nextsize] = tasks[j];
+				 nextsize++;
+			}
+		}
+		return nexttasks;
+	}
+}
 /**
  * Class for todoist main.
  */
@@ -126,17 +149,13 @@ public class TodoistMain {
 				System.out.println(todo);
 				break;
 			case "get-next":
-			    // if(todo.getNextTask(tokens[1]) == null) {
-			    // 	System.out.println("null");
-			    // 	break;
-			    // }
 				System.out.println(todo.getNextTask(tokens[1]));
 				break;
-			// case "get-next-n":
-			// 	int n = Integer.parseInt(tokens[2]);
-			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
-			// 	System.out.println(Arrays.deepToString(tasks));
-			// 	break;
+			case "get-next-n":
+				int n = Integer.parseInt(tokens[2]);
+				Task[] tasks = todo.getNextTask(tokens[1], n);
+				System.out.println(Arrays.deepToString(tasks));
+				break;
 			// case "total-time":
 			// 	System.out.println(todo.totalTime4Completion());
 			// 	break;
