@@ -214,7 +214,7 @@ class Todoist {
             if (nexttasks.length == nextsize) {
                 return nexttasks;
             }
-            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
+            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() && !tasks[i].gettaskurgency()) {
                 nexttasks[nextsize] = tasks[i];
                 nextsize++;
             }
@@ -223,7 +223,7 @@ class Todoist {
             if (nexttasks.length == nextsize) {
                 return nexttasks;
             }
-            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
+            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() && tasks[j].gettaskurgency()) {
                 nexttasks[nextsize] = tasks[j];
                 nextsize++;
             }
@@ -238,8 +238,9 @@ class Todoist {
     public int totalTime4Completion() {
         int totaltime = 0;
         for (int i = 0; i < size; i++) {
-            if (tasks[i].gettaskstatus().equals("todo"))
+            if (tasks[i].gettaskstatus().equals("todo")) {
                 totaltime = totaltime + tasks[i].gettasktime();
+            }
         }
         return totaltime;
     }
@@ -321,14 +322,20 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        final int six = 6;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+                   title, assignedTo,
+                   timeToComplete, important,
+                   urgent, status);
     }
 
     /**
