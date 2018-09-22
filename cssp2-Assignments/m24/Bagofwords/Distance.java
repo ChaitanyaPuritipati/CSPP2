@@ -64,7 +64,7 @@ public class Distance {
 			// eachline = eachline.replaceAll("\\s+"," ");
 			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
-				String[] words = eachline.split("\\s");
+				String[] words = eachline.split(" ");
 				// String[] words = eachline.split(" ");
 				for (String word : words) {
 					// word = word.toLowerCase();
