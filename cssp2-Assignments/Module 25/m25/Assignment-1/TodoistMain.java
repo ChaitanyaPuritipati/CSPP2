@@ -190,12 +190,18 @@ class Todoist {
      */
     public Task getNextTask(final String inputname) {
         for (int i = 0; i < size; i++) {
-            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() && (!tasks[i].gettaskurgency())) {
+            if (tasks[i].gettaskowner().equals(inputname)
+                    && tasks[i].gettaskstatus().equals("todo")
+                    && tasks[i].gettaskimp()
+                    && (!tasks[i].gettaskurgency())) {
                 return tasks[i];
             }
         }
         for (int j = 0; j < size; j++) {
-            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() && tasks[j].gettaskurgency()) {
+            if (tasks[j].gettaskowner().equals(inputname)
+                    && tasks[j].gettaskstatus().equals("todo")
+                    && tasks[j].gettaskimp()
+                    && tasks[j].gettaskurgency()) {
                 return tasks[j];
             }
         }
@@ -216,7 +222,10 @@ class Todoist {
             if (nexttasks.length == nextsize) {
                 return nexttasks;
             }
-            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() && !tasks[i].gettaskurgency()) {
+            if (tasks[i].gettaskowner().equals(inputname)
+                    && tasks[i].gettaskstatus().equals("todo")
+                    && tasks[i].gettaskimp()
+                    && !tasks[i].gettaskurgency()) {
                 nexttasks[nextsize] = tasks[i];
                 nextsize++;
             }
@@ -225,7 +234,10 @@ class Todoist {
             if (nexttasks.length == nextsize) {
                 return nexttasks;
             }
-            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() && tasks[j].gettaskurgency()) {
+            if (tasks[j].gettaskowner().equals(inputname)
+                    && tasks[j].gettaskstatus().equals("todo")
+                    && tasks[j].gettaskimp()
+                    && tasks[j].gettaskurgency()) {
                 nexttasks[nextsize] = tasks[j];
                 nextsize++;
             }
@@ -250,7 +262,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+final class TodoistMain {
     /**
      * Constructs the object.
      */
