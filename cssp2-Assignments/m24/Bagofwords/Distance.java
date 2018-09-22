@@ -67,7 +67,7 @@ public class Distance {
 				String[] words = eachline.split("\\s");
 				// String[] words = eachline.split(" ");
 				for (String word : words) {
-					word = word.toLowerCase();
+					// word = word.toLowerCase();
 					if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
