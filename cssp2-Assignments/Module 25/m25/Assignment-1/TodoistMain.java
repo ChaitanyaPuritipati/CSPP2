@@ -1,16 +1,43 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
-  * write your code below this comment
-  */
+ * Class for task.
+ */
 class Task {
+	/**
+	 * { tasktitle }.
+	 */
 	private String tasktitle;
+	/**
+	 * { ownername }.
+	 */
 	private String taskownername;
+	/**
+	 * { time }.
+	 */
 	private int tasktime;
+	/**
+	 * { importance }.
+	 */
 	private boolean importance;
+	/**
+	 * { urgency }.
+	 */
 	private boolean urgency;
+	/**
+	 * { status }.
+	 */
 	private String taskstatus;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      title   The title
+	 * @param      name    The name
+	 * @param      time    The time
+	 * @param      imp     The imp
+	 * @param      urgent  The urgent
+	 * @param      status  The status
+	 */
 	Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception {
 		if (title.equals("")) {
 			throw new Exception("Title not provided");
@@ -28,24 +55,59 @@ class Task {
 		this.urgency = urgent;
 		this.taskstatus = status;
 	}
+	/**
+	 * { gettitle }.
+	 *
+	 * @return     { String }
+	 */
 	public String gettasktile() {
 		return this.tasktitle;
 	}
+	/**
+	 * { getownername }.
+	 *
+	 * @return     { String }
+	 */
 	public String gettaskowner() {
 		return this.taskownername;
 	}
+	/**
+	 * { gettasktime }.
+	 *
+	 * @return     { String }
+	 */
 	public int gettasktime() {
 		return this.tasktime;
 	}
+	/**
+	 * { getimp }.
+	 *
+	 * @return     { boolean }
+	 */
 	public boolean gettaskimp() {
 		return this.importance;
 	}
+	/**
+	 * { taskurgency }.
+	 *
+	 * @return     { boolean }
+	 */
 	public boolean gettaskurgency() {
 		return this.urgency;
 	}
+	/**
+	 * { taskstatus }.
+	 *
+	 * @return     { String }
+	 */
 	public String gettaskstatus() {
 		return this.taskstatus;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String imp = "";
 		String urg = "";
@@ -63,23 +125,48 @@ class Task {
 	}
 
 }
+/**
+ * Class for todoist.
+ */
 class Todoist {
+	/**
+	 * { tasks array }.
+	 */
 	private Task[] tasks;
+	/**
+	 * { size }.
+	 */
 	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	Todoist() {
 		final int ten = 10;
 		tasks = new Task[ten];
 		size = 0;
 	}
+	/**
+	 * { toresize }.
+	 */
 	public void resize() {
 		tasks = Arrays.copyOf(tasks, 2 * size);
 	}
+	/**
+	 * Adds a task.
+	 *
+	 * @param      newtask  The newtask
+	 */
 	public void addTask(Task newtask) {
 		if (size == tasks.length) {
 			resize();
 		}
 		tasks[size++] = newtask;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String arraystring = "";
 		for (int i = 0; i < size - 1; i++) {
@@ -88,6 +175,13 @@ class Todoist {
 		arraystring = arraystring + tasks[size - 1].toString();
 		return arraystring;
 	}
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      inputname  The inputname
+	 *
+	 * @return     The next task.
+	 */
 	public Task getNextTask(String inputname) {
 		for (int i = 0; i < size; i++) {
 			if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
@@ -101,34 +195,47 @@ class Todoist {
 		}
 		return null;
 	}
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      inputname  The inputname
+	 * @param      count      The count
+	 *
+	 * @return     The next task.
+	 */
 	public Task[] getNextTask(String inputname, int count) {
 		Task[] nexttasks = new Task[count];
 		int nextsize = 0;
 		for (int i = 0; i < size; i++) {
-			if(nexttasks.length == nextsize) {
+			if (nexttasks.length == nextsize) {
 				return nexttasks;
 			}
 			if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
-				 nexttasks[nextsize] = tasks[i];
-				 nextsize++;
+				nexttasks[nextsize] = tasks[i];
+				nextsize++;
 			}
 		}
 		for (int j = 0; j < size; j++) {
-			if(nexttasks.length == nextsize) {
+			if (nexttasks.length == nextsize) {
 				return nexttasks;
 			}
 			if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
-				 nexttasks[nextsize] = tasks[j];
-				 nextsize++;
+				nexttasks[nextsize] = tasks[j];
+				nextsize++;
 			}
 		}
 		return nexttasks;
 	}
+	/**
+	 * { time4completion }.
+	 *
+	 * @return     { int }
+	 */
 	public int totalTime4Completion() {
 		int totaltime = 0;
-		for(int i = 0; i < size; i++) {
-			if(tasks[i].gettaskstatus().equals("todo"))
-            totaltime = totaltime + tasks[i].gettasktime();
+		for (int i = 0; i < size; i++) {
+			if (tasks[i].gettaskstatus().equals("todo"))
+				totaltime = totaltime + tasks[i].gettasktime();
 		}
 		return totaltime;
 	}
