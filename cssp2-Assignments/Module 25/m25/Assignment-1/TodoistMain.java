@@ -160,7 +160,7 @@ class Todoist {
      *
      * @param      newtask  The newtask
      */
-    public void addTask(Task newtask) {
+    public void addTask(final Task newtask) {
         if (size == tasks.length) {
             resize();
         }
@@ -186,14 +186,14 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public Task getNextTask(String inputname) {
+    public Task getNextTask(final String inputname) {
         for (int i = 0; i < size; i++) {
-            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
+            if (tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() && (!tasks[i].gettaskurgency())) {
                 return tasks[i];
             }
         }
         for (int j = 0; j < size; j++) {
-            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
+            if (tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() && tasks[j].gettaskurgency()) {
                 return tasks[j];
             }
         }
@@ -207,7 +207,7 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public Task[] getNextTask(String inputname, int count) {
+    public Task[] getNextTask(final String inputname, final int count) {
         Task[] nexttasks = new Task[count];
         int nextsize = 0;
         for (int i = 0; i < size; i++) {
