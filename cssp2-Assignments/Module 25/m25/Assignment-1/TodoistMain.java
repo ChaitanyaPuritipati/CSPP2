@@ -37,9 +37,12 @@ class Task {
      * @param      imp     The imp
      * @param      urgent  The urgent
      * @param      status  The status
-     * @throws      
+     * @throws
      */
-    Task(final String title, final String name, final int time, final boolean imp, final boolean urgent, final String status) throws Exception {
+    Task(final String title, final String name,
+         final int time, final boolean imp,
+         final boolean urgent,
+         final String status) throws Exception {
         if (title.equals("")) {
             throw new Exception("Title not provided");
         }
