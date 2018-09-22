@@ -89,9 +89,9 @@ class Todoist {
 		return arraystring;
 	}
 	public Task getNextTask(String inputname) {
-		for(Task eachtask: tasks) {
-			if(eachtask.gettaskowner().equals(inputname) && eachtask.gettaskstatus().equals("todo") && eachtask.gettaskimp() == true) {
-				return eachtask;
+		for(int i = 0; i < size - 1; i++) {
+			if(tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true) {
+				return tasks[i];
 			}
 		}
 		return null;
@@ -121,10 +121,10 @@ public class TodoistMain {
 				System.out.println(todo);
 				break;
 			case "get-next":
-			    if(todo.getNextTask(tokens[1]) == null) {
-			    	System.out.println("null");
-			    	break;
-			    }
+			    // if(todo.getNextTask(tokens[1]) == null) {
+			    // 	System.out.println("null");
+			    // 	break;
+			    // }
 				System.out.println(todo.getNextTask(tokens[1]));
 				break;
 			// case "get-next-n":
