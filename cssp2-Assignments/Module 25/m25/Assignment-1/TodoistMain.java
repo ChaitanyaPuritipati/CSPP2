@@ -121,6 +121,10 @@ public class TodoistMain {
 				System.out.println(todo);
 				break;
 			case "get-next":
+			    if(todo.getNextTask(tokens[1]) == null) {
+			    	System.out.println("null");
+			    	break;
+			    }
 				System.out.println(todo.getNextTask(tokens[1]));
 				break;
 			// case "get-next-n":
