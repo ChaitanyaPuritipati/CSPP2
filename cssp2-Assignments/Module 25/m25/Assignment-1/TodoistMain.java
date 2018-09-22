@@ -89,12 +89,12 @@ class Todoist {
 		return arraystring;
 	}
 	public Task getNextTask(String inputname) {
-		for(int i = 0; i < size - 1; i++) {
+		for(int i = 0; i < size; i++) {
 			if(tasks[i].gettaskowner().equals(inputname) && tasks[i].gettaskstatus().equals("todo") && tasks[i].gettaskimp() == true && tasks[i].gettaskurgency() == false) {
 				return tasks[i];
 			}
 		}
-		for(int j = 0; j < size - 1; j++) {
+		for(int j = 0; j < size; j++) {
 			if(tasks[j].gettaskowner().equals(inputname) && tasks[j].gettaskstatus().equals("todo") && tasks[j].gettaskimp() == true && tasks[j].gettaskurgency() == true) {
 				return tasks[j];
 			}
