@@ -11,7 +11,16 @@ class Task {
 	private boolean importance;
 	private boolean urgency;
 	private String taskstatus;
-	Task(String title, String name, int time, boolean imp, boolean urgent, String status) {
+	Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception {
+		if(title.equals("")) {
+			throw new Exception("Title not provided");
+		}
+		if(!(time > 0)) {
+			throw new Exception("Invalid timeToComplete " + time);
+		}
+		if(!(status.equals("done") || status.equals("todo"))) {
+			throw new Exception("Invalid status " + status);
+		}
 		this.tasktitle = title;
 		this.taskownername = name;
 		this.tasktime = time;
