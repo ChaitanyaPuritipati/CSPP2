@@ -59,12 +59,12 @@ public class Distance {
 	}
 	void buildingdict() {
 		for (String eachline : filelines) {
-			// eachline = eachline.toLowerCase();
+			eachline = eachline.toLowerCase();
 			// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
 			// eachline = eachline.replaceAll("\\s+"," ");
 			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
-				String[] words = eachline.split("\\s");
+				String[] words = eachline.split("\\W");
 				//String[] words = eachline.split(" ");
 				for (String word : words) {
 					// word = word.toLowerCase();
