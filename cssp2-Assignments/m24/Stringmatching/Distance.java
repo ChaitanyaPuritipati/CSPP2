@@ -55,7 +55,7 @@ public class Distance
 			double numerator = lcs.length() * 2 * 100;
 			double denominator = s1.length() + s2.length();
 			ans = Math.round(numerator/denominator);
-			System.out.format("%13f",ans); 
+			System.out.format("%13.1f",ans); 
 
 
 	    } catch(Exception e) {
