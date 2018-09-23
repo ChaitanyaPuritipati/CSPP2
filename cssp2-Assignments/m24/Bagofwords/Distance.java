@@ -29,12 +29,12 @@ public class Distance {
 			line = "";
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
-			// while (filescan.hasNext()) {
+			while (filescan.hasNext()) {
 			// String line = filescan.nextLine();
 				line = filescan.useDelimiter("\\A").next();
 				// System.out.println(line + "String value" + inputfile.getName());
 			// filelines.add(line);
-			// }
+			}
 			buildingdict();
 		} catch (IOException io) {
 			System.out.println("FILE NOT FOUND");
