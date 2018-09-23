@@ -31,10 +31,10 @@ public class Distance {
 			// while (filescan.hasNext()) {
 			// String line = filescan.nextLine();
 			while (filescan.hasNext()) {
+				System.out.println("reahced here");
 				line = filescan.useDelimiter("\\A").next();
 				// System.out.println(line + "String value" + inputfile.getName());
 			}
-
 			// filelines.add(line);
 			// }
 			buildingdict();
