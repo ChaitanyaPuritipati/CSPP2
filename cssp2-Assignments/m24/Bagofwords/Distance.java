@@ -31,7 +31,7 @@ public class Distance {
 			// while (filescan.hasNext()) {
 			// String line = filescan.nextLine();
 			while (filescan.hasNext()) {
-				System.out.println("reahced here");
+				System.out.println("reahced here" + inputfile.getName());
 				line = filescan.useDelimiter("\\A").next();
 				// System.out.println(line + "String value" + inputfile.getName());
 			}
