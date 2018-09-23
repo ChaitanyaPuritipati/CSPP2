@@ -21,7 +21,7 @@ public final class Solution {
             String line = scan.nextLine();
             File dir = new File(line);
             File[] files = dir.listFiles();
-            double maxVal = 0;
+            double max = 0;
             String file1 = "";
             String file2 = "";
             System.out.print("             ");
@@ -35,9 +35,9 @@ public final class Solution {
                 for (int j = 0; j < files.length; j++) {
                     Distance map1 = new Distance(files[i], files[j]);
                     double similar = map1.getSimilarity();
-                    if (similar > maxVal && !files[i].getName().equals(
+                    if (similar > max && !files[i].getName().equals(
                                 files[j].getName())) {
-                        maxVal = similar;
+                        max = similar;
                         file1 = files[i].getName();
                         file2 = files[j].getName();
                     }

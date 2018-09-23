@@ -1,15 +1,15 @@
 /**
  ******************************************************************************
- *                    HOMEWORK, 15-121
+ *                    MODULE 24
  ******************************************************************************
- *                  THE DOCUMENT DISTANCE
+ *                  THE STRING MATCHING
  ******************************************************************************
  *
- * The document distance problem is the problem of computing the distance
- * between two given text documents.
+ * The String matching problem is the problem of computing the Longest
+ * common substring between two given text documents.
  *
- * The distance between two documents is the angle between their word
- * frequency vectors.
+ * The plagarism between two documents is given by their lcs.
+ * 
  *
  *
  *****************************************************************************/
@@ -19,15 +19,11 @@ import java.io.*;
 import java.net.*;
 
 public class Distance {
-	//requirements are defined by provided tests
-	//       Test1.java, Test2.java, Test3.java, Test4.java
 	private HashMap<String, Integer> freqWords = new HashMap<>();
 	String s1 = "";
 	String s2 = "";
 	double ans;
-
 	public Distance(File inputFile, File inputFile2) {
-		// String line;
 		try {
 			Scanner filescan = new Scanner(inputFile);
 			while(filescan.hasNext()) {
@@ -37,17 +33,6 @@ public class Distance {
 			while(filescan.hasNext()) {
 				s2 += filescan.nextLine();
 			}
-			// FileReader fileReader = new FileReader(inputFile);
-			// BufferedReader bufferedReader = new BufferedReader(fileReader);
-			// while ((line = bufferedReader.readLine()) != null) {
-			// 	s1 += line;
-			// }
-			// fileReader = new FileReader(inputFile2);
-			// bufferedReader = new BufferedReader(fileReader);
-
-			// while ((line = bufferedReader.readLine()) != null) {
-			// 	s2 += line;
-			// }
 			String lcs = "";
 			for (int i = 0; i < s2.length(); i++) {
 				for (int j = i + 1 ; j <= s2.length(); j++) {
@@ -68,7 +53,7 @@ public class Distance {
 				System.out.format("%13.1f", ans);
 			}
 		} catch (Exception e) {
-			System.out.println("100.0");
+			System.out.println("FILE NOT FOUND");
 		}
 	}
 	public double getSimilarity() {
