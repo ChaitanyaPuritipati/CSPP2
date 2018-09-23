@@ -60,7 +60,7 @@ public class Distance {
 	void buildingdict() {
 		for (String eachline : filelines) {
 			// eachline = eachline.toLowerCase();
-			eachline = eachline.replaceAll("[^a-z0-9]"," ");
+			eachline = eachline.replaceAll("[^a-z]"," ");
 			// eachline = eachline.replaceAll("\\s+"," ");
 			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
