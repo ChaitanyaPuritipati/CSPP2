@@ -37,7 +37,6 @@ final class Solution {
                 System.out.print(file.getName() + "\t");
                 for (File eachfile : files) {
                     Distance map1 = new Distance(file);
-                    System.out.println("reached here");
                     Distance map2 = new Distance(eachfile);
                     System.out.print(map1.angle(map2.getMap()) + "\t" + "\t");
                     if (map1.angle(map2.getMap()) > max
