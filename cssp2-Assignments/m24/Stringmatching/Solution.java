@@ -28,7 +28,7 @@ public final class Solution {
             for (int i = 0; i < files.length - 1; i++) {
                 System.out.print(files[i].getName() + "    ");
             }
-            System.out.print(files[files.length - 1].getName());
+            System.out.print(files[files.length - 1].getName() + " ");
             System.out.println();
             for (int i = 0; i < files.length; i++) {
                 System.out.print(files[i].getName());
