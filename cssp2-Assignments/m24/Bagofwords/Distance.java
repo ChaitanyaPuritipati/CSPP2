@@ -26,6 +26,7 @@ public class Distance {
 	TreeMap<String, Integer> worddict = new TreeMap<>();
 	Distance(File inputfile) {
 		try {
+			line = "";
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
 			// while (filescan.hasNext()) {
