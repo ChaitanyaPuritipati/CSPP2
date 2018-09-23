@@ -27,21 +27,27 @@ public class Distance {
 	double ans;
 
 	public Distance(File inputFile, File inputFile2) {
-		String line;
+		// String line;
 		try {
-
-			FileReader fileReader = new FileReader(inputFile);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-			while ((line = bufferedReader.readLine()) != null) {
-				s1 += line;
+			Scanner filescan = new Scanner(inputFile);
+			while(filescan.hasNext()) {
+				s1 += filescan.nextLine();
 			}
-			fileReader = new FileReader(inputFile2);
-			bufferedReader = new BufferedReader(fileReader);
-
-			while ((line = bufferedReader.readLine()) != null) {
-				s2 += line;
+			filescan = new Scanner(inputFile2);
+			while(filescan.hasNext()) {
+				s2 += filescan.nextLine();
 			}
+			// FileReader fileReader = new FileReader(inputFile);
+			// BufferedReader bufferedReader = new BufferedReader(fileReader);
+			// while ((line = bufferedReader.readLine()) != null) {
+			// 	s1 += line;
+			// }
+			// fileReader = new FileReader(inputFile2);
+			// bufferedReader = new BufferedReader(fileReader);
+
+			// while ((line = bufferedReader.readLine()) != null) {
+			// 	s2 += line;
+			// }
 			String lcs = "";
 			for (int i = 0; i < s2.length(); i++) {
 				for (int j = i + 1 ; j <= s2.length(); j++) {
