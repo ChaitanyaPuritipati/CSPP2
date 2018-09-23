@@ -21,17 +21,18 @@ public class Distance {
 	//       Test1.java, Test2.java, Test3.java, Test4.java
 	File testfile;
 	Scanner filescan;
-	ArrayList<String> filelines = new ArrayList<String>();
+	String line;
+	// ArrayList<String> filelines = new ArrayList<String>();
 	TreeMap<String, Integer> worddict = new TreeMap<>();
 	Distance(File inputfile) {
 		try {
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
-			 while (filescan.hasNext()) {
-				String line = filescan.nextLine();
-				// String line = filescan.useDelimiter("\\A").next();
-				filelines.add(line);
-			}
+			 // while (filescan.hasNext()) {
+				// String line = filescan.nextLine();
+				line = filescan.useDelimiter("\\A").next();
+				// filelines.add(line);
+			// }
 			buildingdict();
 		} catch (IOException io) {
 			System.out.println("FILE NOT FOUND");
@@ -39,45 +40,45 @@ public class Distance {
 		}
 
 	}
-	Distance(String inputline) {
-		filelines.add(inputline);
-		buildingdict();
+	// Distance(String inputline) {
+	// 	filelines.add(inputline);
+	// 	buildingdict();
 
-	}
-	int getNumOfLines() {
-		return filelines.size();
-	}
-	int getNumOfDistinctWords() {
-		return worddict.keySet().size();
-	}
-	int getNumOfWords() {
-		int sum = 0;
-		for (int i : worddict.values()) {
-			sum = sum + i;
-		}
-		return sum;
-	}
+	// }
+	// int getNumOfLines() {
+	// 	return filelines.size();
+	// }
+	// int getNumOfDistinctWords() {
+	// 	return worddict.keySet().size();
+	// }
+	// int getNumOfWords() {
+	// 	int sum = 0;
+	// 	for (int i : worddict.values()) {
+	// 		sum = sum + i;
+	// 	}
+	// 	return sum;
+	// }
 	void buildingdict() {
-		for (String eachline : filelines) {
+		// for (String eachline : filelines) {
 			// eachline = eachline.toLowerCase();
 			// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
 			// eachline = eachline.replaceAll("\\s+"," ");
 			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
-				String[] words = eachline.split(" ");
+				String[] words = line.toLowerCase().split(" ");
 				//String[] words = eachline.split(" ");
 				for (String word : words) {
 					// word = word.toLowerCase();
-					if (word.length() > 0) {
+					// if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
 						} else {
 							worddict.put(word, 1);
 						}
-					}
+					// }
 				}
 			// }
-		}
+		// }
 	}
 	TreeMap<String, Integer> getMap() {
 		return worddict;
