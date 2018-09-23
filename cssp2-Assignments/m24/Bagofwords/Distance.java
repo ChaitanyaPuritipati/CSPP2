@@ -34,7 +34,6 @@ public class Distance {
 				// System.out.println(line + "String value" + inputfile.getName());
 				// filelines.add(line);
 			}
-			System.out.println(line + "line value");
 			buildingdict();
 		} catch (IOException io) {
 			System.out.println("FILE NOT FOUND");
@@ -65,7 +64,7 @@ public class Distance {
 		// eachline = eachline.toLowerCase();
 		// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
 		// eachline = eachline.replaceAll("\\s+"," ");
-		if (line.length() > 0) {
+		if (line != null) {
 			// System.out.println(eachline);
 			String[] words = line.toLowerCase().split(" ");
 			// System.out.println(Arrays.toString(words) + "wordarray");
