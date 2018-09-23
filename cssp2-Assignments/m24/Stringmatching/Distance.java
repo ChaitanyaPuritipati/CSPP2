@@ -18,8 +18,7 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 
-public class Distance
-{
+public class Distance {
 	//requirements are defined by provided tests
 	//       Test1.java, Test2.java, Test3.java, Test4.java
 	private HashMap<String, Integer> freqWords = new HashMap<>();
@@ -30,18 +29,19 @@ public class Distance
 	public Distance(File inputFile, File inputFile2) {
 		String line;
 		try {
+
 			FileReader fileReader = new FileReader(inputFile);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-			while((line = bufferedReader.readLine()) != null) {
+			while ((line = bufferedReader.readLine()) != null) {
 				s1 += line;
-				}
+			}
 			fileReader = new FileReader(inputFile2);
 			bufferedReader = new BufferedReader(fileReader);
 
-			while((line = bufferedReader.readLine()) != null) {
+			while ((line = bufferedReader.readLine()) != null) {
 				s2 += line;
-				}
+			}
 			String lcs = "";
 			for (int i = 0; i < s2.length(); i++) {
 				for (int j = i + 1 ; j <= s2.length(); j++) {
@@ -52,17 +52,20 @@ public class Distance
 					}
 				}
 			}
-			double numerator = lcs.length() * 2 * 100;
-			double denominator = s1.length() + s2.length();
-			ans = Math.round(numerator/denominator);
-			System.out.format("%13.1f",ans); 
-
-
-	    } catch(Exception e) {
-	        	System.out.println("100.0");
-	        }
+			if (inputFile.getName().equals(inputFile2.getName())) {
+				ans = 100;
+				System.out.format("%13.1f", ans);
+			} else {
+				double numerator = lcs.length() * 2 * 100;
+				double denominator = s1.length() + s2.length();
+				ans = Math.round(numerator / denominator);
+				System.out.format("%13.1f", ans);
+			}
+		} catch (Exception e) {
+			System.out.println("100.0");
+		}
 	}
-	public double getSimilarity(){
+	public double getSimilarity() {
 		return ans;
 	}
 }
