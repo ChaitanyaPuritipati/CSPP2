@@ -24,10 +24,10 @@ final class Solution {
             String dirname = scan.nextLine();
             File dir = new File(dirname);
             File[] files = dir.listFiles();
-            if (files.length == 0) {
-                System.out.println("empty directory");
-                return;
-            }
+            // if (files.length == 0) {
+            //     System.out.println("empty directory");
+            //     return;
+            // }
             System.out.print("\t" + "\t");
             for (File file : files) {
                 System.out.print(file.getName() + "\t");
