@@ -51,7 +51,7 @@ final class Solution {
             System.out.println("Maximum similarity is between "
                                + file1 + " and " + file2);
         } catch (Exception e) {
-            System.out.println("empty hello");
+            System.out.println(e.getMessage());
             return;
         }
     }
