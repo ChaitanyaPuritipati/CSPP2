@@ -1,8 +1,8 @@
 /**
  ******************************************************************************
- *                    HOMEWORK, 15-121
+ *                    MODULE 24
  ******************************************************************************
- *                  THE DOCUMENT DISTANCE
+ *                  BAG OF WORDS
  ******************************************************************************
  *
  * The document distance problem is the problem of computing the distance
@@ -60,14 +60,14 @@ public class Distance {
 	void buildingdict() {
 		for (String eachline : filelines) {
 			// eachline = eachline.toLowerCase();
-			// eachline = eachline.replaceAll("[^a-zA-Z0-9_']"," ");
+			// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
 			// eachline = eachline.replaceAll("\\s+"," ");
 			// if (eachline.length() > 0) {
 				// System.out.println(eachline);
 				String[] words = eachline.split(" ");
-				// String[] words = eachline.split(" ");
+				//String[] words = eachline.split(" ");
 				for (String word : words) {
-					word = word.toLowerCase();
+					// word = word.toLowerCase();
 					if (word.length() > 0) {
 						if (worddict.containsKey(word)) {
 							worddict.put(word, worddict.get(word) + 1);
@@ -99,7 +99,6 @@ public class Distance {
 		return innerproductvalue;
 	}
 	long angle(TreeMap<String, Integer> comparedict) {
-		// System.out.println(getNumOfWords() + "Wordcount");
 		double compnorm = 0;
 		for (int i : comparedict.values()) {
 			compnorm = compnorm + (i * i);
