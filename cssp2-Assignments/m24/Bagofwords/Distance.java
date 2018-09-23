@@ -32,7 +32,7 @@ public class Distance {
 			// String line = filescan.nextLine();
 			while (filescan.hasNext()) {
 				line = filescan.useDelimiter("\\A").next();
-				System.out.println(line + "String value" + inputfile.getName());
+				// System.out.println(line + "String value" + inputfile.getName());
 			}
 
 			// filelines.add(line);
@@ -70,7 +70,7 @@ public class Distance {
 		// if (eachline.length() > 0) {
 		// System.out.println(eachline);
 		String[] words = line.toLowerCase().split(" ");
-		System.out.println(Arrays.toString(words) + "wordarray");
+		// System.out.println(Arrays.toString(words) + "wordarray");
 		//String[] words = eachline.split(" ");
 		for (String word : words) {
 			// word = word.toLowerCase();
