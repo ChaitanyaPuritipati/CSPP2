@@ -42,7 +42,6 @@ public class Distance
 			while((line = bufferedReader.readLine()) != null) {
 				s2 += line;
 				}
-			//System.out.println(s1);
 			String lcs = "";
 			for (int i = 0; i < s2.length(); i++) {
 				for (int j = i + 1 ; j <= s2.length(); j++) {
@@ -56,7 +55,7 @@ public class Distance
 			double numerator = lcs.length() * 2 * 100;
 			double denominator = s1.length() + s2.length();
 			ans = Math.round(numerator/denominator);
-			System.out.print(ans +"         "); 
+			System.out.format("%13f",ans); 
 
 
 	    } catch(Exception e) {
