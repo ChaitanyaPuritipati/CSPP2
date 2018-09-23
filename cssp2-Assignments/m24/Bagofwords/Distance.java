@@ -22,17 +22,13 @@ public class Distance {
 	File testfile;
 	Scanner filescan;
 	String line;
-	// ArrayList<String> filelines = new ArrayList<String>();
 	TreeMap<String, Integer> worddict = new TreeMap<>();
 	Distance(File inputfile) {
 		try {
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
 			 while (filescan.hasNext()) {
-				// String line = filescan.nextLine();
 				line = filescan.useDelimiter("\\A").next();
-				// System.out.println(line + "String value" + inputfile.getName());
-				// filelines.add(line);
 			}
 			buildingdict();
 		} catch (IOException io) {
