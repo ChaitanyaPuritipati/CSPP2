@@ -28,11 +28,14 @@ public class Distance {
 		try {
 			this.testfile = inputfile;
 			filescan = new Scanner(testfile);
-			 // while (filescan.hasNext()) {
-				// String line = filescan.nextLine();
+			// while (filescan.hasNext()) {
+			// String line = filescan.nextLine();
+			while (filescan.hasNext()) {
 				line = filescan.useDelimiter("\\A").next();
 				System.out.println(line + "String value" + inputfile.getName());
-				// filelines.add(line);
+			}
+
+			// filelines.add(line);
 			// }
 			buildingdict();
 		} catch (IOException io) {
@@ -61,25 +64,25 @@ public class Distance {
 	// }
 	void buildingdict() {
 		// for (String eachline : filelines) {
-			// eachline = eachline.toLowerCase();
-			// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
-			// eachline = eachline.replaceAll("\\s+"," ");
-			// if (eachline.length() > 0) {
-				// System.out.println(eachline);
-				String[] words = line.toLowerCase().split(" ");
-				System.out.println(Arrays.toString(words) + "wordarray");
-				//String[] words = eachline.split(" ");
-				for (String word : words) {
-					// word = word.toLowerCase();
-					// if (word.length() > 0) {
-						if (worddict.containsKey(word)) {
-							worddict.put(word, worddict.get(word) + 1);
-						} else {
-							worddict.put(word, 1);
-						}
-					// }
-				}
+		// eachline = eachline.toLowerCase();
+		// eachline = eachline.replaceAll("[^a-z0-9_A-Z]"," ");
+		// eachline = eachline.replaceAll("\\s+"," ");
+		// if (eachline.length() > 0) {
+		// System.out.println(eachline);
+		String[] words = line.toLowerCase().split(" ");
+		System.out.println(Arrays.toString(words) + "wordarray");
+		//String[] words = eachline.split(" ");
+		for (String word : words) {
+			// word = word.toLowerCase();
+			// if (word.length() > 0) {
+			if (worddict.containsKey(word)) {
+				worddict.put(word, worddict.get(word) + 1);
+			} else {
+				worddict.put(word, 1);
+			}
 			// }
+		}
+		// }
 		// }
 	}
 	TreeMap<String, Integer> getMap() {
