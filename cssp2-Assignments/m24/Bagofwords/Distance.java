@@ -34,6 +34,7 @@ public class Distance {
 				// System.out.println(line + "String value" + inputfile.getName());
 				// filelines.add(line);
 			}
+			System.out.println(line + "line value");
 			buildingdict();
 		} catch (IOException io) {
 			System.out.println("FILE NOT FOUND");
