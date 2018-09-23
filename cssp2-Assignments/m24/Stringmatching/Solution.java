@@ -43,6 +43,7 @@ public final class Solution {
                     }
 
                 }
+                System.out.print(" ");
                 System.out.println();
             }
             System.out.println("Maximum similarity is between " + file1
