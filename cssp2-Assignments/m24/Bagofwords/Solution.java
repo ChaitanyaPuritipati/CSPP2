@@ -24,10 +24,6 @@ final class Solution {
             String dirname = scan.nextLine();
             File dir = new File(dirname);
             File[] files = dir.listFiles();
-            // if (files.length == 0) {
-            //     System.out.println("empty directory");
-            //     return;
-            // }
             System.out.print("\t" + "\t");
             for (File file : files) {
                 System.out.print(file.getName() + "\t");
@@ -51,7 +47,7 @@ final class Solution {
             System.out.println("Maximum similarity is between "
                                + file1 + " and " + file2);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("empty directory");
             return;
         }
     }
